@@ -1,0 +1,581 @@
+{
+  "name": "b2b-machining-image-generator",
+  "description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+  "version": "0.1.0",
+  "platform": "generic",
+  "skill_root": "b2b-machining-image-generator",
+  "job_to_be_done": "Turn technical B2B manufacturing content into accurate, minimalist, brand-controlled industrial image concepts and standalone generated images.",
+  "ir_source": "reports\\skill-ir.json",
+  "ir_schema_version": "2.0.0",
+  "semantic_contract": {
+    "name": "b2b-machining-image-generator",
+    "description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+    "job_to_be_done": "Turn technical B2B manufacturing content into accurate, minimalist, brand-controlled industrial image concepts and standalone generated images.",
+    "trigger_description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+    "should_trigger_count": 6,
+    "should_not_trigger_count": 6,
+    "edge_case_count": 4,
+    "workflow_step_count": 3,
+    "decision_point_count": 7,
+    "failure_mode_count": 10,
+    "resource_counts": {
+      "references": 2,
+      "scripts": 0,
+      "assets": 0,
+      "reports": 30
+    },
+    "eval_counts": {
+      "trigger": 5,
+      "output": 1,
+      "adversarial": 0,
+      "baseline": 1
+    },
+    "risk": {
+      "output_risk": "high",
+      "execution_risk": "low",
+      "trust_boundary": "team"
+    },
+    "governance": {
+      "owner": "Lostk",
+      "maturity": "production",
+      "review_cadence": "monthly",
+      "review_due": ""
+    },
+    "targets": [
+      "openai",
+      "generic"
+    ],
+    "source_files_count": 6
+  },
+  "semantic_parity": {
+    "source": "skill-ir",
+    "ir_source": "reports\\skill-ir.json",
+    "name_matches_ir": true,
+    "description_matches_ir": true,
+    "platform_declared_in_ir": true,
+    "platform_declared_in_interface": true,
+    "display_name_present": true,
+    "default_prompt_present": true
+  },
+  "compiler": {
+    "name": "yao-skill-ir-compiler",
+    "schema_version": "1.0",
+    "source": "skill-ir",
+    "ir_source": "reports\\skill-ir.json",
+    "ir_schema_version": "2.0.0"
+  },
+  "compiled_contract": {
+    "name": "b2b-machining-image-generator",
+    "title": "B2B Machining Visual Strategist",
+    "version": "0.1.0",
+    "description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+    "job_to_be_done": "Turn technical B2B manufacturing content into accurate, minimalist, brand-controlled industrial image concepts and standalone generated images.",
+    "trigger": {
+      "description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+      "should_trigger": [
+        "把这段 CNC 加工文章转成三套工业技术插图方案。",
+        "这段关于电镀起皮的内容，直接生成图片。",
+        "Create a cutaway illustration showing sink marks in an injection-molded housing.",
+        "Turn these paragraphs into one professional process comparison image.",
+        "为铝合金 CNC 零件的热变形做一张带引导线的白底技术图。",
+        "Generate each of these three machining visuals independently, one by one."
+      ],
+      "should_not_trigger": [
+        "给这个零件出一份带完整 GD&T 和公差的工程图。",
+        "Calculate the exact plating thickness distribution from this current-density dataset.",
+        "Design a cartoon mascot for our factory.",
+        "把这张人像照片修得更自然。",
+        "Create our company logo.",
+        "Precision engineering drawings, tolerance-critical annotations, microscopic metallography, exact process data charts, generic decorative art, collage output, and unverified structural claims."
+      ],
+      "edge_cases": [
+        "找几张真实 CNC 铣削照片给采购团队参考，不需要生成图片。",
+        "Audit the technical accuracy of this existing engineering diagram without generating a new image.",
+        "Write image alt text for this machining photo.",
+        "做一个精确尺寸的模具装配剖面图。"
+      ]
+    },
+    "workflow": {
+      "steps": [
+        "Understand the request.",
+        "Execute the main task.",
+        "Validate the result."
+      ],
+      "decision_points": [
+        "Prefer one coherent panoramic, comparison, cutaway, or process illustration over redundant one-paragraph-one-image plans.",
+        "Assess feasibility. If unsuitable, recommend a verified real diagram, chart, or photo and give two search keywords.",
+        "If suitable, give exactly three materially different options: `[Visual Angle] — [Composition] — Advantage: [one sentence]`.",
+        "After selection, research references, emit the final English prompt, and call the image tool.",
+        "Ask one focused clarification when the real job, output, or exclusion boundary is unclear.",
+        "Escalate visible tradeoffs when benchmark patterns conflict with local privacy, naming, or governance constraints.",
+        "Do not silently broaden the skill into adjacent jobs just because the examples are nearby."
+      ],
+      "failure_modes": [
+        "Screenshots can be captured from the wrong state, wrong viewport, or wrong crop.",
+        "Missing screenshots can cause the skill to invent visual references instead of declaring the gap.",
+        "Headings and summaries can drift into generic, interchangeable language.",
+        "The output can sound polished but lose the user's actual taste, audience, or scenario.",
+        "Tables can render as dense grids with weak hierarchy or poor mobile readability.",
+        "Long bullets can make the output look complete while hiding the actual decision logic.",
+        "Users start invoking the skill for adjacent one-off or explanation-only requests.",
+        "Outputs remain valid but become generic, cluttered, or weakly aligned with the user's domain.",
+        "Borrowed benchmark patterns no longer fit the local job or add ceremony without payoff.",
+        "Skill usage becomes team-critical while ownership, review cadence, or rollback evidence stays informal."
+      ]
+    },
+    "resources": {
+      "references": [
+        "references\\industrial-visual-protocol.md",
+        "references\\source-notes.md"
+      ],
+      "scripts": [],
+      "assets": [],
+      "reports": [
+        "reports/intent-context.json",
+        "reports/intent-confidence.json",
+        "reports/intent-confidence.md",
+        "reports/reference-synthesis.json",
+        "reports/reference-synthesis.md",
+        "reports/output-risk-profile.json",
+        "reports/output-risk-profile.md",
+        "reports/artifact-design-profile.json",
+        "reports/artifact-design-profile.md",
+        "reports/prompt-quality-profile.json",
+        "reports/prompt-quality-profile.md",
+        "reports/system-model.json",
+        "reports/system-model.md",
+        "reports/iteration-directions.json",
+        "reports/iteration-directions.md",
+        "reports/skill-overview.json",
+        "reports/skill-overview.html",
+        "reports/output_quality_scorecard.json",
+        "reports/output_quality_scorecard.md",
+        "reports/output_blind_review_pack.json",
+        "reports/output_blind_review_pack.md",
+        "reports/output_blind_answer_key.json",
+        "reports/review_annotations.json",
+        "reports/review_annotations.md",
+        "reports/conformance_matrix.json",
+        "reports/conformance_matrix.md",
+        "reports/security_trust_report.json",
+        "reports/security_trust_report.md",
+        "reports/skill_atlas.json",
+        "reports/skill_atlas.html"
+      ],
+      "counts": {
+        "references": 2,
+        "scripts": 0,
+        "assets": 0,
+        "reports": 30
+      }
+    },
+    "eval_plan": {
+      "trigger": [
+        "evals\\output\\cases.jsonl",
+        "evals\\packaging_expectations.json",
+        "evals\\quality-checklist.md",
+        "evals\\semantic_config.json",
+        "evals\\trigger_cases.json"
+      ],
+      "output": [
+        "evals\\output\\cases.jsonl"
+      ],
+      "adversarial": [],
+      "baseline": "without_skill",
+      "counts": {
+        "trigger": 5,
+        "output": 1,
+        "adversarial": 0,
+        "baseline": 1
+      }
+    },
+    "risk": {
+      "output_risk": "high",
+      "execution_risk": "low",
+      "trust_boundary": "team"
+    },
+    "governance": {
+      "owner": "Lostk",
+      "maturity": "production",
+      "review_cadence": "monthly",
+      "review_due": ""
+    },
+    "runtime": {
+      "activation": {
+        "mode": "manual",
+        "paths": []
+      },
+      "execution": {
+        "context": "inline",
+        "shell": "powershell"
+      },
+      "trust": {
+        "source_tier": "local",
+        "remote_inline_execution": "forbid",
+        "remote_metadata_policy": "allow-metadata-only"
+      },
+      "adapter_targets": [
+        "openai",
+        "generic"
+      ],
+      "canonical_format": "agent-skills"
+    },
+    "permissions": {
+      "schema_version": "1.0",
+      "source": "reports\\security_trust_report.json",
+      "source_available": true,
+      "declared_capabilities": [],
+      "review_required": false,
+      "capabilities": {
+        "network": {
+          "required": false,
+          "script_count": 0,
+          "scripts": [],
+          "review_reason": ""
+        },
+        "file_write": {
+          "required": false,
+          "script_count": 0,
+          "scripts": [],
+          "review_reason": ""
+        },
+        "subprocess": {
+          "required": false,
+          "script_count": 0,
+          "scripts": [],
+          "review_reason": ""
+        },
+        "interactive": {
+          "required": false,
+          "script_count": 0,
+          "scripts": [],
+          "review_reason": ""
+        }
+      },
+      "network_policy": {
+        "source": "security/network_policy.json",
+        "covered_scripts": [],
+        "missing_scripts": [],
+        "mismatches": []
+      },
+      "help_smoke": {
+        "enabled": true,
+        "checked_count": 0,
+        "failed_count": 0,
+        "failed_scripts": []
+      },
+      "trust_summary": {
+        "secret_findings": 0,
+        "network_script_count": 0,
+        "file_write_script_count": 0,
+        "subprocess_script_count": 0,
+        "interactive_script_count": 0,
+        "help_smoke_failed_count": 0
+      }
+    },
+    "source_files_count": 6,
+    "target": "generic",
+    "target_permission_contract": {
+      "schema_version": "1.0",
+      "target": "generic",
+      "permission_model": "agent-skills-compatible-metadata",
+      "native_enforcement": false,
+      "representation": "targets/generic/adapter.json::target_permission_contract",
+      "review_required": false,
+      "declared_capabilities": [],
+      "capability_counts": {
+        "network": 0,
+        "file_write": 0,
+        "subprocess": 0,
+        "interactive": 0
+      },
+      "evidence": "reports\\security_trust_report.json",
+      "operator_note": "Generic target exposes permission metadata for downstream clients to enforce or review."
+    },
+    "target_native_contract": {
+      "schema_version": "1.0",
+      "target": "generic",
+      "native_surface": "Agent Skills compatible neutral package",
+      "activation": {
+        "policy": "Use SKILL.md name and description; consumers decide automatic or manual activation.",
+        "trigger_description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+        "manual_activation_supported": true,
+        "automatic_activation_note": "Depends on the target client route/catalog implementation."
+      },
+      "resources": {
+        "strategy": "Preserve references, scripts, assets, evals, reports, and adapter metadata as relative package resources.",
+        "counts": {
+          "references": 2,
+          "scripts": 0,
+          "assets": 0,
+          "reports": 30
+        },
+        "generated_files": [
+          "targets/generic/adapter.json"
+        ]
+      },
+      "scripts": {
+        "strategy": "Expose script and permission metadata for downstream clients or installers to enforce.",
+        "script_count": 0,
+        "help_smoke_failed_count": 0
+      },
+      "permissions": {
+        "enforcement": "consumer-enforced-or-metadata-only",
+        "native_enforcement": false,
+        "declared_capabilities": [],
+        "review_required": false
+      },
+      "review": {
+        "artifacts": [
+          "targets/generic/adapter.json",
+          "reports/review-studio.html"
+        ],
+        "fallback_behavior": "Neutral source is the runtime fallback.",
+        "unsupported_native_features": []
+      },
+      "install_scope": "generic Agent Skills compatible root"
+    },
+    "degradation_strategy": "Prompt-only fallback when image search or generation tools are unavailable.",
+    "target_runtime": {
+      "adapter_mode": "agent-skills-compatible",
+      "generated_files": [
+        "targets/generic/adapter.json"
+      ],
+      "metadata_mapping": {
+        "display_name": "targets/generic/adapter.json::display_name",
+        "default_prompt": "targets/generic/adapter.json::default_prompt",
+        "activation": "targets/generic/adapter.json::activation_mode",
+        "execution": "targets/generic/adapter.json::execution_context",
+        "trust": "targets/generic/adapter.json::trust_level",
+        "permissions": "targets/generic/adapter.json::target_permission_contract",
+        "degradation": "targets/generic/adapter.json::degradation_strategy"
+      },
+      "preserved_semantics": [
+        "trigger",
+        "workflow-counts",
+        "resources",
+        "eval-plan",
+        "risk",
+        "governance",
+        "runtime",
+        "trust",
+        "permissions"
+      ],
+      "native_surface": "Agent Skills compatible neutral package"
+    }
+  },
+  "permission_contract": {
+    "schema_version": "1.0",
+    "source": "reports\\security_trust_report.json",
+    "source_available": true,
+    "declared_capabilities": [],
+    "review_required": false,
+    "capabilities": {
+      "network": {
+        "required": false,
+        "script_count": 0,
+        "scripts": [],
+        "review_reason": ""
+      },
+      "file_write": {
+        "required": false,
+        "script_count": 0,
+        "scripts": [],
+        "review_reason": ""
+      },
+      "subprocess": {
+        "required": false,
+        "script_count": 0,
+        "scripts": [],
+        "review_reason": ""
+      },
+      "interactive": {
+        "required": false,
+        "script_count": 0,
+        "scripts": [],
+        "review_reason": ""
+      }
+    },
+    "network_policy": {
+      "source": "security/network_policy.json",
+      "covered_scripts": [],
+      "missing_scripts": [],
+      "mismatches": []
+    },
+    "help_smoke": {
+      "enabled": true,
+      "checked_count": 0,
+      "failed_count": 0,
+      "failed_scripts": []
+    },
+    "trust_summary": {
+      "secret_findings": 0,
+      "network_script_count": 0,
+      "file_write_script_count": 0,
+      "subprocess_script_count": 0,
+      "interactive_script_count": 0,
+      "help_smoke_failed_count": 0
+    }
+  },
+  "target_permission_contract": {
+    "schema_version": "1.0",
+    "target": "generic",
+    "permission_model": "agent-skills-compatible-metadata",
+    "native_enforcement": false,
+    "representation": "targets/generic/adapter.json::target_permission_contract",
+    "review_required": false,
+    "declared_capabilities": [],
+    "capability_counts": {
+      "network": 0,
+      "file_write": 0,
+      "subprocess": 0,
+      "interactive": 0
+    },
+    "evidence": "reports\\security_trust_report.json",
+    "operator_note": "Generic target exposes permission metadata for downstream clients to enforce or review."
+  },
+  "target_native_contract": {
+    "schema_version": "1.0",
+    "target": "generic",
+    "native_surface": "Agent Skills compatible neutral package",
+    "activation": {
+      "policy": "Use SKILL.md name and description; consumers decide automatic or manual activation.",
+      "trigger_description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+      "manual_activation_supported": true,
+      "automatic_activation_note": "Depends on the target client route/catalog implementation."
+    },
+    "resources": {
+      "strategy": "Preserve references, scripts, assets, evals, reports, and adapter metadata as relative package resources.",
+      "counts": {
+        "references": 2,
+        "scripts": 0,
+        "assets": 0,
+        "reports": 30
+      },
+      "generated_files": [
+        "targets/generic/adapter.json"
+      ]
+    },
+    "scripts": {
+      "strategy": "Expose script and permission metadata for downstream clients or installers to enforce.",
+      "script_count": 0,
+      "help_smoke_failed_count": 0
+    },
+    "permissions": {
+      "enforcement": "consumer-enforced-or-metadata-only",
+      "native_enforcement": false,
+      "declared_capabilities": [],
+      "review_required": false
+    },
+    "review": {
+      "artifacts": [
+        "targets/generic/adapter.json",
+        "reports/review-studio.html"
+      ],
+      "fallback_behavior": "Neutral source is the runtime fallback.",
+      "unsupported_native_features": []
+    },
+    "install_scope": "generic Agent Skills compatible root"
+  },
+  "target_transform": {
+    "target": "generic",
+    "adapter_mode": "agent-skills-compatible",
+    "generated_files": [
+      "targets/generic/adapter.json"
+    ],
+    "metadata_mapping": {
+      "display_name": "targets/generic/adapter.json::display_name",
+      "default_prompt": "targets/generic/adapter.json::default_prompt",
+      "activation": "targets/generic/adapter.json::activation_mode",
+      "execution": "targets/generic/adapter.json::execution_context",
+      "trust": "targets/generic/adapter.json::trust_level",
+      "permissions": "targets/generic/adapter.json::target_permission_contract",
+      "degradation": "targets/generic/adapter.json::degradation_strategy"
+    },
+    "preserved_semantics": [
+      "trigger",
+      "workflow-counts",
+      "resources",
+      "eval-plan",
+      "risk",
+      "governance",
+      "runtime",
+      "trust",
+      "permissions"
+    ],
+    "degradation_strategy": "Prompt-only fallback when image search or generation tools are unavailable.",
+    "permission_representation": "targets/generic/adapter.json::target_permission_contract",
+    "native_surface": "Agent Skills compatible neutral package",
+    "activation_policy": "Use SKILL.md name and description; consumers decide automatic or manual activation.",
+    "resource_strategy": "Preserve references, scripts, assets, evals, reports, and adapter metadata as relative package resources.",
+    "script_strategy": "Expose script and permission metadata for downstream clients or installers to enforce.",
+    "permission_enforcement": "consumer-enforced-or-metadata-only"
+  },
+  "unsupported_features": [],
+  "compiler_warnings": [],
+  "display_name": "B2B Machining Visual Strategist",
+  "short_description": "Diagnose, prompt, and generate industrial machining visuals",
+  "default_prompt": "Use $b2b-machining-image-generator to diagnose this manufacturing content, propose three differentiated industrial visual concepts, and generate the selected image. If I say directly generate image, skip the proposals and generate one standalone image immediately.",
+  "canonical_metadata": "agents/interface.yaml",
+  "canonical_format": "agent-skills",
+  "adapter_targets": [
+    "openai",
+    "generic"
+  ],
+  "activation_mode": "manual",
+  "activation_paths": [],
+  "execution_context": "inline",
+  "shell": "powershell",
+  "trust_level": "local",
+  "remote_inline_execution": "forbid",
+  "remote_metadata_policy": "allow-metadata-only",
+  "degradation_strategy": "Prompt-only fallback when image search or generation tools are unavailable.",
+  "portability_profile": {
+    "activation_mode": "manual",
+    "activation_paths": [],
+    "execution_context": "inline",
+    "shell": "powershell",
+    "source_tier": "local",
+    "remote_inline_execution": "forbid",
+    "remote_metadata_policy": "allow-metadata-only",
+    "degradation_strategy": "Prompt-only fallback when image search or generation tools are unavailable."
+  },
+  "install_hint": "Use b2b-machining-image-generator as an Agent Skills compatible package.",
+  "contract": {
+    "required_fields": [
+      "name",
+      "description",
+      "version",
+      "display_name",
+      "short_description",
+      "default_prompt",
+      "job_to_be_done",
+      "ir_source",
+      "ir_schema_version",
+      "semantic_contract",
+      "semantic_parity",
+      "canonical_metadata",
+      "canonical_format",
+      "activation_mode",
+      "execution_context",
+      "shell",
+      "trust_level",
+      "remote_inline_execution",
+      "degradation_strategy",
+      "portability_profile",
+      "permission_contract",
+      "target_permission_contract",
+      "target_native_contract"
+    ],
+    "required_files": [
+      "targets/generic/adapter.json"
+    ],
+    "field_mapping": {
+      "display_name": "adapter.display_name",
+      "short_description": "adapter.short_description",
+      "default_prompt": "adapter.default_prompt",
+      "execution_context": "compatibility.execution.context",
+      "shell": "compatibility.execution.shell"
+    }
+  }
+}

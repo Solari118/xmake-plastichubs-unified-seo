@@ -1,0 +1,22 @@
+interface:
+  display_name: "SEO/GEO Content Auditor"
+  short_description: "Audit intent, evidence, structure, originality, and delivery readiness"
+  default_prompt: "Use $seo-geo-content-auditor. State the Audit route, stage, and deliverable; then issue evidence-backed findings, the 20-point verdict, and the smallest necessary revision scope."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "codex"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    codex: "native-skill-source"
+    generic: "neutral-source"

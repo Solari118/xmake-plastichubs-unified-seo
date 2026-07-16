@@ -1,0 +1,55 @@
+{
+  "optimizer_hints": {
+    "capability": "Diagnose and generate B2B manufacturing technical illustrations",
+    "inputs": ["manufacturing article", "CNC content", "molding defect", "surface finishing", "机加工文章", "制造缺陷"],
+    "trigger_actions": ["generate industrial image", "visualize manufacturing content", "create cutaway illustration", "直接生成图片", "工业技术插图"],
+    "exclusions": ["precision engineering drawing", "GD&T", "logo", "cartoon", "unrelated photo editing", "精密工程图", "公差图", "卡通"],
+    "artifacts": ["technical illustration", "image prompt", "cutaway", "exploded view", "comparison image", "技术图", "剖面图"]
+  },
+  "fallback_positive_concepts": ["industrial_image", "manufacturing_domain", "visual_strategy", "direct_generation"],
+  "positive_concepts": {
+    "industrial_image": {
+      "weight": 0.46,
+      "phrases": ["industrial image", "technical illustration", "process comparison image", "cutaway illustration", "machining visual", "工业技术插图", "技术图", "图片", "插图"]
+    },
+    "manufacturing_domain": {
+      "weight": 0.28,
+      "phrases": ["cnc", "machining", "injection molded", "molding", "electroplating", "surface finish", "aluminum part", "manufacturing", "机加工", "注塑", "电镀", "铝合金", "模具"]
+    },
+    "visual_strategy": {
+      "weight": 0.3,
+      "phrases": ["visualize", "visual concepts", "three concepts", "three options", "cutaway", "exploded view", "comparison", "三套", "视觉方案", "剖面", "对比图"]
+    },
+    "direct_generation": {
+      "weight": 0.34,
+      "phrases": ["generate image", "generate each", "direct image", "directly generate image", "直接生成图片", "生成图片", "逐张生成"]
+    }
+  },
+  "negative_concepts": {
+    "precision_drawing": {
+      "weight": 0.75,
+      "exclusive": true,
+      "phrases": ["engineering drawing", "gd&t", "tolerance-certified", "exact dimensions", "precision cutaway", "精确尺寸", "工程图", "公差", "完整 gd&t"]
+    },
+    "quantitative_analysis": {
+      "weight": 0.7,
+      "exclusive": true,
+      "phrases": ["calculate", "dataset", "exact plating thickness", "quantitative", "计算", "数据集"]
+    },
+    "generic_or_unrelated_art": {
+      "weight": 0.7,
+      "exclusive": true,
+      "phrases": ["cartoon mascot", "company logo", "portrait photo", "logo", "卡通吉祥物", "人像照片", "修图"]
+    },
+    "research_only": {
+      "weight": 1.0,
+      "exclusive": true,
+      "phrases": ["do not generate", "without generating", "不需要生成", "只找", "research only"]
+    },
+    "text_only": {
+      "weight": 0.4,
+      "exclusive": true,
+      "phrases": ["alt text", "image caption", "write a caption", "替代文本", "图片说明"]
+    }
+  }
+}

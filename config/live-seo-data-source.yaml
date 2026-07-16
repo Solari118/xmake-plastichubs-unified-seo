@@ -1,0 +1,48 @@
+version: 1
+name: authenticated-live-seo-data
+enabled: true
+purpose: "Read-only current keyword, SERP, and site evidence for XMAKE and PlasticHubs SEO tasks."
+
+primary_source:
+  type: authenticated_browser
+  provider: "Semrush workspace accessed through sem.seogroup.club"
+  session_owner: user
+  session_requirement: "User signs in interactively in the Codex in-app browser. Do not store credentials, cookies, session URLs, or tokens in this project."
+  allowed_operations:
+    - keyword overview
+    - keyword research
+    - related keyword and question discovery
+    - SERP feature and organic-result inspection
+    - domain organic-research and site-audit reads
+  prohibited_operations:
+    - account, billing, quota, or subscription changes
+    - project creation, deletion, or configuration changes
+    - exports unless explicitly requested by the user
+    - credential, cookie, token, or session URL storage
+
+required_trace_fields:
+  - LIVE_DATA_STATUS
+  - SOURCE
+  - QUERY
+  - DATABASE
+  - LOCALE
+  - LANGUAGE
+  - DEVICE_ASSUMPTION
+  - CAPTURE_DATE
+  - AVAILABLE_METRICS
+  - LIMITATIONS
+  - FALLBACK_USED
+
+fallback_policy:
+  order:
+    - "authenticated live source"
+    - "data/plastichubs/keywords/PlasticHubs_SEMrush_All_Keywords_Classified_2026-07-10.xlsx when relevant"
+    - "strategy-only recommendation without numeric claims"
+  browser_timeout_status: Degraded
+  unavailable_session_status: Unavailable
+  metric_rule: "Never invent or backfill numeric SEO metrics from generated estimates."
+
+default_query_environment:
+  target_market: United States
+  language: English
+  device_assumption: Desktop

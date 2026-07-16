@@ -1,0 +1,6 @@
+interface:
+  display_name: "Xmake-Plastichubs Website Operations"
+  short_description: "Build and package manufacturing website pages"
+  default_prompt: "Use $xmake-plastichubs-website-ops to create this operational website page or package this approved draft for XMAKE or PlasticHubs."
+policy:
+  allow_implicit_invocation: true

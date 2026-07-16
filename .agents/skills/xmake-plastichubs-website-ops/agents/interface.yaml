@@ -1,0 +1,22 @@
+interface:
+  display_name: "Xmake-Plastichubs Website Operations"
+  short_description: "Build varied, verified manufacturing website pages and publishing artifacts"
+  default_prompt: "Use $xmake-plastichubs-website-ops. State the route, output stage, and deliverable; apply the batch-variation framework; create or package the requested XMAKE or PlasticHubs page; and verify preview or Word artifacts before claiming visual QA."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "codex"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    codex: "native-skill-source"
+    generic: "neutral-source"

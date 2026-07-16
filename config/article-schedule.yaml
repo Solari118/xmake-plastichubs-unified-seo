@@ -1,0 +1,30 @@
+version: 1
+name: plastichubs-article-output
+enabled: false
+project_root: "C:\\Users\\Lostk\\Documents\\文章规划提示词-Plan"
+entry_agent: unified-seo-pipeline
+route: "SEO Core -> Plan -> Info -> Audit -> B2B Asset -> Website Ops/Word"
+live_data_source: "config/live-seo-data-source.yaml"
+approval_policy:
+  user_supplied_keyword: bypass
+  agent_proposed_keyword: pause
+  missing_brand_scope: pause
+  hard_evidence_blocker: block
+input:
+  mode: fixed_keyword_or_approved_queue
+  required_fields:
+    - BRAND
+    - TOPIC
+    - PRIMARY_KEYWORD
+  optional_fields:
+    - MIN_WORD_COUNT
+    - READABILITY_TARGET
+    - DELIVERABLE_MODE
+    - IMAGE_COUNT
+output:
+  directory: outputs/scheduled
+  terminal_states:
+    - COMPLETED
+    - WAITING_FOR_KEYWORD_APPROVAL
+    - BLOCKED
+runtime_note: "This file is a scheduler contract. It does not create a Windows or Codex automation until an external scheduler invokes the project."

@@ -1,0 +1,37 @@
+{
+  "score": 100,
+  "band": "high",
+  "gate_passed": true,
+  "strengths": [
+    "The recurring job is concrete enough to anchor the package.",
+    "Real input shape is explicit.",
+    "The hand-back output is concrete.",
+    "Boundary exclusions are already explicit.",
+    "Operational constraints are visible."
+  ],
+  "gaps": [],
+  "follow_up_questions": [],
+  "anchor_sentence": "Turn technical B2B manufacturing content into accurate, minimalist, brand-controlled industrial image concepts and standalone generated images. Primary output: Normal mode: diagnosis and three differentiated visual options; selected or direct mode: final English prompt plus one independently generated image per request.. Exclusions: Precision engineering drawings, tolerance-critical annotations, microscopic metallography, exact process data charts, generic decorative art, collage output, and unverified structural claims..",
+  "recommended_action": "Intent is clear enough to package the first routeable version.",
+  "context": {
+    "job": "Turn technical B2B manufacturing content into accurate, minimalist, brand-controlled industrial image concepts and standalone generated images.",
+    "real_inputs": [
+      "English or Chinese manufacturing article text, a selected concept number, or text plus the direct image generation instruction."
+    ],
+    "primary_output": "Normal mode: diagnosis and three differentiated visual options; selected or direct mode: final English prompt plus one independently generated image per request.",
+    "description": "Diagnose B2B industrial manufacturing content, design high-value visual concepts, research relevant reference images, produce RapidDirect-style technical illustration prompts, and generate standalone images for CNC machining, surface finishing, electroplating, injection molding, tooling, materials, defects, and manufacturing processes. Use when the user asks to visualize manufacturing articles, create industrial technical illustrations, compare process or failure states, or directly generate B2B machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+    "exclusions": [
+      "Precision engineering drawings, tolerance-critical annotations, microscopic metallography, exact process data charts, generic decorative art, collage output, and unverified structural claims."
+    ],
+    "constraints": [
+      "Search relevant image references before generation when web image search is available; use #ea543f accents; white or light gray background; no anime, cartoon, cinematic lighting, pure monochrome, long in-image text, or collage."
+    ],
+    "standards": [
+      "Bilingual interaction Chinese first and English second; engineering-rational tone; concise labels; visual truthfulness; one image generated independently per tool call."
+    ],
+    "correction": "If AI is likely to invent critical geometry, reject generation and recommend real diagrams or photos with two search keywords.",
+    "user_references": [
+      "User-provided ChatGPT project base instructions for B2B machining image generation; full project chat history unavailable due browser policy and must be treated as missing evidence."
+    ]
+  }
+}

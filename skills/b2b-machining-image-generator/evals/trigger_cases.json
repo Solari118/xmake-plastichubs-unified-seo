@@ -1,0 +1,24 @@
+{
+  "recommended_threshold": 0.35,
+  "should_trigger": [
+    {"text": "把这段 CNC 加工文章转成三套工业技术插图方案。", "family": "cn_visual_strategy"},
+    {"text": "这段关于电镀起皮的内容，直接生成图片。", "family": "cn_direct_generation"},
+    {"text": "Create a cutaway illustration showing sink marks in an injection-molded housing.", "family": "en_defect_visual"},
+    {"text": "Turn these paragraphs into one professional process comparison image.", "family": "en_article_visualization"},
+    {"text": "为铝合金 CNC 零件的热变形做一张带引导线的白底技术图。", "family": "cn_technical_illustration"},
+    {"text": "Generate each of these three machining visuals independently, one by one.", "family": "en_multi_asset"}
+  ],
+  "should_not_trigger": [
+    {"text": "给这个零件出一份带完整 GD&T 和公差的工程图。", "family": "cn_precision_drawing"},
+    {"text": "Calculate the exact plating thickness distribution from this current-density dataset.", "family": "en_quantitative_analysis"},
+    {"text": "Design a cartoon mascot for our factory.", "family": "en_generic_art"},
+    {"text": "把这张人像照片修得更自然。", "family": "cn_unrelated_edit"},
+    {"text": "Create our company logo.", "family": "en_logo"}
+  ],
+  "near_neighbor": [
+    {"text": "找几张真实 CNC 铣削照片给采购团队参考，不需要生成图片。", "family": "cn_research_only"},
+    {"text": "Audit the technical accuracy of this existing engineering diagram without generating a new image.", "family": "en_diagram_audit"},
+    {"text": "Write image alt text for this machining photo.", "family": "en_alt_text"},
+    {"text": "做一个精确尺寸的模具装配剖面图。", "family": "cn_precision_cutaway"}
+  ]
+}

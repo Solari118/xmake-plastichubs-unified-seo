@@ -1,0 +1,33 @@
+{
+  "name": "xmake-plastichubs-unified-seo",
+  "version": "4.1.0",
+  "repository": "Solari118/xmake-plastichubs-unified-seo",
+  "branch": "main",
+  "visibility": "private",
+  "workflow": [
+    "SEO Core",
+    "Plan",
+    "Info/Blog",
+    "Audit",
+    "B2B Asset",
+    "Website Ops/Word"
+  ],
+  "includes": [
+    "agents",
+    "skills",
+    "hooks",
+    "config",
+    "data",
+    "knowledge and templates",
+    "Codex and agent discovery mirrors",
+    "B2B machining image-generation source snapshot",
+    "deployment scripts"
+  ],
+  "excludes": [
+    "credentials and login state",
+    "local Git metadata",
+    "generated article outputs",
+    "render caches",
+    "temporary Word files"
+  ]
+}

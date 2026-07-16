@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unified SEO Pipeline"
+  short_description: "Run Plan, Info, Audit, images, and document packaging in one task"
+  default_prompt: "Use $unified-seo-pipeline. Route this PlasticHubs/XMAKE content task through Plan, Info, Audit, B2B Asset, and WordPress/Word delivery. Pause only if the primary keyword must be approved."

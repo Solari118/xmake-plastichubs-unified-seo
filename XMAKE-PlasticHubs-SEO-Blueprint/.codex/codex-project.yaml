@@ -1,0 +1,45 @@
+name: "xmake-plastichubs-unified-seo"
+description: "Unified XMAKE / PlasticHubs Plan-Info-Audit SEO system"
+version: "3.0.0"
+
+agents:
+  default: "xmake-plastichubs-seo-expert"
+  directory: "agents"
+
+skills:
+  directory: "skills"
+  auto_load:
+    - "xmake-plastichubs-seo-expert"
+    - "seo-content-strategy"
+    - "b2b-seo-topic-map-builder"
+    - "manufacturing-blog-writer"
+    - "manufacturing-content-writer"
+    - "seo-geo-content-auditor"
+    - "xmake-plastichubs-website-ops"
+
+data:
+  directory: "data"
+  sources:
+    xmake:
+      - "data/xmake/company_info.md"
+    plastichubs:
+      - "data/plastichubs/industry_knowledge_map.md"
+      - "data/plastichubs/customer_intent_map.md"
+      - "data/plastichubs/seo_topic_map.md"
+      - "data/plastichubs/pillar_supporting_pages.md"
+      - "data/plastichubs/blog_topic_map.md"
+      - "data/plastichubs/topic_map.csv"
+      - "data/plastichubs/keywords/keyword_resource_index.md"
+      - "data/plastichubs/keywords/PlasticHubs_SEMrush_All_Keywords_Classified_2026-07-10.xlsx"
+    shared:
+      - "data/shared/mechanical_manufacturing.md"
+      - "data/shared/electronics_manufacturing.md"
+      - "data/shared/competitors.md"
+      - "data/shared/writing_anti_fluff.md"
+
+context:
+  data_supremacy: true
+  brand_isolation: true
+  anti_fluff: true
+  zero_hallucination: true
+  keyword_resource_preserved: true

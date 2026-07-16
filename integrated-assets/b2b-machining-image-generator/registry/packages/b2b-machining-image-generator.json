@@ -1,0 +1,49 @@
+{
+  "schema_version": "2.0",
+  "name": "b2b-machining-image-generator",
+  "version": "0.1.0",
+  "description": "Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.",
+  "targets": [
+    "openai",
+    "generic"
+  ],
+  "maturity": "production",
+  "owner": "Lostk",
+  "review_cadence": "monthly",
+  "trust_level": "local",
+  "license": "Proprietary",
+  "checksums": {
+    "package_sha256": "de1f1633cd7dc4ed82d29f5b18980c94db4f45220ac5b68c7eb343e17710d46a"
+  },
+  "compatibility": {
+    "openai": "pass",
+    "generic": "pass"
+  },
+  "source": {
+    "skill_dir": "C:\\Users\\Lostk\\Documents\\B2B机加工生图\\b2b-machining-image-generator",
+    "skill_ir": "reports\\skill-ir.json",
+    "ir_schema_version": "2.0.0",
+    "canonical_metadata": "agents/interface.yaml"
+  },
+  "artifacts": {
+    "overview_html": "reports/skill-overview.html",
+    "review_studio_html": "reports/review-studio.html",
+    "trust_report": "reports/security_trust_report.md",
+    "conformance_matrix": "reports/conformance_matrix.md",
+    "compiled_targets": "reports/compiled_targets.md",
+    "package_verification": "",
+    "install_simulation": "",
+    "adoption_drift": "reports/adoption_drift_report.md",
+    "review_waivers": "reports/review_waivers.md",
+    "review_annotations": "reports/review_annotations.md",
+    "package_metadata": "registry/packages/b2b-machining-image-generator.json"
+  },
+  "distribution": {
+    "archive_verified": false,
+    "archive_sha256": "",
+    "package_verification": "",
+    "install_simulated": false,
+    "install_simulation": ""
+  },
+  "generated_at": "2026-07-08"
+}
