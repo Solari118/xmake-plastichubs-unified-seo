@@ -37,7 +37,12 @@ def sha(path: Path) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.parse_args()
+    parser.add_argument(
+        "--skip-legacy-adapters",
+        action="store_true",
+        help="Skip workstation-specific legacy adapter checks in portable CI environments",
+    )
+    args = parser.parse_args()
     failures = []
     for rel in REQUIRED_ROOT:
         if not (ROOT / rel).exists():
@@ -68,20 +73,21 @@ def main() -> int:
             mirror = ROOT / mirror_name / "skills" / skill / "SKILL.md"
             if not mirror.exists() or sha(source) != sha(mirror):
                 failures.append(f"mirror mismatch: {mirror_name}/skills/{skill}/SKILL.md")
-    for name, legacy in LEGACY.items():
-        adapter = legacy / "AGENTS.md"
-        backup = legacy / "AGENTS.legacy.md"
-        if not adapter.exists() or "CANONICAL_UNIFIED_PROJECT" not in adapter.read_text(encoding="utf-8"):
-            failures.append(f"legacy adapter missing: {name}")
-        if not backup.exists():
-            failures.append(f"legacy AGENTS backup missing: {name}")
-        pointer = legacy / "UNIFIED_PROJECT_POINTER.yaml"
-        if not pointer.exists() or str(ROOT) not in pointer.read_text(encoding="utf-8"):
-            failures.append(f"legacy project pointer missing or wrong: {name}")
-        for discovery in [".agents", ".codex"]:
-            skill_adapter = legacy / discovery / "skills" / "manufacturing-content-pipeline" / "SKILL.md"
-            if not skill_adapter.exists() or "CANONICAL_UNIFIED_PROJECT" not in skill_adapter.read_text(encoding="utf-8"):
-                failures.append(f"legacy discovery adapter missing: {name}/{discovery}")
+    if not args.skip_legacy_adapters:
+        for name, legacy in LEGACY.items():
+            adapter = legacy / "AGENTS.md"
+            backup = legacy / "AGENTS.legacy.md"
+            if not adapter.exists() or "CANONICAL_UNIFIED_PROJECT" not in adapter.read_text(encoding="utf-8"):
+                failures.append(f"legacy adapter missing: {name}")
+            if not backup.exists():
+                failures.append(f"legacy AGENTS backup missing: {name}")
+            pointer = legacy / "UNIFIED_PROJECT_POINTER.yaml"
+            if not pointer.exists() or str(ROOT) not in pointer.read_text(encoding="utf-8"):
+                failures.append(f"legacy project pointer missing or wrong: {name}")
+            for discovery in [".agents", ".codex"]:
+                skill_adapter = legacy / discovery / "skills" / "manufacturing-content-pipeline" / "SKILL.md"
+                if not skill_adapter.exists() or "CANONICAL_UNIFIED_PROJECT" not in skill_adapter.read_text(encoding="utf-8"):
+                    failures.append(f"legacy discovery adapter missing: {name}/{discovery}")
     inventory = ROOT / "data" / "processed" / "source-capability-inventory.json"
     if not inventory.exists():
         failures.append("capability inventory not generated")
