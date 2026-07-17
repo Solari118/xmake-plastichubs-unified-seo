@@ -1,0 +1,16 @@
+name: validate
+on:
+  push:
+  pull_request:
+jobs:
+  project:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/build_inventory.py
+      - run: python scripts/sync_mirrors.py
+      - run: python scripts/validate_project.py --skip-legacy-adapters
+      - run: python -m unittest discover -s tests -p "test_*.py"

@@ -1,0 +1,22 @@
+interface:
+  display_name: "B2B Machining Visual Strategist"
+  short_description: "Diagnose, prompt, and generate industrial machining visuals"
+  default_prompt: "Use $b2b-machining-image-generator to diagnose this manufacturing content, propose three differentiated industrial visual concepts, and generate the selected image. If I say directly generate image, skip the proposals and generate one standalone image immediately."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "powershell"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "Uses web image search and image generation when exposed by the client; otherwise returns a verified English prompt."
+    generic: "Prompt-only fallback when image search or generation tools are unavailable."

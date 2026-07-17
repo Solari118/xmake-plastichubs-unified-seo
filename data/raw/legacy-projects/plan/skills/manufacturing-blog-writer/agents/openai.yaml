@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manufacturing Blog Writer"
+  short_description: "Write varied SEO/GEO manufacturing articles"
+  default_prompt: "Use $manufacturing-blog-writer. State the Info route, stage, and deliverable; write or revise the bilingual XMAKE or PlasticHubs article from the complete brief; satisfy intent early; prevent section-role overlap; preserve requested source elements; and verify any requested preview or Word artifact."

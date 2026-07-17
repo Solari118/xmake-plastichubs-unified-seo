@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Plan Brief",
+  "type": "object",
+  "required": [
+    "BRAND", "CONTENT_TYPE", "TOPIC", "PRIMARY_SERVICE", "PRIMARY_KEYWORD", "AUDIENCE",
+    "PRIMARY_INTENT", "INTENT_COMPLETION_CRITERIA", "COMMERCIAL_BRIDGE_MODE",
+    "SERP_RESEARCH_REQUIRED", "SERP_BENCHMARK_STATUS", "TOP_FIVE_SERP_RESULTS",
+    "BORROWABLE_PATTERNS", "DIFFERENTIATION_REQUIREMENTS", "ORIGINALITY_GUARDRAILS",
+    "ANSWER_FIRST_FORMAT", "SECTION_ROLE_MAP", "READABILITY_TARGET", "MIN_WORD_COUNT",
+    "DELIVERABLE_MODE", "PREVIEW_FORMAT", "WORD_STYLE_REFERENCE", "REVISION_SCOPE",
+    "SOURCE_ELEMENTS_TO_PRESERVE", "CROSS_SERVICE_LINK_PLAN"
+  ],
+  "properties": {
+    "BRAND": {"enum": ["XMAKE", "PlasticHubs"]},
+    "CONTENT_TYPE": {"type": "string"},
+    "TOPIC": {"type": "string"},
+    "PRIMARY_SERVICE": {"type": "string"},
+    "PRIMARY_KEYWORD": {"type": "string"},
+    "AUDIENCE": {"type": "string"},
+    "PRIMARY_INTENT": {"type": "string"},
+    "INTENT_COMPLETION_CRITERIA": {"type": "array", "items": {"type": "string"}},
+    "COMMERCIAL_BRIDGE_MODE": {"enum": ["none", "soft", "explicit"]},
+    "SERP_RESEARCH_REQUIRED": {"enum": ["Yes", "No"]},
+    "SERP_BENCHMARK_STATUS": {"enum": ["Validated", "Best-effort", "Blocked"]},
+    "TOP_FIVE_SERP_RESULTS": {"type": "array"},
+    "BORROWABLE_PATTERNS": {"type": "array"},
+    "DIFFERENTIATION_REQUIREMENTS": {"type": "array"},
+    "ORIGINALITY_GUARDRAILS": {"type": "array"},
+    "ANSWER_FIRST_FORMAT": {"type": "string"},
+    "SECTION_ROLE_MAP": {"type": "object"},
+    "READABILITY_TARGET": {},
+    "MIN_WORD_COUNT": {},
+    "DELIVERABLE_MODE": {"type": "string"},
+    "PREVIEW_FORMAT": {},
+    "WORD_STYLE_REFERENCE": {},
+    "REVISION_SCOPE": {"type": "string"},
+    "SOURCE_ELEMENTS_TO_PRESERVE": {},
+    "CROSS_SERVICE_LINK_PLAN": {},
+    "artifact_version": {"type": "string"},
+    "supersedes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}
+

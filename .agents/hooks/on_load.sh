@@ -1,25 +1,8 @@
-#!/usr/bin/env bash
-set -euo pipefail
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-required=(
-  "AGENTS.md"
-  "project.yaml"
-  "agents/unified-seo-pipeline.md"
-  "skills/unified-seo-pipeline/SKILL.md"
-  "skills/b2b-seo-topic-map-builder/SKILL.md"
-  "skills/manufacturing-blog-writer/SKILL.md"
-  "skills/seo-geo-content-auditor/SKILL.md"
-  "skills/b2b-machining-image-generator/SKILL.md"
-  "config/article-schedule.yaml"
-)
-missing=()
-for file in "${required[@]}"; do
-  [[ -f "$ROOT/$file" ]] || missing+=("$file")
+#!/usr/bin/env sh
+set -eu
+root="$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)"
+for rel in AGENTS.md project.yaml skills/manufacturing-content-pipeline/SKILL.md workflows/article-pipeline.yaml policies/context-isolation.md scripts/validate_project.py; do
+  test -e "$root/$rel" || { echo "BLOCKED: missing $rel"; exit 1; }
 done
-if (( ${#missing[@]} )); then
-  echo "BLOCKED: missing unified project files: ${missing[*]}"
-  exit 1
-fi
-echo "OK: unified SEO pipeline files are present."
-echo "Approval gate: only agent-proposed keywords pause the chain."
-echo "Scheduler: contract loaded; external automation remains disabled until explicitly configured."
+echo "OK: canonical manufacturing content pipeline is present."
+

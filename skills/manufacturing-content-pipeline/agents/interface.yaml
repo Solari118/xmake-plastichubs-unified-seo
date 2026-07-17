@@ -1,0 +1,23 @@
+interface:
+  display_name: "Manufacturing Content Pipeline"
+  short_description: "Route Plan, Info, Audit, B2B Image, and Final Output with artifact-aware insertion"
+  default_prompt: "Use $manufacturing-content-pipeline to detect the latest supplied artifact, enter at the safe stage, and execute or roll back through the unified manufacturing content workflow."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "generic"
+  activation:
+    mode: "project-default"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "powershell"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "Use available browsing, image, document, and local-file capabilities; preserve stage truth when a capability is unavailable."
+    generic: "Return contract-complete artifacts and prompts, marking unavailable execution or render steps explicitly."
+

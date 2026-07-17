@@ -1,7 +1,7 @@
 interface:
   display_name: "Manufacturing Blog Writer"
   short_description: "Write or revise intent-complete manufacturing articles"
-  default_prompt: "Use $manufacturing-blog-writer. State the Info route, stage, and deliverable; then execute the supplied Plan brief while preserving source material and user-set readability or artifact constraints."
+  default_prompt: "Use $manufacturing-blog-writer. State the Info route, stage, and deliverable; execute the supplied Plan brief; preserve the primary service and requested source material; then run the recorded writer quality gate without issuing the final Audit verdict."
 compatibility:
   canonical_format: "agent-skills"
   adapter_targets:

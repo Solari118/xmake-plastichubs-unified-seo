@@ -1,4 +1,0 @@
-interface:
-  display_name: "B2B SEO/GEO Content Planner"
-  short_description: "Build manufacturing content briefs and topic maps."
-  default_prompt: "Use $b2b-seo-topic-map-builder. State the Plan route, stage, and deliverable; create a complete SEO/GEO brief with a live Top-5 organic SERP benchmark, intent-completion criteria, non-overlapping section roles, keyword candidates, differentiation requirements, commercial-bridge mode, and all user-set readability, revision, preview, or Word constraints."

@@ -1,0 +1,9 @@
+{
+  "default":"deny",
+  "exceptions":[
+    {"capability":"read_only_web_research","stage":"plan","approval":"task-implied when current SERP evidence is required"},
+    {"capability":"image_generation","stage":"b2b-image","approval":"task-implied when image generation is requested"}
+  ],
+  "external_mutations":"explicit user approval required"
+}
+

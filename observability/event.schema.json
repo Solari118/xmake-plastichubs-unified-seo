@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["timestamp","run_id","stage","event","artifact_version"],
+  "properties":{
+    "timestamp":{"type":"string"},
+    "run_id":{"type":"string"},
+    "stage":{"enum":["plan","info","audit","b2b-image","final-output","orchestrator"]},
+    "event":{"enum":["started","completed","rollback","blocked","artifact_created"]},
+    "artifact_version":{"type":["string","null"]},
+    "reason_code":{"type":["string","null"]}
+  },
+  "additionalProperties":false
+}
+

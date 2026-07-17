@@ -1,6 +1,6 @@
 ---
 name: b2b-machining-image-generator
-description: Diagnose manufacturing content, research visual references, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for article illustrations, process or failure comparisons, cutaways, exploded views, and requests to directly generate machining images. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.
+description: Diagnose manufacturing content, retouch user-provided factory and machining photographs, research visual references when needed, design technical illustration concepts, write brand-controlled English prompts, and generate standalone B2B industrial images for CNC machining, molding, tooling, materials, finishing, defects, and process explanations. Use for factory-environment cleanup, industrial photo enhancement, article illustrations, process or failure comparisons, cutaways, exploded views, and direct machining-image generation. Do not use for precision engineering drawings, tolerance-certified diagrams, generic marketing art, logos, or unrelated image editing.
 metadata:
   owner: Lostk
   lifecycle_stage: production
@@ -20,7 +20,7 @@ Own visual strategy and image generation for technical B2B manufacturing content
 
 When the user says `直接生成图片`, `directly generate image`, or an equivalent explicit command:
 
-Skip diagnosis and options. Silently choose the strongest visual angle, run the reference scan, build the closed RD prompt, emit it immediately before the image call, and generate one standalone image. Add nothing afterward.
+Skip diagnosis and options. Build the closed RD prompt and submit one image call within 90 seconds after the input is accessible. For an edit, use the uploaded image as the authoritative target and do not search for references unless the user asks for a specific external style. Add nothing after a successful generation.
 
 ### Normal mode
 
@@ -31,10 +31,19 @@ Skip diagnosis and options. Silently choose the strongest visual angle, run the 
 
 ## Execution Rules
 
-- Read [Industrial Visual Protocol](references/industrial-visual-protocol.md) before concepting or generation.
+- Read [Industrial Visual Protocol](references/industrial-visual-protocol.md) once per task before concepting or generation; do not reread it in later turns of the same task.
 - Search images when available, but never claim whole-web coverage. Combine geometry, material, viewpoint, and diagram patterns from multiple sources without copying one source or artist style.
 - Generate each asset independently with one image call. No collage, montage, contact sheet, or unrelated grid; a coherent technical comparison is allowed.
 - If generation is unavailable, return the verified English prompt and state the capability gap.
+
+## Runtime Guardrails
+
+- Submit exactly one `image_gen__imagegen` call per asset at a time.
+- Limit one image call to eight minutes of total waiting. Terminate its asynchronous execution cell after that limit and report a timeout.
+- After `network error`, `/images/edits`, or `/images/generations` failure, retry the same asset no more than once. Stop after the second failure.
+- Never expand a failed online edit into browser control, CLI calls, compression experiments, background regeneration, local painting, masking/compositing, or PowerShell retouching unless the user explicitly authorizes that specific fallback.
+- Treat complaints about latency as feedback, not cancellation. Stop only on an explicit cancellation instruction.
+- Report the attempt count, elapsed time, and original error after final failure. Do not continue probing with more tools.
 
 ## Output Gate
 

@@ -1,0 +1,7 @@
+services:
+  validator:
+    build: ..
+    command: ["python", "scripts/validate_project.py"]
+    volumes:
+      - ..:/workspace:ro
+

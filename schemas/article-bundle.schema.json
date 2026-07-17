@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Article Bundle",
+  "type": "object",
+  "required": ["run_id", "artifact_version", "plan_version", "status", "article_path", "writer_self_check", "private_claim_ledger"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "artifact_version": {"type": "string"},
+    "plan_version": {"type": "string"},
+    "status": {"enum": ["Provisional Draft", "Audit-ready Draft", "Revision Draft"]},
+    "article_path": {"type": "string"},
+    "writer_self_check": {"type": "string"},
+    "private_claim_ledger": {"type": "string"},
+    "revision_summary": {"type": ["string", "null"]},
+    "supersedes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
+

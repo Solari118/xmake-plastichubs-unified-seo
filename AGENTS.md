@@ -1,99 +1,60 @@
-# AGENTS.md instructions for XMAKE-PlasticHubs Unified SEO System
+# Unified Manufacturing Content Project
 
-Mandatory: All responses must be bilingual: Chinese first, English second. Keep code, commands, URLs, file paths, formulas, quoted labels, and IDs unchanged when translation would reduce precision.
+Mandatory: all user-facing responses are bilingual, Chinese first and English second. Keep code, commands, URLs, paths, formulas, quoted labels, and IDs unchanged when translation would reduce precision.
 
-Give the result first. Be concise, evidence-aware, and direct. Challenge unsupported claims. Never invent citations, standards, certifications, exact metrics, keyword volumes, search rankings, or company capabilities.
+## Canonical Route
 
-## Unified Route
+Start every non-trivial manufacturing content task with:
 
-This project consolidates the previous `文章规划提示词-Plan`, `文章撰写提示词-Info`, and `文章优化提示词2.0-Aduit` projects into one XMAKE/PlasticHubs SEO system.
+`Route: Manufacturing Content Pipeline > Plan → Info → Audit → B2B Image → Final Output | Stage: [stage] | Deliverable: [mode]`
 
-The active project root is `C:\Users\Lostk\Documents\文章规划提示词-Plan`. The sibling Plan, Info, Audit, and B2B image-generator folders are preserved source projects, not execution entry points.
+Use `skills/manufacturing-content-pipeline/SKILL.md` as the only top-level article router. Specialist skills own their phases and must not absorb another phase's role.
 
-Start every non-trivial task with one concise bilingual route line:
+## Entry-Point Behavior
 
-- `Route: Plan > b2b-seo-topic-map-builder | Stage: Strategy Brief | Deliverable: [mode]`
-- `Route: Info > manufacturing-blog-writer | Stage: Drafting/Revision | Deliverable: [mode]`
-- `Route: Audit > seo-geo-content-auditor | Stage: Audit/Targeted Revision | Deliverable: [mode]`
-- `Route: Website Ops > xmake-plastichubs-website-ops | Stage: [stage] | Deliverable: [mode]`
-- `Route: SEO Core > xmake-plastichubs-seo-expert | Stage: Routing/Data Loading | Deliverable: [mode]`
+- A complete article, blog, revision-to-publication, or content-package request defaults to the full ordered pipeline.
+- A request received from any legacy Plan, Info, Audit, or B2B Image workspace must route here first.
+- A user may explicitly request a phase-only task. Run only that phase after checking its prerequisites and label the terminal state accurately.
+- A standalone image generation or retouch request remains B2B Image-only. An article-linked image request requires the audited article and visual brief.
+- Never skip directly to final packaging without an Audit artifact. Never call a writer self-check the final Audit verdict.
 
-When the user asks for the complete `Plan -> Info -> Audit` chain, run the stages sequentially. Keep each stage's owner, inputs, artifact, and gate visible. Do not claim Info or Audit passed before the actual artifact exists.
+## Ordered Stages
 
-## Automatic End-to-End Execution
+1. `Plan` — `b2b-seo-topic-map-builder`: strategy brief, live Top-5 SERP benchmark, primary service, link plan, evidence boundary.
+2. `Info` — `manufacturing-blog-writer`: article draft from the accepted Plan artifact.
+3. `Audit` — `seo-geo-content-auditor`: independent hard gates, findings, verdict, and bounded revision request.
+4. `B2B Image` — `b2b-machining-image-generator`: visual brief and independent article assets from the audited article.
+5. `Final Output` — `xmake-plastichubs-website-ops` plus the appropriate document workflow: final article package, metadata, image placement, alt text, WordPress and/or verified Word output.
 
-Use `skills/unified-seo-pipeline/SKILL.md` for any request that supplies a primary keyword, asks for a blog/article package, or asks to analyze a keyword and continue.
+Audit may return work to Info for targeted repair. Re-audit the revised artifact before B2B Image. The default automated repair loop is limited to two cycles; unresolved hard failures end in `BLOCKED` or `REVISION_REQUIRED`.
 
-- User-supplied primary keyword: run `Plan -> Info -> Audit -> B2B Asset -> Website Ops/Word` in one task without waiting for an additional prompt.
-- Agent-proposed keyword candidates: stop after Plan with `WAITING_FOR_KEYWORD_APPROVAL`; show the candidate, evidence, intent, and risks, then wait for explicit approval.
-- Keyword approval is the only normal user gate. Do not pause between Info, Audit, image generation, and WordPress/Word packaging unless a hard factual or permission blocker exists.
-- The image route is `B2B Asset > b2b-machining-image-generator`; generate article visuals after Audit identifies the final visual requirements.
-- A publishable Word or WordPress artifact requires the Audit gate. If document rendering is unavailable, label the result `Structural QA Only`.
-- Every run must record a route trace and terminal state in the output package. Valid terminal states are `COMPLETED`, `WAITING_FOR_KEYWORD_APPROVAL`, or `BLOCKED`.
+## Artifact And Context Isolation
 
-## Scheduler Boundary
+- The orchestrator owns the route state. Phase agents receive only the current task envelope, their declared inputs, and approved references.
+- Store phase artifacts under one run ID. Do not pass the whole conversation, another phase's scratch notes, or unfiltered private research into a downstream phase.
+- Treat handoff artifacts as immutable. Corrections create a versioned successor and preserve provenance.
+- Keep public content separate from `Internal — Not for Publication` evidence ledgers.
+- `data/raw/legacy-projects/` is preservation evidence, not an executable knowledge source. Do not load it unless migration diagnosis explicitly requires it.
+- Follow `policies/context-isolation.md`, `workflows/handoff-contract.md`, and the JSON schemas in `schemas/`.
 
-`config/article-schedule.yaml` defines the scheduler contract, but a local skill cannot create or activate a Codex/Windows automation by itself. A scheduler must invoke this project with a user-approved keyword or topic. Scheduled runs may not auto-approve agent-proposed keywords.
+## Evidence And Brand Gates
 
-## Skill Ownership
+- One public brand per artifact: XMAKE or PlasticHubs.
+- Never expose RapidDirect, supplier identities, competitor URLs, or private source notes in publishable content.
+- PlasticHubs remains plastic-manufacturing-focused. Exact figures, standards, certifications, guarantees, legal or regulated claims require applicable support.
+- Public links default to the selected brand's domain. External research stays private unless explicitly approved.
+- Never invent search volume, rankings, tolerances, material values, lead time, cost savings, capacity, or certification scope.
 
-- `xmake-plastichubs-seo-expert`: default router and data-loading coordinator for XMAKE/PlasticHubs SEO tasks.
-- `seo-content-strategy`: campaign-level keyword research, content planning, topic map use, competitor and content-calendar strategy.
-- `b2b-seo-topic-map-builder`: writer-ready Plan briefs, live Top-5 organic SERP benchmark, keyword/query maps, GEO answer plans, commercial-bridge mode, and topic architecture.
-- `manufacturing-blog-writer`: Info-stage editorial article and blog drafting from a complete Plan brief.
-- `manufacturing-content-writer`: package-provided manufacturing content writing reference; use only when it adds useful process/page writing rules not already covered by `manufacturing-blog-writer`.
-- `seo-geo-content-auditor`: final Audit-stage quality verdict, brand/factual gates, SEO/GEO scoring, and targeted revision actions.
-- `xmake-plastichubs-website-ops`: service, material, industry, solution, hub, FAQ, WordPress-ready, and approved-content packaging operations.
+## Completion Truth
 
-## Brand And Evidence Rules
+Valid terminal states are `COMPLETED`, `PHASE_COMPLETED`, `WAITING_FOR_KEYWORD_APPROVAL`, `REVISION_REQUIRED`, and `BLOCKED`.
 
-- Select one public brand per artifact: XMAKE or PlasticHubs.
-- Public copy, metadata, CTA text, headings, image text, schema, and publishable notes must not expose shared upstream supplier identities or legacy brand names.
-- PlasticHubs remains plastic-manufacturing-first. XMAKE may use the broader supported manufacturing scope.
-- Use project data, user input, official sources, standards, and primary technical evidence. Exact metrics, tolerances, certifications, lead times, guarantees, legal qualifications, and regulated claims require support.
-- Keep third-party research, competitor URLs, and external source notes in private sections marked `Internal — Not for Publication` unless the user explicitly approves public attribution.
-- Public links default to same-brand, same-domain internal links.
+`COMPLETED` requires all requested artifacts, a passing final Audit, truthful image-generation status, and the requested final-output QA. If `.docx` or paginated rendering cannot be visually inspected, use `Structural QA Only` and do not claim Word-ready status.
 
-## Keyword Resource Rules
+## Canonical And Compatibility Policy
 
-The PlasticHubs keyword source library is preserved at `data/plastichubs/keywords/`.
+- Canonical skills live in `skills/`.
+- Discovery mirrors live in `.agents/skills/` and `.codex/skills/`; update them only through `scripts/sync_mirrors.py`.
+- Legacy workspaces contain adapters to this root and retain their former instructions as `AGENTS.legacy.md`.
+- Run `python scripts/validate_project.py` before release or after changing routing, contracts, adapters, or mirrors.
 
-- Use `PlasticHubs_SEMrush_All_Keywords_Classified_2026-07-10.xlsx` for keyword selection, volume/KD support, content brief evidence, and keyword insertion candidates when relevant.
-- Do not treat the workbook as exhaustive or mandatory when better current-task evidence exists.
-- Do not use long-tail phrases as primary Semrush seed keywords by default; use them as page-intent or insertion evidence unless explicitly asked otherwise.
-- Do not generate seed lists by mechanically appending broad modifiers such as `parts`, `manufacturer`, `supplier`, or `service` without exported-data support.
-- Keep brand, claim-control, and source-boundary rules above keyword convenience.
-
-## Planning Rules
-
-For Plan work, use `skills/b2b-seo-topic-map-builder/SKILL.md`.
-
-Minimum inputs: `BRAND`, `TOPIC`, and `PRIMARY_KEYWORD`. Ask only when brand ambiguity creates service-scope risk. Live Top-5 SERP benchmarking is required before marking a brief ready for final article production. If live search cannot be performed, label the brief `Blocked` or `Provisional`.
-
-The final Plan artifact must include every handoff field required by `skills/b2b-seo-topic-map-builder/references/content-brief-contract.md`.
-
-## Writing Rules
-
-For Info work, use `skills/manufacturing-blog-writer/SKILL.md`.
-
-Write from a complete Plan brief. Do not rebuild the upstream strategy when a valid brief exists. Use the declared `COMMERCIAL_BRIDGE_MODE`, satisfy every `INTENT_COMPLETION_CRITERIA`, preserve user-specified delivery constraints, and produce bilingual review drafts Chinese first, English second unless the user asks for approved publish-ready English.
-
-## Audit Rules
-
-For Audit work, use `skills/seo-geo-content-auditor/SKILL.md`.
-
-Apply hard gates before scoring. Findings come first, ordered by severity. Audit against the Plan brief, source evidence, benchmark status, brand scope, and publishing contract. Do not silently rewrite acceptable sections.
-
-## Website Ops Rules
-
-For operational website pages, approved-content packaging, WordPress-ready output, and Word-ready output, use `skills/xmake-plastichubs-website-ops/SKILL.md`.
-
-For Word/PDF/paginated previews, create the artifact and inspect the rendered pages before claiming visual QA. If rendering is unavailable, report structural QA only.
-
-## Anti-AI Language Gate
-
-Do not use or recommend public wording such as `delve`, `embark`, `craft`, `unlock`, `discover`, `utilize`, `dive deep`, `unveil`, `harness`, `game-changer`, `skyrocket`, `revolutionize`, `cutting-edge`, `world-class`, `shed light`, `imagine`, `realm`, `tapestry`, `navigating`, `landscape`, `ever-evolving`, `pivotal`, `intricate`, `hence`, `furthermore`, `moreover`, `in summary`, `in conclusion`, or `in closing`.
-
-## Canonical And Mirror Policy
-
-Canonical active skills live in `skills/`. Discovery mirrors live in `.agents/skills/` and `.codex/skills/`. Update canonical files first, then synchronize mirrors when changing project instructions.

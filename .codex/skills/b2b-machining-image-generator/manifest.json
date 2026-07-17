@@ -1,0 +1,21 @@
+{
+  "name": "b2b-machining-image-generator",
+  "version": "0.1.1",
+  "owner": "Lostk",
+  "license": "Proprietary",
+  "updated_at": "2026-07-14",
+  "status": "active",
+  "maturity_tier": "production",
+  "lifecycle_stage": "production",
+  "context_budget_tier": "production",
+  "review_cadence": "monthly",
+  "skill_archetype": "production",
+  "target_platforms": ["openai", "generic"],
+  "factory_components": ["agents", "references", "evals", "reports", "registry", "security", "skill_atlas"],
+  "evidence_boundary": {
+    "chatgpt_project_history": "missing evidence: blocked by in-app browser policy on 2026-07-08",
+    "user_base_instruction": "available",
+    "external_benchmarks": "official OpenAI image-generation documentation",
+    "local_fit_reference": "xmake-plastichubs-website-ops"
+  }
+}

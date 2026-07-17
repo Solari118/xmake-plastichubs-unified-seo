@@ -1,0 +1,9 @@
+{
+  "nodes": [
+    {
+      "name": "b2b-machining-image-generator",
+      "path": "b2b-machining-image-generator"
+    }
+  ],
+  "shared_resources": []
+}

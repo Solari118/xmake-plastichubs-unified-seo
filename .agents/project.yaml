@@ -1,0 +1,4 @@
+canonical_root: C:\Users\Lostk\Documents\agent-project
+instructions: ../AGENTS.md
+default_skill: manufacturing-content-pipeline
+

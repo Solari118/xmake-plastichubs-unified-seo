@@ -1,0 +1,10 @@
+auto_load:
+  - policies/evidence-and-publication.md
+  - data/raw/plastichubs
+manual_only:
+  - data/raw/legacy-projects
+rules:
+  legacy_snapshots: preservation_only
+  public_claims: evidence_controlled
+  brand_isolation: required
+
