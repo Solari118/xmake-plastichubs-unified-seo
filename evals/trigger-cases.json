@@ -1,0 +1,21 @@
+{
+  "should_route_to_orchestrator": [
+    "Write a complete PlasticHubs article from this keyword",
+    "Audit this article and continue through images and final output",
+    "Revise this manufacturing blog until it is ready for publication"
+  ],
+  "should_enter_at_audit": [
+    "Here is an existing article; check, revise, illustrate, and package it"
+  ],
+  "should_stay_standalone_image": [
+    "Retouch this CNC factory photograph",
+    "Directly generate one injection molding illustration"
+  ],
+  "near_neighbors": {
+    "campaign_strategy": "seo-content-strategy",
+    "website_service_page": "xmake-plastichubs-website-ops",
+    "article_draft_phase": "manufacturing-blog-writer",
+    "final_audit_phase": "seo-geo-content-auditor"
+  }
+}
+

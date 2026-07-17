@@ -1,0 +1,22 @@
+{
+  "recommended_threshold": 0.30,
+  "should_trigger": [
+    {"text":"根据这个关键词完成 PlasticHubs 文章规划、写作、审核、配图和最终输出。","family":"full_cn"},
+    {"text":"Here is an existing manufacturing article. Audit it, repair upstream issues if needed, create article images, and deliver the final package.","family":"article_entry_en"},
+    {"text":"我从 Info 项目下达任务，但需要你按完整项目流程执行。","family":"legacy_info_cn"},
+    {"text":"Continue this approved Plan brief through writing, independent audit, visuals, and WordPress packaging.","family":"plan_artifact_en"},
+    {"text":"这篇文章的大纲可能有问题，审核时需要能退回 Plan 修正。","family":"rollback_cn"},
+    {"text":"Audit only this manufacturing article and stop after the verdict.","family":"audit_phase_only"}
+  ],
+  "should_not_trigger": [
+    {"text":"Translate this one sentence into English.","family":"translation"},
+    {"text":"Calculate the mass of this steel plate.","family":"calculation"},
+    {"text":"Create a company logo unrelated to manufacturing content.","family":"logo"},
+    {"text":"Summarize these meeting notes.","family":"notes"}
+  ],
+  "near_neighbor": [
+    {"text":"Directly retouch this CNC factory photograph.","family":"standalone_image"},
+    {"text":"Build a six-month SEO content calendar, not an individual article.","family":"campaign_strategy"},
+    {"text":"Package this already approved service page into WordPress blocks.","family":"website_ops"}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "owner":"Lostk",
+  "scope":"local unified manufacturing content project",
+  "file_write":{"decision":"approved","boundary":"canonical root and explicitly requested legacy adapters"},
+  "network":{"decision":"conditional","boundary":"read-only research and requested image generation"},
+  "subprocess":{"decision":"approved","boundary":"validation, mirror synchronization, inventory, and declared project tools"},
+  "secrets":{"decision":"deny_artifact_storage"}
+}
+

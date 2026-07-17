@@ -1,6 +1,6 @@
 interface:
   display_name: "B2B Machining Visual Strategist"
-  short_description: "Create accurate industrial manufacturing visuals"
-  default_prompt: "Use $b2b-machining-image-generator for this B2B manufacturing image task. Diagnose first unless I explicitly request direct image generation."
+  short_description: "Generate and retouch controlled industrial visuals"
+  default_prompt: "Use $b2b-machining-image-generator for this B2B manufacturing image task. Diagnose first unless I explicitly request direct image generation or direct factory-photo editing. Apply the one-call, eight-minute, one-retry runtime limits."
 policy:
   allow_implicit_invocation: true

@@ -1,0 +1,16 @@
+audit_repair:
+  maximum_cycles: 2
+  on_exhaustion: REVISION_REQUIRED
+image_generation:
+  maximum_attempts_per_asset: 2
+  retryable_errors:
+    - network error
+    - /images/edits failure
+    - /images/generations failure
+  on_exhaustion: BLOCKED
+tool_calls:
+  never_retry:
+    - denied permission
+    - missing user authority
+    - unsupported regulated claim
+

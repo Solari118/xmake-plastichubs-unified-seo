@@ -1,0 +1,2125 @@
+{
+  "generated_on": "2026-07-16",
+  "scope": "execution-relevant source files; generated outputs, user inputs, caches, git metadata, and dist packages excluded",
+  "records": [
+    {
+      "source_project": "plan",
+      "source_path": "AGENTS.md",
+      "sha256": "3eaab220247aa8365937692fc86f58cbbab3995c26d3eba655edf793d37e4699",
+      "preserved_path": "data/raw/legacy-projects/plan/AGENTS.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "project.yaml",
+      "sha256": "0fc14ed8a8ff1891113270162238c69a56d157c8bf81758662f7b2e69812a6d0",
+      "preserved_path": "data/raw/legacy-projects/plan/project.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "codex-project.yaml",
+      "sha256": "6c7e2e841f5ef9f0b298b1f89a656a9f3a0bc289a74a62e93b3748cfcd18661d",
+      "preserved_path": "data/raw/legacy-projects/plan/codex-project.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "README.md",
+      "sha256": "87433511f8561ccb3f6cdc01c69b267b3a8d7d9d67716f4c41b5e16b0a523cb5",
+      "preserved_path": "data/raw/legacy-projects/plan/README.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "agents/unified-seo-pipeline.md",
+      "sha256": "6c6ae0a4dc714623253f099aea11fc0420f9112d855b76e5c02adb2368bcc267",
+      "preserved_path": "data/raw/legacy-projects/plan/agents/unified-seo-pipeline.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "agents/xmake-plastichubs-seo-expert.md",
+      "sha256": "41ec8e0e4f102652bbd265b6975b705be649d4570dce9511e1e364577950f86d",
+      "preserved_path": "data/raw/legacy-projects/plan/agents/xmake-plastichubs-seo-expert.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "config/article-schedule.yaml",
+      "sha256": "7c51a8508f4cf4d2be9fa79f3b33b00821c5da3f4a68e5f964ffc633d0dd1763",
+      "preserved_path": "data/raw/legacy-projects/plan/config/article-schedule.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "config/live-seo-data-source.yaml",
+      "sha256": "94d1edd43619da07a8b107f20b4899e992476f2f3f23c6b6d4a17df2bff9df76",
+      "preserved_path": "data/raw/legacy-projects/plan/config/live-seo-data-source.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/blog_topic_map.md",
+      "sha256": "f0c4604287b05066082dd45772167f884e5bbd8aa1ad568ed58ed5d0ce0ccf6a",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/blog_topic_map.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/customer_intent_map.md",
+      "sha256": "9bba3676d5ac9a00e90e268a7cf4daa75020859fbcc7d6605ef315faa4b37284",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/customer_intent_map.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/industry_knowledge_map.md",
+      "sha256": "8b64d2dbf2077b2adc501895d73630ae1414154ffdc220c1e8af3830787d0ebf",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/industry_knowledge_map.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/pillar_supporting_pages.md",
+      "sha256": "23dd1a69411fa1372785ff0aabc491d7821afe966e886d0df37c3250af013808",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/pillar_supporting_pages.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/seo_topic_map.md",
+      "sha256": "3bc522f590e2c0dc5a7d95d9216609d3293aec054f98e3d38a71560bc79debe7",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/seo_topic_map.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/seo_topic_map_report.md",
+      "sha256": "b3973343c6f4af58a2bbc632680b07cf55517b3495fe5aa96e784fc460dbf524",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/seo_topic_map_report.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/topic_map.csv",
+      "sha256": "8ada7ab8d4c7fea2b892966be4b7c71d690a3bb01668cec8677f03bc84c6b9d8",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/topic_map.csv",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/web_validation_notes.csv",
+      "sha256": "cf9b038fc36a730b020b9762dcc37ff96cdee3aa296dee3726b40f3552754c20",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/web_validation_notes.csv",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/raw/About_Plastichubs_xmake.zip",
+      "sha256": "7ce38172157e746e801f1b9f10c135d05c5cc60341ff4024b97969763e153d93",
+      "preserved_path": "data/raw/legacy-projects/plan/data/raw/About_Plastichubs_xmake.zip",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/raw/plastichubs_seo_topic_map_package.zip",
+      "sha256": "7deecda25bdfc34479b7d93e2c8af79a42546801507d249145dc2676f8fece58",
+      "preserved_path": "data/raw/legacy-projects/plan/data/raw/plastichubs_seo_topic_map_package.zip",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/raw/README.md",
+      "sha256": "711d1d8e8d7df0cc2720b2144ee3436094ec85ed9bf1c511c671afc4782a39c5",
+      "preserved_path": "data/raw/legacy-projects/plan/data/raw/README.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/raw/XMAKE_公司信息.docx",
+      "sha256": "e293a807bb325196433e6e0ce087738548c1ee212674f899f5ac4ba7d2867f9e",
+      "preserved_path": "data/raw/legacy-projects/plan/data/raw/XMAKE_公司信息.docx",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/shared/competitors.md",
+      "sha256": "97cae3ac6f4e915e2e4eb2e467edcd913a04b463ac2d3f7fc7148cf0aeadcc0b",
+      "preserved_path": "data/raw/legacy-projects/plan/data/shared/competitors.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/shared/electronics_manufacturing.md",
+      "sha256": "e703963dacad18bf4aaa3d9c2db1020b93da38dd8625664f7d5853a61fa9bc55",
+      "preserved_path": "data/raw/legacy-projects/plan/data/shared/electronics_manufacturing.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/shared/mechanical_manufacturing.md",
+      "sha256": "2ebad0bd9049496b77e26612a10dc9624d081dfa308c3bbaa3ba139b08609713",
+      "preserved_path": "data/raw/legacy-projects/plan/data/shared/mechanical_manufacturing.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/shared/writing_anti_fluff.md",
+      "sha256": "7528e4456ff525b19ea5998dd456c458016c0b78cbee91f982280e2afc3038ab",
+      "preserved_path": "data/raw/legacy-projects/plan/data/shared/writing_anti_fluff.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/xmake/company_info.md",
+      "sha256": "291782f417e77bef12a418b005b8fb69d0504fd5ddd3efb5e10eb3245b60e794",
+      "preserved_path": "data/raw/legacy-projects/plan/data/xmake/company_info.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/keywords/keyword_resource_index.md",
+      "sha256": "62838b2891d868080a3d4f90b58e3159995560041a72147bdcde0d286145a5d6",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/keywords/keyword_resource_index.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "data/plastichubs/keywords/PlasticHubs_SEMrush_All_Keywords_Classified_2026-07-10.xlsx",
+      "sha256": "cfbafb64e1d9d50f80ac38b89f35a3a8944034ba926e9e175e33f3cfa08c15eb",
+      "preserved_path": "data/raw/legacy-projects/plan/data/plastichubs/keywords/PlasticHubs_SEMrush_All_Keywords_Classified_2026-07-10.xlsx",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "docs/sidebar-merge-runbook.md",
+      "sha256": "7003397f03d4b801443d475707d4dc56407a6dd1fd8c8f5acabb317f24a191c1",
+      "preserved_path": "data/raw/legacy-projects/plan/docs/sidebar-merge-runbook.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "docs/unified-project-audit.md",
+      "sha256": "ddb17091298d0851fe38aa246280d64c2f02ffff1dee08439d9a101f3b6199ab",
+      "preserved_path": "data/raw/legacy-projects/plan/docs/unified-project-audit.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "hooks/on_load.ps1",
+      "sha256": "c78370b6029f5751d14175b79366a954a0c299fbb69169a207b81eab6dcaa2c1",
+      "preserved_path": "data/raw/legacy-projects/plan/hooks/on_load.ps1",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "hooks/on_load.sh",
+      "sha256": "8909b401beae1961e1d7d0ae31623b51b73827dc54f3e37b04e15370cb41fa8b",
+      "preserved_path": "data/raw/legacy-projects/plan/hooks/on_load.sh",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/SKILL.md",
+      "sha256": "b58a4a2910b65b84da075a265157d16b31415e3a6b3bfc7bd0fef5f28f54c8c4",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/SKILL.md",
+      "sha256": "cc93bb919f34561bc85afa00481e2a4cf1b07eb1b7a3cb49dad4bcc25236785a",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/SKILL.md",
+      "sha256": "2164a771849a325b37b846ef4609c84f31fa41f522efe2eddde1eddcc3e4eb95",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-content-writer/SKILL.md",
+      "sha256": "b10607c88dd6c6a96cfd77905d30ea42d4fa13ae96be49afbf791164cf3f6497",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-content-writer/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-content-strategy/SKILL.md",
+      "sha256": "5688852d69476e5ac80b8da913fed2a6c5b7bee0d38f5c57b1d26e174faab99a",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-content-strategy/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/SKILL.md",
+      "sha256": "05f488bd70e42a52f36c0b30bf8875b73428b60d8de03013dc0b756b7f4bf6b2",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/unified-seo-pipeline/SKILL.md",
+      "sha256": "5e20b88b12ee236c2b48ccaef4d1d8f21b6afd1a5f10ffe3fc47b98192ee9fbc",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/unified-seo-pipeline/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-seo-expert/SKILL.md",
+      "sha256": "2ffb94017fd72b09723685946d2fa43be3b88ad4789d7f1cb75f58d5c12e3a02",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-seo-expert/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/manifest.json",
+      "sha256": "2c99c6892c1ca4fcdd68f77d0c3ce2f9bea6316317fe8f642033342a30863810",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/manifest.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/README.md",
+      "sha256": "41b94967cfd224b48c70ef21ec2161afc971ab903a234238c3a26ecb45ff8c70",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/README.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/SKILL.md",
+      "sha256": "83a39e947e859bacf41abe21624f0ab3b78b6c458e7cf68b62c8fad315c33509",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/agents/interface.yaml",
+      "sha256": "95fc5125367ccc3d1b95ac88e631fbdd56a3720ba9816bbda73f1a20e4cf66fd",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/agents/openai.yaml",
+      "sha256": "f11a0f0cb4439c980b996cb375c09dbc7ddfca8765f4a0c1405d51019ff269c8",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/evals/packaging_expectations.json",
+      "sha256": "058fce11ee67778d0e3424928deaf1e4beecc479bf97d02601bad7d39eb7ce4d",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/evals/packaging_expectations.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/evals/quality-checklist.md",
+      "sha256": "350d5ec672a3f8919390f2dfafeb61c044ffff728803bfc4df28c7201ab5ad3d",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/evals/quality-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/evals/semantic_config.json",
+      "sha256": "34ec0db174912f2bdc3359c4eda0612127c5dcbbd0d70986a53e1846bfb9db09",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/evals/semantic_config.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/evals/trigger_cases.json",
+      "sha256": "c9b7ecb6eac1f005b0fd0d15c3557a0f1a8566a351aa4dc5030f1ee89379a47e",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/evals/trigger_cases.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/references/industrial-visual-protocol.md",
+      "sha256": "ef4c2a102ddee6b6caa08dce570bef8987ad6c229558156a6556c585b27354b1",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/references/industrial-visual-protocol.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/references/source-notes.md",
+      "sha256": "bdd427e71d8dcd4d08c9f12fcbb2f1a0eafbbd374fd1bb86cd7b6264183796ef",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/references/source-notes.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/registry/index.json",
+      "sha256": "691fc71cfa890904b01619e10d955db19d2ef7b97a58f2c3e391e8314a1cbeae",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/registry/index.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/security/permission_policy.json",
+      "sha256": "1c16bb77b3db2d3e1dd90e24040518c105138dcb08a9ff878853faaaad37626b",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/security/permission_policy.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-machining-image-generator/registry/packages/b2b-machining-image-generator.json",
+      "sha256": "6f0453970e0f60844d03dd989c0a6b49ac014047027d316983492ab6700d9528",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-machining-image-generator/registry/packages/b2b-machining-image-generator.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/agents/interface.yaml",
+      "sha256": "587d478764aa82dc1692e68734b80bdb3d864827a709b1b821b3764d9c76cb73",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/agents/openai.yaml",
+      "sha256": "326b1cfcb8b4bd8c609aa365fc885e44c46a5b214faf43404ad97123197951f5",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/assets/report_template.html",
+      "sha256": "8478301164b6a3b77c3234a514a910cf32c4a71a091eb6857ca77f1f85cc3ae4",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/assets/report_template.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/assets/report_template.md",
+      "sha256": "7427ba6f23f13bd3da10fc1a25060b6524a46a392b90de9c88aefe90802f8eac",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/assets/report_template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/assets/topic_map_columns.csv",
+      "sha256": "4f1046ebb283c1e79bb3b6ce879a95999199a35ec89006e0c7d2fd1a56b83f06",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/assets/topic_map_columns.csv",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/evals/brief-quality-checklist.md",
+      "sha256": "8c791abb0913659a5053c73c9a95a284ed5cbdb96f637da05760507f51e603df",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/evals/brief-quality-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/evals/output-cases.md",
+      "sha256": "a8164ff0d9ada8bf8af8ab8379365a22908ebc2f1f7ad22d86a247801fdda9f1",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/evals/output-cases.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/company-assets.md",
+      "sha256": "b58ff54a379d49933b378fe825e6f58e05071d1299c90e96ce774f37afe61400",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/company-assets.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/content-brief-contract.md",
+      "sha256": "8f311fe714e17f86b69d6f4de99fd6852a1eec2a2a46d1c9ffaccced7ed89228",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/content-brief-contract.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/example-pcb-ems.md",
+      "sha256": "fa10eb66fa2201afc6637025034e2dda68a2b72d0f86853e239bfe2c1fed38d9",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/example-pcb-ems.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/input-format.md",
+      "sha256": "c39c122ebf0acbda1f7fe495a8d9eef0ccf403d9a0024f7e39890b278dd09d27",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/input-format.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/prompt-01-industry-knowledge-map.md",
+      "sha256": "3e474fb313d9d0649b5e302195dceba8ce7f7833b864a650fd8238cec75c53ca",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/prompt-01-industry-knowledge-map.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/prompt-02-customer-intent-map.md",
+      "sha256": "46785d7f599872c69d49c011fa390761280b671d51bd0ad3bdb6a8aa9c2af325",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/prompt-02-customer-intent-map.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/prompt-03-topic-map-builder.md",
+      "sha256": "6cde42675c8b9ceed491ab776f038bc6925d9c85f2e481ab95b7046d6f3199c7",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/prompt-03-topic-map-builder.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/prompt-04-pillar-supporting-pages.md",
+      "sha256": "db9a521c6ee2995036c1d203d2ded55d66bb094c7eeef0692a858d7d4e79c80e",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/prompt-04-pillar-supporting-pages.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/prompt-05-final-report-generator.md",
+      "sha256": "90c2ee6e047d3c56003c6e1c6a60e08323b7964056cf3d83fcd2e918db515a28",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/prompt-05-final-report-generator.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/seo-geo-planning-rules.md",
+      "sha256": "89b3d381acf160a2e932a2a9575df662f6f1193a4f76f5dc13a6700df32f4f1c",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/seo-geo-planning-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/b2b-seo-topic-map-builder/references/serp-top-five-workflow.md",
+      "sha256": "50e56d5855e57ad515f3e763dfa35d8eeb557e137ffd0e7d813df9ba692dd709",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/b2b-seo-topic-map-builder/references/serp-top-five-workflow.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/agents/interface.yaml",
+      "sha256": "648248c666590da2d26316956118783ac8de98cc060d3fe05ca8230eb9cb2bc8",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/agents/openai.yaml",
+      "sha256": "8e9306628cd364251917d0bef8399f0c05d033845f1ed0a6a48b6d0ea24f64b2",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/evals/output-cases.md",
+      "sha256": "a683e1a072df711f752fb5b6eb7611cc77384a4a98e62bf001ea4c797149db16",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/evals/output-cases.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/evals/writer-quality-checklist.md",
+      "sha256": "f209ce56dc5cfec7be426a79da13e652af9c7c38625ac3beb0a93359aa6003d6",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/evals/writer-quality-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/references/brand-and-evidence-policy.md",
+      "sha256": "ddb976316422a99f8dbaafccc8fe22c5a6c1c7708c17a5bda3d54800c8500d05",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/references/brand-and-evidence-policy.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/references/content-brief-contract.md",
+      "sha256": "8f311fe714e17f86b69d6f4de99fd6852a1eec2a2a46d1c9ffaccced7ed89228",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/references/content-brief-contract.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/references/seo-geo-writing-rules.md",
+      "sha256": "9e9c7835b1ca3123e6e0ff2a474c8e0a3202bfedd96087bbf1a0be8508fe8c92",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/references/seo-geo-writing-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/references/serp-synthesis-rules.md",
+      "sha256": "a7bfdb49628bcdc79676fecb0aa5598c08faff64ba9dc60f9719f89668bb14aa",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/references/serp-synthesis-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/manufacturing-blog-writer/templates/article-output-template.md",
+      "sha256": "debb9cd20bb28a1be78d7cdf525df819cd0e2903fb7971f2959e3d208fdc35dc",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/manufacturing-blog-writer/templates/article-output-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/agents/interface.yaml",
+      "sha256": "e2255fd566bf2315cbd65e2cb8f92dc475e7e4777f01891100f983f393fa25f1",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/agents/openai.yaml",
+      "sha256": "2ebee1e3b6fe3ac506c633f5f616e2a982f6d29a91e2850d4d45d6c80c760b75",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/evals/audit-cases.md",
+      "sha256": "d7ba5eeacb506451c7077a67bd6efcfb7f6d5bf533d9ebb89c43276bf0ea47d9",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/evals/audit-cases.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/references/audit-rubric.md",
+      "sha256": "bd6ffaffd52d61b4ef04f34b12e4ae07579ee8720e6c5645dbe6677c26cd9ecd",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/references/audit-rubric.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/references/content-brief-contract.md",
+      "sha256": "8f311fe714e17f86b69d6f4de99fd6852a1eec2a2a46d1c9ffaccced7ed89228",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/references/content-brief-contract.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/references/serp-benchmark-review-rules.md",
+      "sha256": "bd84080617b4af775a72197bdf84ad56debb35741b38016108a6b89c4d03a655",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/references/serp-benchmark-review-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/seo-geo-content-auditor/templates/audit-report-template.md",
+      "sha256": "b2c503edda997044bf074ef6431847f393e671ada14a0b145f09c9be7bc29f23",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/seo-geo-content-auditor/templates/audit-report-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/unified-seo-pipeline/agents/openai.yaml",
+      "sha256": "b8b6d49b4dedde4f0f71afb55d561409661768c85f750872ffbe333f7bf86413",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/unified-seo-pipeline/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/agents/interface.yaml",
+      "sha256": "d455f629cb80e5a18e034646feb89c69796a30b5292bd976c02d4521ea2f4c20",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/agents/openai.yaml",
+      "sha256": "d0a9b3cb3f2537fa705c38b3175506881b54ce8d12454d190d7797da873bf34e",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/evals/ai-style-detection-checklist.md",
+      "sha256": "760a416436c485b1a60ff275615b8514938a5a7cfaeddbc3314cea0409abd1f4",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/evals/ai-style-detection-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/evals/brand-consistency-checklist.md",
+      "sha256": "8c19cd716730bfec8f4f76600ec4a5ff82a66a692cd989591a57a3bb04b2bda1",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/evals/brand-consistency-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/evals/claim-risk-checklist.md",
+      "sha256": "7351b7038ed0a4d662a6fdc72e1c4acf8718c93a2aa336bdcd55c644f3bbccd9",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/evals/claim-risk-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/evals/page-quality-checklist.md",
+      "sha256": "8f392d5cb26b7c7e6257013ac6753914ae5b3d3b2df69a21fdaf0eccfd4d907e",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/evals/page-quality-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/evals/seo-checklist.md",
+      "sha256": "abfd649786092e17e7ae786e3a494fc75859e13064d4b7efe60cc7f941c8d676",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/evals/seo-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/evals/technical-accuracy-checklist.md",
+      "sha256": "afa6d38bc1b3e7dda2c30e470d47f6c8880d58581327a86594119873926e4779",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/evals/technical-accuracy-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/brand-rules.md",
+      "sha256": "a3b278a122562501a110769cd34a19520c28ae8e7ec3c0bc4623131eb919945a",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/brand-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/competitor-benchmark-notes.md",
+      "sha256": "62c490f74444002cba434a542da959453ebb28c7b621d2914c2db5e8f67f30fd",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/competitor-benchmark-notes.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/delivery-and-variation-framework.md",
+      "sha256": "66a291d3ba0d9f15f444f49a67dd3c269cc502f049e18e7421985869860373e1",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/delivery-and-variation-framework.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/manufacturing-claims-control.md",
+      "sha256": "d839795f8fcecee9cb9deaacb618a064d0a8a7e9689a495b5ba03c85d2328552",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/manufacturing-claims-control.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/plastic-cnc-machining-knowledge-base.md",
+      "sha256": "885a5a5173ea44c5d57f01e2e459fbd23a4029016e1d7bb576603f379f1b70ad",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/plastic-cnc-machining-knowledge-base.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/plastichubs-positioning.md",
+      "sha256": "57bd102a18d2e0b80d56a098fb3ba730770e62da9e7c096777b951bf981fc874",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/plastichubs-positioning.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/seo-keyword-rules.md",
+      "sha256": "aaeece2c9644bb80b6bb6978b14518ebf97fbdafdb7a447539902511df29eea2",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/seo-keyword-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/source-ingestion-rules.md",
+      "sha256": "c6826fea07edf7645efcdaa3543691263cc0cc368e7ad4a8cf8f85ac8e1c5853",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/source-ingestion-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/surface-finishing-knowledge-base.md",
+      "sha256": "e2335d788b71863b6244c8075f3070e4d7fc8a06bcd0ba475164f03d5f37411c",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/surface-finishing-knowledge-base.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/references/xmake-positioning.md",
+      "sha256": "ef58a6ec42020426568c6038d31f7b59a47dc289d7e4ee82226c412b723c16c8",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/references/xmake-positioning.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/reports/output-review-log.md",
+      "sha256": "223b965f79cd53d6fd14bc2269d7f5ea0f5011f726d4fcc43f3c0e6d3f76a05d",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/reports/output-review-log.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/scripts/optional-formatting-tools.md",
+      "sha256": "3725ab5c0e7b58bb110a6d1859e0f4907d70d9bab2d5f5b8ff3feefee6183022",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/scripts/optional-formatting-tools.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/scripts/validate_surface_page.py",
+      "sha256": "6e4425247dce6f509310df253369b65a05fd0d29b93ae17e237a44625aadc976",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/scripts/validate_surface_page.py",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/blog-article-template.md",
+      "sha256": "84e25eafd9eb4d4723ff5972cded6940d6044e1e8b3b0e1a8ab5fdaccb3fae99",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/blog-article-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/faq-template.md",
+      "sha256": "d96f5ab6bf27cd1ddc19c4edfcf9ebdec4b05c5168e10e8d7c32b266ed0ea355",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/faq-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/hub-page-template.md",
+      "sha256": "06b8f3a6f94a87e18d427b75d8dde0e1c4af68bd494d668120e37819d0c6464d",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/hub-page-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/industry-page-template.md",
+      "sha256": "dbaa55dcca71b2467894998d62c4b37fcbd8b204a817e1132be8777aa8070636",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/industry-page-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/material-page-template.md",
+      "sha256": "8c9eb6ac78e8e982e22bdbf9f8954efecc8546fbb8ee92648fefcc0f070c65d9",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/material-page-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/page-audit-template.md",
+      "sha256": "f5d20fa6a43951edb662b4d344ba361ccb19fa662ee55ab4c250d65945b38ec3",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/page-audit-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/project-source-pack-template.md",
+      "sha256": "6f29439a0e3cd25ac1481e440bc32e6a4aa8847ec7ea84ef7c9f57e269acdb9b",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/project-source-pack-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/service-page-template.md",
+      "sha256": "5ff4e7aaf0ef1af186285aee144b9bdc34c8ba54584f5a58ba1bdf647b443972",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/service-page-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/solution-page-template.md",
+      "sha256": "f2bc6d924740be1e5e9128dbe0c9e14dd6f1326f0f3eb4c96ccc2297b8991557",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/solution-page-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/surface-finishing-input-sheet-template.md",
+      "sha256": "a236dc4228aa057c75dbe6f645b40d3d6babf9ae6b25b46b1ca9efba7664c272",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/surface-finishing-input-sheet-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/surface-finishing-service-page-template.md",
+      "sha256": "68d91009ecb8b04a2f691a292463a8e5314c03f79cdc62dee4778cb48171d5d0",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/surface-finishing-service-page-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "skills/xmake-plastichubs-website-ops/templates/wordpress-ready-block-template.md",
+      "sha256": "e47033d6b651d7c1bc124b3a1f659a580c09d53050e0f54d44d1e124cf655f79",
+      "preserved_path": "data/raw/legacy-projects/plan/skills/xmake-plastichubs-website-ops/templates/wordpress-ready-block-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "tools/sync_unified_project.ps1",
+      "sha256": "4a34196ff97009fb05a5c12d471912feffb9568a992c9b2193570fd26cb6cbc4",
+      "preserved_path": "data/raw/legacy-projects/plan/tools/sync_unified_project.ps1",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "tools/validate_unified_project.py",
+      "sha256": "7253cc78c4c03b9e1e2a5fdb6041fd3e9541fb1c15b507c1dd35e2fc6aa83415",
+      "preserved_path": "data/raw/legacy-projects/plan/tools/validate_unified_project.py",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/LICENSE",
+      "sha256": "c0af99d1cef5c55657826e66ce7e6aa1c24e241a869d36ca954e53bcc5e839f3",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/LICENSE",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/manifest.json",
+      "sha256": "cd70f65340389bd013aa64271e43e8da49f146536b0ca3636665b88a3d96a9d5",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/manifest.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/README.md",
+      "sha256": "77c62e586deecb812c2b31206b5800906b9b516abb957f638ac4d0811caccd60",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/README.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/SKILL.md",
+      "sha256": "b58a4a2910b65b84da075a265157d16b31415e3a6b3bfc7bd0fef5f28f54c8c4",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/agents/interface.yaml",
+      "sha256": "95fc5125367ccc3d1b95ac88e631fbdd56a3720ba9816bbda73f1a20e4cf66fd",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/agents/openai.yaml",
+      "sha256": "f11a0f0cb4439c980b996cb375c09dbc7ddfca8765f4a0c1405d51019ff269c8",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/evals/packaging_expectations.json",
+      "sha256": "058fce11ee67778d0e3424928deaf1e4beecc479bf97d02601bad7d39eb7ce4d",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/evals/packaging_expectations.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/evals/quality-checklist.md",
+      "sha256": "350d5ec672a3f8919390f2dfafeb61c044ffff728803bfc4df28c7201ab5ad3d",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/evals/quality-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/evals/semantic_config.json",
+      "sha256": "34ec0db174912f2bdc3359c4eda0612127c5dcbbd0d70986a53e1846bfb9db09",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/evals/semantic_config.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/evals/trigger_cases.json",
+      "sha256": "c9b7ecb6eac1f005b0fd0d15c3557a0f1a8566a351aa4dc5030f1ee89379a47e",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/evals/trigger_cases.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/references/industrial-visual-protocol.md",
+      "sha256": "ef4c2a102ddee6b6caa08dce570bef8987ad6c229558156a6556c585b27354b1",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/references/industrial-visual-protocol.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/references/source-notes.md",
+      "sha256": "bdd427e71d8dcd4d08c9f12fcbb2f1a0eafbbd374fd1bb86cd7b6264183796ef",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/references/source-notes.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/registry/index.json",
+      "sha256": "691fc71cfa890904b01619e10d955db19d2ef7b97a58f2c3e391e8314a1cbeae",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/registry/index.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/adoption_drift_report.json",
+      "sha256": "844b8e8eeb90d538dfbbfc90c800aeb9d14b91f6e515d42e05df951f47787051",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/adoption_drift_report.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/adoption_drift_report.md",
+      "sha256": "07923db5a9c67f5de5704bae3d1c0b441ca4d74344a84089b86af1ce5ff54789",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/adoption_drift_report.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/artifact-design-profile.json",
+      "sha256": "d6f80855fa6a4cf797a076d4c5cb24514e53ec8f5b4fa0f589e062e4677acf91",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/artifact-design-profile.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/artifact-design-profile.md",
+      "sha256": "95d22370a4746f30644ae6817605d9d1d40b739c931faeeb240eac4615989cbf",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/artifact-design-profile.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/compiled_targets.json",
+      "sha256": "b7d5babf1c5c73037dd2f591bba1ccb5e5d632cd7e2e011577df74e1467d4bb7",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/compiled_targets.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/compiled_targets.md",
+      "sha256": "6c5408e36ac6cb504f60c619885e4d6def9d92347dd5c869003dbd520d3f7103",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/compiled_targets.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/conformance_matrix.json",
+      "sha256": "4b55a58050233cb38ccb29c2005615165de9b0471d7ecccad2a51f10993bdabf",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/conformance_matrix.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/conformance_matrix.md",
+      "sha256": "e4b135aa3444c7e99e1d1c99b1d80ae5c6c7aaaf94aaa7b976d06eb594badc7a",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/conformance_matrix.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/install_simulation.json",
+      "sha256": "aceb8ce1af946c95e5dafa23d83b5b832522e0889da66129c8a6b4a3b64bbbfb",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/install_simulation.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/install_simulation.md",
+      "sha256": "95e16690c7be7f4aef72e757025a46b6bc8adf52787cdc30d1430457cd05a55e",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/install_simulation.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/intent-confidence.json",
+      "sha256": "0ed784d32fe56a432e3d7d76c4b2626b8976a899efcaac9b4779c0877319f59c",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/intent-confidence.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/intent-confidence.md",
+      "sha256": "5d4a416043186ce1a6b8aee73d32375e153cb8f2654f7843520d916c87568972",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/intent-confidence.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/intent-context.json",
+      "sha256": "f37dd7abcee961913229af76693918896ce0ece00bc15064bf87f9b3d3b9a805",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/intent-context.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/intent-dialogue.json",
+      "sha256": "4ee78f772930bd8447b0ccd0fc338ea5778a1bf776848055b2a99c00378021f5",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/intent-dialogue.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/intent-dialogue.md",
+      "sha256": "57834cc6a673e2eaf02475b8c1cd00326ca55546afa10c7e8e8f1df86f046be5",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/intent-dialogue.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/iteration-directions.json",
+      "sha256": "b630e34ccd167db3a2841fda70a5a1bc7748810fa0669c328f5e2f0f378e4d0d",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/iteration-directions.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/iteration-directions.md",
+      "sha256": "a57792d359c1625e89fd30505692cee67eb4cf210f7da275d7be69c8d7d59d96",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/iteration-directions.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/output-risk-profile.json",
+      "sha256": "d73d1767997fd8b756bd40e294138e2c9c1d10c1b920240cb84eba4ebee9f365",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/output-risk-profile.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/output-risk-profile.md",
+      "sha256": "1d5a22ce84daf40214c1348851cdfe349d9be9562ca7ad7a39b16f6f03c9e12d",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/output-risk-profile.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/output_blind_answer_key.json",
+      "sha256": "039cbd197b2d9e28a8539085a72befbe8c6579c3384fadcc51d07b55a6ed2cc6",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/output_blind_answer_key.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/output_blind_review_pack.json",
+      "sha256": "28c082498aa3d9b7f9d40ffa2cbdff30596f39377979d184b3bf86ba2806cd11",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/output_blind_review_pack.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/output_blind_review_pack.md",
+      "sha256": "01053faff8c94bb2a011ac76516befa15662bb833eef20bd8defdcfeaac728a0",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/output_blind_review_pack.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/output_quality_scorecard.json",
+      "sha256": "22e161f2fb02df46f7bb3e7f14edf48a7696314102b161b4407574cb4ee921ac",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/output_quality_scorecard.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/output_quality_scorecard.md",
+      "sha256": "e0967c528621b0bb4f169c4b9ac22f05f5d74cc0567c620ab1b0884bc98383fc",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/output_quality_scorecard.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/package_verification.json",
+      "sha256": "1d7aab1766ff958cc01e2ede095254fb27f191b09ef56b7cfc14bdad7cb3038b",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/package_verification.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/package_verification.md",
+      "sha256": "260e23a032836b3dd4fbc8c7beda3b4a84e7889e68e9556789c38227a98a7191",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/package_verification.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/prompt-quality-profile.json",
+      "sha256": "91a603a9c60fd14033aaea991ed2ba542ac49487fb8af4bab853d2ddcbaeb28f",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/prompt-quality-profile.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/prompt-quality-profile.md",
+      "sha256": "b845d4b349e8f56ed7a5046ff8cdf0923b889f5be945b902c36238bb93722bb1",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/prompt-quality-profile.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/reference-scan.json",
+      "sha256": "a36133ca11e3c5054a932c9e4f8e5ceb1ec944ec7acdd0008f4a7e15070573bb",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/reference-scan.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/reference-scan.md",
+      "sha256": "dec8e3be11c72c6a03c102b95b3ce39442deae0f472cf3e2ab430661a09db4dd",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/reference-scan.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/reference-synthesis.json",
+      "sha256": "92fea9b3cedea565814a0f1f1105fd6ccc423f988e917317145b4f4540bb520f",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/reference-synthesis.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/reference-synthesis.md",
+      "sha256": "c88b11fc168d0f1cdf72873e0381eb8dace99d66003f2460cb0dbced89eab300",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/reference-synthesis.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/registry_audit.json",
+      "sha256": "54248482b43a2dd70b29952527e92982e56248da0b979f8a2304d158a7715991",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/registry_audit.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/registry_audit.md",
+      "sha256": "5d56b46941240e5632629ad432ea3e91add0a4a935af56fadf528fa07c0e4ae7",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/registry_audit.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review-studio.html",
+      "sha256": "0f49f7819f551f03018f44aa2afbc17edd68027ab79c0751c96d722493927310",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review-studio.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review-studio.json",
+      "sha256": "6d890120122cc2063698b7f4a99bb7c2202ac80fae66e578535ff4b934e41f3b",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review-studio.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review-viewer.html",
+      "sha256": "0be8c6e2f61bd857c9dc59cdc950db70f2ab3b4299ace6776d37556e4cb431f0",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review-viewer.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review-viewer.json",
+      "sha256": "28fbb1647ea8fa88543d1a82a7529418805e6d6de7c6a8c13de5026c17a739e9",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review-viewer.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review_annotations.json",
+      "sha256": "8208f90f3eb32088a79cc6dccc94e0af3687a10a6df8ae4e0c34571ce8a9701e",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review_annotations.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review_annotations.md",
+      "sha256": "2a0f5df0a8b2093aa6785265ac649c67cc3a79726e43fa8398081a5657d1d3ab",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review_annotations.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review_waivers.json",
+      "sha256": "73ff19d9e74d68988e2ca1945fb8d2c38f4fb1751848cbd4fa2fea75eba63b2b",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review_waivers.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/review_waivers.md",
+      "sha256": "69c80dec58d468cace2e5e92b34836da5a2b60907cb696cf7b39f9f21ca86fc4",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/review_waivers.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/security_trust_report.json",
+      "sha256": "26dc1433ec5023c9368221f226313eee7421ed1c7462ce0b03c1a088f9249981",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/security_trust_report.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/security_trust_report.md",
+      "sha256": "fc0d51b667b5ecd4498ccbd6eb11d0271099b50880badeef957ce4c99091768c",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/security_trust_report.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/skill-interpretation.html",
+      "sha256": "247191e963882a26cbdb7a8916da647ccd066310eacfcab07d2a5a9b3721a52d",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/skill-interpretation.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/skill-interpretation.json",
+      "sha256": "7bfa7b8ee70c16732149be9775a49c6d2f2bfbcc3d7dc36241142273d3460812",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/skill-interpretation.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/skill-ir.json",
+      "sha256": "5f7b1aab2bb2ea12b8c61f6f3a4692b26b450095c3b7dbaab68b34d80038cb47",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/skill-ir.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/skill-overview.html",
+      "sha256": "4df807719a451e5e90930bd166161788debe765538c4cde400e6b8482af8514d",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/skill-overview.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/skill-overview.json",
+      "sha256": "3fb56031a2fb9536e52240891e7f4546a9cdd3851cdba3dccb2a630e5c9ee30a",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/skill-overview.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/skill_atlas.html",
+      "sha256": "c320b15998f70b44848c0ccfb5bac62c19777097359edff7023688a020630458",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/skill_atlas.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/skill_atlas.json",
+      "sha256": "5559922ae7c057ab48d95c5e2252415412e71617252d45ba1f18b4c02eb135b9",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/skill_atlas.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/system-model.json",
+      "sha256": "2d55cc785ef26c6e144ba48f9b01b3ec97223e413fd45038ce652b14718527b2",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/system-model.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/system-model.md",
+      "sha256": "684a439edd24678d54530004392341cb62a27535c234d35ecab8538c7d55981e",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/system-model.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/reports/trigger_eval_summary.md",
+      "sha256": "3817843c0c646d9cb07a42d6ebcf5a605b91935945e90f1a06da8b8751c83772",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/reports/trigger_eval_summary.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/security/permission_policy.json",
+      "sha256": "1c16bb77b3db2d3e1dd90e24040518c105138dcb08a9ff878853faaaad37626b",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/security/permission_policy.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/skill_atlas/catalog.json",
+      "sha256": "3911d2f6617e8d733fa243348f453f8ab743b702faa58914b2a99089ea02f2e2",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/skill_atlas/catalog.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/skill_atlas/dependency_graph.json",
+      "sha256": "304538a36ef1e75d0fe028953592681fcd4c540393e2275b3232193f6f7b8b99",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/skill_atlas/dependency_graph.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/skill_atlas/drift_signals.json",
+      "sha256": "7ce0e4f75a2f827f67b69bf7b227c4106fa143e6300c2a911f9164777f01819b",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/skill_atlas/drift_signals.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/skill_atlas/no_route_opportunities.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/skill_atlas/no_route_opportunities.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/skill_atlas/owner_review_gaps.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/skill_atlas/owner_review_gaps.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/skill_atlas/route_overlap_matrix.csv",
+      "sha256": "20b912e84ee2038afc2ef10c4c6912433ce955f862203713138363c100057337",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/skill_atlas/route_overlap_matrix.csv",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/skill_atlas/stale_skills.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/skill_atlas/stale_skills.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "plan",
+      "source_path": "integrated-assets/b2b-machining-image-generator/registry/packages/b2b-machining-image-generator.json",
+      "sha256": "6f0453970e0f60844d03dd989c0a6b49ac014047027d316983492ab6700d9528",
+      "preserved_path": "data/raw/legacy-projects/plan/integrated-assets/b2b-machining-image-generator/registry/packages/b2b-machining-image-generator.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": "AGENTS.md",
+      "sha256": "9b5542052541c996ed7195a1c0b5e13db051712c24766510357ec02eea85783a",
+      "preserved_path": "data/raw/legacy-projects/info/AGENTS.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/SKILL.md",
+      "sha256": "def95de0727723c678a9dd114311167bdd0f8f7f02faa62e729fc2d435feb0c5",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/agents/interface.yaml",
+      "sha256": "a897621f53867de2d423aa9eb6c21471b801b1836b67e75592c4d6ccf20c0d68",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/agents/openai.yaml",
+      "sha256": "1a14f0ccf19b3a6f8618ce4e36de50561956ba9f7a224f246b76a3909806fbc1",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/evals/output-cases.md",
+      "sha256": "8b72137662ecafe32a351a1e8264528ebe073fcc381abf9a270320d8eef4c45d",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/evals/output-cases.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/evals/writer-quality-checklist.md",
+      "sha256": "53c0b512a1df1078748ac4b3954abe0ed22ebb3f4e1d85191c573d054b426fe2",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/evals/writer-quality-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/references/brand-and-evidence-policy.md",
+      "sha256": "59d6f1cdc6fb1b1e3899bc0fd561ec761c5b25c06a2f792609765c3de5fdd014",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/references/brand-and-evidence-policy.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/references/content-brief-contract.md",
+      "sha256": "817d7f571591346d5385ce86240ddd344b2fbcaa8f3fe1b4540301654c6a974b",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/references/content-brief-contract.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/references/seo-geo-writing-rules.md",
+      "sha256": "cef0fc5485a120b0c1a79451a065a2f75fab8a20eb2d0e57e49f96b85a90e0e1",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/references/seo-geo-writing-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/references/serp-synthesis-rules.md",
+      "sha256": "a7bfdb49628bcdc79676fecb0aa5598c08faff64ba9dc60f9719f89668bb14aa",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/references/serp-synthesis-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "info",
+      "source_path": ".agents/skills/manufacturing-blog-writer/templates/article-output-template.md",
+      "sha256": "28d3e2ddeb823c78cd7bc804512fc39f735c83ef62416433ad0a531b79666337",
+      "preserved_path": "data/raw/legacy-projects/info/.agents/skills/manufacturing-blog-writer/templates/article-output-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": "AGENTS.md",
+      "sha256": "9d9fbefffa1416e680f0a033ec010b138594503362111c32e465f2fefd782e68",
+      "preserved_path": "data/raw/legacy-projects/audit/AGENTS.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/SKILL.md",
+      "sha256": "193de5791c4730b17fab00617f62bd30217b9492ea5b6b9137c3db8e2031db46",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/agents/interface.yaml",
+      "sha256": "e2255fd566bf2315cbd65e2cb8f92dc475e7e4777f01891100f983f393fa25f1",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/agents/openai.yaml",
+      "sha256": "2ebee1e3b6fe3ac506c633f5f616e2a982f6d29a91e2850d4d45d6c80c760b75",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/evals/audit-cases.md",
+      "sha256": "ff39c91cadf3e7b0064a362ef6e557efdf0faf16d07baf4418ffadc8f0bb1610",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/evals/audit-cases.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/references/audit-rubric.md",
+      "sha256": "bd6ffaffd52d61b4ef04f34b12e4ae07579ee8720e6c5645dbe6677c26cd9ecd",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/references/audit-rubric.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/references/content-brief-contract.md",
+      "sha256": "8f311fe714e17f86b69d6f4de99fd6852a1eec2a2a46d1c9ffaccced7ed89228",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/references/content-brief-contract.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/references/serp-benchmark-review-rules.md",
+      "sha256": "bd84080617b4af775a72197bdf84ad56debb35741b38016108a6b89c4d03a655",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/references/serp-benchmark-review-rules.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": ".agents/skills/seo-geo-content-auditor/templates/audit-report-template.md",
+      "sha256": "b2c503edda997044bf074ef6431847f393e671ada14a0b145f09c9be7bc29f23",
+      "preserved_path": "data/raw/legacy-projects/audit/.agents/skills/seo-geo-content-auditor/templates/audit-report-template.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": "tools/insert_article_images.py",
+      "sha256": "78b00fb7fb946ebac8fa993d32a2c3da15214dc69f5241cea1bbf2fd1cd49f23",
+      "preserved_path": "data/raw/legacy-projects/audit/tools/insert_article_images.py",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "audit",
+      "source_path": "tools/keyword_safe_docx_replace.py",
+      "sha256": "403e52f067746055062d9cf78d678b550ce851cc131ee72b72ee7ab8fea65176",
+      "preserved_path": "data/raw/legacy-projects/audit/tools/keyword_safe_docx_replace.py",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "AGENTS.md",
+      "sha256": "3e6da7d8d1621b8954c3c27b332665d83700c30ae391d566c36512f1f5103406",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/AGENTS.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/LICENSE",
+      "sha256": "c0af99d1cef5c55657826e66ce7e6aa1c24e241a869d36ca954e53bcc5e839f3",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/LICENSE",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/manifest.json",
+      "sha256": "ebeadd7d26767e5af636c3256bbe087679c34bae06a96155fecb95bc9d9d613f",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/manifest.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/README.md",
+      "sha256": "77c62e586deecb812c2b31206b5800906b9b516abb957f638ac4d0811caccd60",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/README.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/SKILL.md",
+      "sha256": "4c1af52c9c21e2465a702c9f83e11002e5559cc7681c9658b1da781a106628e9",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/SKILL.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/agents/interface.yaml",
+      "sha256": "3722c559a4d7675464d58b5442c0bbe4e85b978282d7ac1054a1439463e8dec2",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/agents/interface.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/agents/openai.yaml",
+      "sha256": "18796eab28ecec9175cfbfc62f010391e57b233bfdf8fe3a04d98ad1f47ec6c1",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/agents/openai.yaml",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/evals/packaging_expectations.json",
+      "sha256": "058fce11ee67778d0e3424928deaf1e4beecc479bf97d02601bad7d39eb7ce4d",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/evals/packaging_expectations.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/evals/quality-checklist.md",
+      "sha256": "350d5ec672a3f8919390f2dfafeb61c044ffff728803bfc4df28c7201ab5ad3d",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/evals/quality-checklist.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/evals/semantic_config.json",
+      "sha256": "34ec0db174912f2bdc3359c4eda0612127c5dcbbd0d70986a53e1846bfb9db09",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/evals/semantic_config.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/evals/trigger_cases.json",
+      "sha256": "c9b7ecb6eac1f005b0fd0d15c3557a0f1a8566a351aa4dc5030f1ee89379a47e",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/evals/trigger_cases.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/references/industrial-visual-protocol.md",
+      "sha256": "ef4c2a102ddee6b6caa08dce570bef8987ad6c229558156a6556c585b27354b1",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/references/industrial-visual-protocol.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/references/source-notes.md",
+      "sha256": "bdd427e71d8dcd4d08c9f12fcbb2f1a0eafbbd374fd1bb86cd7b6264183796ef",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/references/source-notes.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/registry/index.json",
+      "sha256": "691fc71cfa890904b01619e10d955db19d2ef7b97a58f2c3e391e8314a1cbeae",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/registry/index.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/adoption_drift_report.json",
+      "sha256": "844b8e8eeb90d538dfbbfc90c800aeb9d14b91f6e515d42e05df951f47787051",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/adoption_drift_report.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/adoption_drift_report.md",
+      "sha256": "07923db5a9c67f5de5704bae3d1c0b441ca4d74344a84089b86af1ce5ff54789",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/adoption_drift_report.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/artifact-design-profile.json",
+      "sha256": "d6f80855fa6a4cf797a076d4c5cb24514e53ec8f5b4fa0f589e062e4677acf91",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/artifact-design-profile.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/artifact-design-profile.md",
+      "sha256": "95d22370a4746f30644ae6817605d9d1d40b739c931faeeb240eac4615989cbf",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/artifact-design-profile.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/compiled_targets.json",
+      "sha256": "b7d5babf1c5c73037dd2f591bba1ccb5e5d632cd7e2e011577df74e1467d4bb7",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/compiled_targets.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/compiled_targets.md",
+      "sha256": "6c5408e36ac6cb504f60c619885e4d6def9d92347dd5c869003dbd520d3f7103",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/compiled_targets.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/conformance_matrix.json",
+      "sha256": "4b55a58050233cb38ccb29c2005615165de9b0471d7ecccad2a51f10993bdabf",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/conformance_matrix.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/conformance_matrix.md",
+      "sha256": "e4b135aa3444c7e99e1d1c99b1d80ae5c6c7aaaf94aaa7b976d06eb594badc7a",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/conformance_matrix.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/install_simulation.json",
+      "sha256": "aceb8ce1af946c95e5dafa23d83b5b832522e0889da66129c8a6b4a3b64bbbfb",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/install_simulation.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/install_simulation.md",
+      "sha256": "95e16690c7be7f4aef72e757025a46b6bc8adf52787cdc30d1430457cd05a55e",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/install_simulation.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/intent-confidence.json",
+      "sha256": "0ed784d32fe56a432e3d7d76c4b2626b8976a899efcaac9b4779c0877319f59c",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/intent-confidence.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/intent-confidence.md",
+      "sha256": "5d4a416043186ce1a6b8aee73d32375e153cb8f2654f7843520d916c87568972",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/intent-confidence.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/intent-context.json",
+      "sha256": "f37dd7abcee961913229af76693918896ce0ece00bc15064bf87f9b3d3b9a805",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/intent-context.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/intent-dialogue.json",
+      "sha256": "4ee78f772930bd8447b0ccd0fc338ea5778a1bf776848055b2a99c00378021f5",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/intent-dialogue.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/intent-dialogue.md",
+      "sha256": "57834cc6a673e2eaf02475b8c1cd00326ca55546afa10c7e8e8f1df86f046be5",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/intent-dialogue.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/iteration-directions.json",
+      "sha256": "b630e34ccd167db3a2841fda70a5a1bc7748810fa0669c328f5e2f0f378e4d0d",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/iteration-directions.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/iteration-directions.md",
+      "sha256": "a57792d359c1625e89fd30505692cee67eb4cf210f7da275d7be69c8d7d59d96",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/iteration-directions.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/output-risk-profile.json",
+      "sha256": "d73d1767997fd8b756bd40e294138e2c9c1d10c1b920240cb84eba4ebee9f365",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/output-risk-profile.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/output-risk-profile.md",
+      "sha256": "1d5a22ce84daf40214c1348851cdfe349d9be9562ca7ad7a39b16f6f03c9e12d",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/output-risk-profile.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/output_blind_answer_key.json",
+      "sha256": "039cbd197b2d9e28a8539085a72befbe8c6579c3384fadcc51d07b55a6ed2cc6",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/output_blind_answer_key.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/output_blind_review_pack.json",
+      "sha256": "28c082498aa3d9b7f9d40ffa2cbdff30596f39377979d184b3bf86ba2806cd11",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/output_blind_review_pack.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/output_blind_review_pack.md",
+      "sha256": "01053faff8c94bb2a011ac76516befa15662bb833eef20bd8defdcfeaac728a0",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/output_blind_review_pack.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/output_quality_scorecard.json",
+      "sha256": "22e161f2fb02df46f7bb3e7f14edf48a7696314102b161b4407574cb4ee921ac",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/output_quality_scorecard.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/output_quality_scorecard.md",
+      "sha256": "e0967c528621b0bb4f169c4b9ac22f05f5d74cc0567c620ab1b0884bc98383fc",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/output_quality_scorecard.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/package_verification.json",
+      "sha256": "1d7aab1766ff958cc01e2ede095254fb27f191b09ef56b7cfc14bdad7cb3038b",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/package_verification.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/package_verification.md",
+      "sha256": "260e23a032836b3dd4fbc8c7beda3b4a84e7889e68e9556789c38227a98a7191",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/package_verification.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/prompt-quality-profile.json",
+      "sha256": "91a603a9c60fd14033aaea991ed2ba542ac49487fb8af4bab853d2ddcbaeb28f",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/prompt-quality-profile.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/prompt-quality-profile.md",
+      "sha256": "b845d4b349e8f56ed7a5046ff8cdf0923b889f5be945b902c36238bb93722bb1",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/prompt-quality-profile.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/reference-scan.json",
+      "sha256": "a36133ca11e3c5054a932c9e4f8e5ceb1ec944ec7acdd0008f4a7e15070573bb",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/reference-scan.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/reference-scan.md",
+      "sha256": "dec8e3be11c72c6a03c102b95b3ce39442deae0f472cf3e2ab430661a09db4dd",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/reference-scan.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/reference-synthesis.json",
+      "sha256": "92fea9b3cedea565814a0f1f1105fd6ccc423f988e917317145b4f4540bb520f",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/reference-synthesis.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/reference-synthesis.md",
+      "sha256": "c88b11fc168d0f1cdf72873e0381eb8dace99d66003f2460cb0dbced89eab300",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/reference-synthesis.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/registry_audit.json",
+      "sha256": "54248482b43a2dd70b29952527e92982e56248da0b979f8a2304d158a7715991",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/registry_audit.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/registry_audit.md",
+      "sha256": "5d56b46941240e5632629ad432ea3e91add0a4a935af56fadf528fa07c0e4ae7",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/registry_audit.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review-studio.html",
+      "sha256": "0f49f7819f551f03018f44aa2afbc17edd68027ab79c0751c96d722493927310",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review-studio.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review-studio.json",
+      "sha256": "6d890120122cc2063698b7f4a99bb7c2202ac80fae66e578535ff4b934e41f3b",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review-studio.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review-viewer.html",
+      "sha256": "0be8c6e2f61bd857c9dc59cdc950db70f2ab3b4299ace6776d37556e4cb431f0",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review-viewer.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review-viewer.json",
+      "sha256": "28fbb1647ea8fa88543d1a82a7529418805e6d6de7c6a8c13de5026c17a739e9",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review-viewer.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review_annotations.json",
+      "sha256": "8208f90f3eb32088a79cc6dccc94e0af3687a10a6df8ae4e0c34571ce8a9701e",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review_annotations.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review_annotations.md",
+      "sha256": "2a0f5df0a8b2093aa6785265ac649c67cc3a79726e43fa8398081a5657d1d3ab",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review_annotations.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review_waivers.json",
+      "sha256": "73ff19d9e74d68988e2ca1945fb8d2c38f4fb1751848cbd4fa2fea75eba63b2b",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review_waivers.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/review_waivers.md",
+      "sha256": "69c80dec58d468cace2e5e92b34836da5a2b60907cb696cf7b39f9f21ca86fc4",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/review_waivers.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/security_trust_report.json",
+      "sha256": "26dc1433ec5023c9368221f226313eee7421ed1c7462ce0b03c1a088f9249981",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/security_trust_report.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/security_trust_report.md",
+      "sha256": "fc0d51b667b5ecd4498ccbd6eb11d0271099b50880badeef957ce4c99091768c",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/security_trust_report.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/skill-interpretation.html",
+      "sha256": "247191e963882a26cbdb7a8916da647ccd066310eacfcab07d2a5a9b3721a52d",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/skill-interpretation.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/skill-interpretation.json",
+      "sha256": "7bfa7b8ee70c16732149be9775a49c6d2f2bfbcc3d7dc36241142273d3460812",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/skill-interpretation.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/skill-ir.json",
+      "sha256": "5f7b1aab2bb2ea12b8c61f6f3a4692b26b450095c3b7dbaab68b34d80038cb47",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/skill-ir.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/skill-overview.html",
+      "sha256": "4df807719a451e5e90930bd166161788debe765538c4cde400e6b8482af8514d",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/skill-overview.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/skill-overview.json",
+      "sha256": "3fb56031a2fb9536e52240891e7f4546a9cdd3851cdba3dccb2a630e5c9ee30a",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/skill-overview.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/skill_atlas.html",
+      "sha256": "c320b15998f70b44848c0ccfb5bac62c19777097359edff7023688a020630458",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/skill_atlas.html",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/skill_atlas.json",
+      "sha256": "5559922ae7c057ab48d95c5e2252415412e71617252d45ba1f18b4c02eb135b9",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/skill_atlas.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/system-model.json",
+      "sha256": "2d55cc785ef26c6e144ba48f9b01b3ec97223e413fd45038ce652b14718527b2",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/system-model.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/system-model.md",
+      "sha256": "684a439edd24678d54530004392341cb62a27535c234d35ecab8538c7d55981e",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/system-model.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/reports/trigger_eval_summary.md",
+      "sha256": "3817843c0c646d9cb07a42d6ebcf5a605b91935945e90f1a06da8b8751c83772",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/reports/trigger_eval_summary.md",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/security/permission_policy.json",
+      "sha256": "1c16bb77b3db2d3e1dd90e24040518c105138dcb08a9ff878853faaaad37626b",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/security/permission_policy.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/skill_atlas/catalog.json",
+      "sha256": "3911d2f6617e8d733fa243348f453f8ab743b702faa58914b2a99089ea02f2e2",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/skill_atlas/catalog.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/skill_atlas/dependency_graph.json",
+      "sha256": "304538a36ef1e75d0fe028953592681fcd4c540393e2275b3232193f6f7b8b99",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/skill_atlas/dependency_graph.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/skill_atlas/drift_signals.json",
+      "sha256": "7ce0e4f75a2f827f67b69bf7b227c4106fa143e6300c2a911f9164777f01819b",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/skill_atlas/drift_signals.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/skill_atlas/no_route_opportunities.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/skill_atlas/no_route_opportunities.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/skill_atlas/owner_review_gaps.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/skill_atlas/owner_review_gaps.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/skill_atlas/route_overlap_matrix.csv",
+      "sha256": "20b912e84ee2038afc2ef10c4c6912433ce955f862203713138363c100057337",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/skill_atlas/route_overlap_matrix.csv",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/skill_atlas/stale_skills.json",
+      "sha256": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/skill_atlas/stale_skills.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "b2b-machining-image-generator/registry/packages/b2b-machining-image-generator.json",
+      "sha256": "6f0453970e0f60844d03dd989c0a6b49ac014047027d316983492ab6700d9528",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/b2b-machining-image-generator/registry/packages/b2b-machining-image-generator.json",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "composite-people.ps1",
+      "sha256": "04b0b3e5f584af49f073d1fbeb86a4d588fcd79bc37d434db3afad8fad3f19cb",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/composite-people.ps1",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "fast-clean-factory.ps1",
+      "sha256": "e559d03b821ca61486c937ae40a08e04353700beae63c44e11db12495325c271",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/fast-clean-factory.ps1",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "retouch-factory.ps1",
+      "sha256": "333eae9e8d06f747dad153784cd2e8e0540bb34e11f6034fc42d172f099d5e7b",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/retouch-factory.ps1",
+      "status": "preserved_snapshot"
+    },
+    {
+      "source_project": "b2b-image",
+      "source_path": "selective-clean-factory.ps1",
+      "sha256": "6a60bbf463a26595e80876e9aaf2adb978cddd0ba489a538543214fd0342b2a5",
+      "preserved_path": "data/raw/legacy-projects/b2b-image/selective-clean-factory.ps1",
+      "status": "preserved_snapshot"
+    }
+  ],
+  "summary": {
+    "total": 302,
+    "preserved_snapshot": 302,
+    "missing_or_changed": 0
+  }
+}

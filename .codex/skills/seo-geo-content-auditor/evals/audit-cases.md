@@ -3,7 +3,7 @@
 1. Strong technical article with no broker section and `COMMERCIAL_BRIDGE_MODE=none`: must not lose commercial points merely for omitting broker contrast.
 2. Informational article with `soft`: should pass when factory-direct value is brief and contextual.
 3. Supplier comparison with `explicit`: should lose points when sourcing-model comparison is absent or unsupported.
-4. Article mentioning Plastichubs/xmake in metadata or CTA: hard fail and Red.
+4. Article mentioning RapidDirect in metadata or CTA: hard fail and Red.
 5. PlasticHubs article claiming metal die casting: hard fail and Red.
 6. Accurate article using `typically` and `project-dependent`: must not fail trust solely for reasonable qualification.
 7. Keyword-rich article with mechanical exact-match repetition: deduct SEO and structure points.

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task Envelope",
+  "type": "object",
+  "required": ["run_id", "entry_point", "task_mode", "detected_artifact", "requested_output", "user_constraints"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 8},
+    "entry_point": {"enum": ["canonical", "plan", "info", "audit", "b2b-image"]},
+    "task_mode": {"enum": ["full_pipeline", "phase_only", "standalone_image"]},
+    "detected_artifact": {"enum": ["none", "topic", "plan_brief", "article", "audited_article", "article_with_assets"]},
+    "requested_output": {"type": "array", "items": {"type": "string"}},
+    "user_constraints": {"type": "object"},
+    "approved_evidence_paths": {"type": "array", "items": {"type": "string"}},
+    "raw_conversation_forwarding": {"const": false}
+  },
+  "additionalProperties": false
+}
+

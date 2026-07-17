@@ -1,0 +1,22 @@
+stages:
+  plan:
+    agent: agents/plan.md
+    skill: skills/b2b-seo-topic-map-builder/SKILL.md
+    output_schema: schemas/plan-brief.schema.json
+  info:
+    agent: agents/info.md
+    skill: skills/manufacturing-blog-writer/SKILL.md
+    output_schema: schemas/article-bundle.schema.json
+  audit:
+    agent: agents/audit.md
+    skill: skills/seo-geo-content-auditor/SKILL.md
+    output_schema: schemas/audit-report.schema.json
+  b2b-image:
+    agent: agents/b2b-image.md
+    skill: skills/b2b-machining-image-generator/SKILL.md
+    output_schema: schemas/visual-brief.schema.json
+  final-output:
+    agent: agents/final-output.md
+    skill: skills/xmake-plastichubs-website-ops/SKILL.md
+    output_schema: schemas/final-package.schema.json
+

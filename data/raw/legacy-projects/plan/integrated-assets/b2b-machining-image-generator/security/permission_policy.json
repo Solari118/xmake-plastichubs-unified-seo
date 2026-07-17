@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at": "2026-07-08",
+  "capabilities": {
+    "network": {
+      "decision": "approved",
+      "reviewer": "Lostk (request owner)",
+      "scope": "Read-only web image search for manufacturing reference research; no uploads, messages, purchases, or account changes.",
+      "reason": "The requested workflow explicitly requires searching relevant object, process, material, and defect images before generation.",
+      "expires_at": "2027-07-08",
+      "evidence": [
+        "references/industrial-visual-protocol.md",
+        "reports/security_trust_report.md"
+      ],
+      "target_enforcement": {
+        "openai": "Host-controlled web search capability with package metadata boundary.",
+        "generic": "Metadata-only; downstream client must enforce network permissions."
+      }
+    }
+  }
+}

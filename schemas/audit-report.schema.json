@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Audit Report",
+  "type": "object",
+  "required": ["run_id", "artifact_version", "article_version", "verdict", "hard_gates", "findings", "rollback_origin"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "artifact_version": {"type": "string"},
+    "article_version": {"type": "string"},
+    "verdict": {"enum": ["GREEN", "YELLOW", "RED", "BLOCKED"]},
+    "hard_gates": {"type": "array"},
+    "findings": {"type": "array"},
+    "rollback_origin": {"enum": ["none", "info", "plan", "user"]},
+    "affected_fields": {"type": "array", "items": {"type": "string"}},
+    "required_replay": {"type": "array", "items": {"type": "string"}},
+    "supersedes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
+

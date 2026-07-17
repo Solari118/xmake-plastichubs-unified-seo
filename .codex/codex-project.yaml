@@ -1,26 +1,3 @@
-name: "xmake-plastichubs-unified-seo"
-description: "Unified XMAKE / PlasticHubs Plan-Info-Audit-B2B-Asset SEO system"
-version: "4.1.0"
-agents:
-  default: "unified-seo-pipeline"
-  directory: "agents"
-skills:
-  directory: "skills"
-  auto_load:
-    - "unified-seo-pipeline"
-    - "xmake-plastichubs-seo-expert"
-    - "b2b-seo-topic-map-builder"
-    - "manufacturing-blog-writer"
-    - "seo-geo-content-auditor"
-    - "b2b-machining-image-generator"
-    - "xmake-plastichubs-website-ops"
-data:
-  directory: "data"
-  scheduler: "config/article-schedule.yaml"
-  live_seo_data_source: "config/live-seo-data-source.yaml"
-context:
-  data_supremacy: true
-  brand_isolation: true
-  anti_fluff: true
-  zero_hallucination: true
-  automatic_chain_after_user_keyword: true
+canonical_root: C:\Users\Lostk\Documents\agent-project
+instructions: ../AGENTS.md
+default_skill: manufacturing-content-pipeline

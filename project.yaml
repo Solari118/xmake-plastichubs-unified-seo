@@ -1,31 +1,32 @@
-name: "xmake-plastichubs-unified-seo"
-description: "Unified XMAKE / PlasticHubs Plan-Info-Audit-B2B-Asset SEO system"
-version: "4.1.0"
-agents:
-  default: "unified-seo-pipeline"
-  directory: "agents"
-skills:
-  directory: "skills"
-  auto_load:
-    - "unified-seo-pipeline"
-    - "xmake-plastichubs-seo-expert"
-    - "b2b-seo-topic-map-builder"
-    - "manufacturing-blog-writer"
-    - "seo-geo-content-auditor"
-    - "b2b-machining-image-generator"
-    - "xmake-plastichubs-website-ops"
-data:
-  directory: "data"
-config:
-  scheduler: "config/article-schedule.yaml"
-  live_seo_data_source: "config/live-seo-data-source.yaml"
-  terminal_states:
-    - "COMPLETED"
-    - "WAITING_FOR_KEYWORD_APPROVAL"
-    - "BLOCKED"
-context:
-  data_supremacy: true
-  brand_isolation: true
-  anti_fluff: true
-  zero_hallucination: true
-  automatic_chain_after_user_keyword: true
+name: manufacturing-content-pipeline
+description: Unified XMAKE and PlasticHubs manufacturing content project
+version: 5.0.0
+owner: Lostk
+status: active
+maturity_tier: governed
+lifecycle_stage: governed
+review_cadence: monthly
+root: C:\Users\Lostk\Documents\agent-project
+default_agent: manufacturing-content-pipeline
+route:
+  - plan
+  - info
+  - audit
+  - b2b-image
+  - final-output
+skills_directory: skills
+agents_directory: agents
+workflow: workflows/article-pipeline.yaml
+context_policy: policies/context-isolation.md
+terminal_states:
+  - COMPLETED
+  - PHASE_COMPLETED
+  - WAITING_FOR_KEYWORD_APPROVAL
+  - REVISION_REQUIRED
+  - BLOCKED
+legacy_entry_points:
+  plan: C:\Users\Lostk\Documents\文章规划提示词-Plan
+  info: C:\Users\Lostk\Documents\文章撰写提示词-Info
+  audit: C:\Users\Lostk\Documents\文章优化提示词2.0-Aduit
+  b2b-image: C:\Users\Lostk\Documents\B2B机加工生图
+

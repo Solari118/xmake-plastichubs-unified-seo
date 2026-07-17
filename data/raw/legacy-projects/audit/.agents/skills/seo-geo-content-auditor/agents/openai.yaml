@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO/GEO Content Auditor"
+  short_description: "Audit manufacturing content with hard gates"
+  default_prompt: "Use $seo-geo-content-auditor. State the Audit route, stage, and deliverable; audit this XMAKE or PlasticHubs article against its brief and Top-5 SERP benchmark; test intent completion, section redundancy, readability, revision scope, artifact QA, originality, and differentiation."

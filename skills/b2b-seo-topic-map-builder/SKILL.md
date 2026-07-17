@@ -13,14 +13,14 @@ At activation, report `Route: Plan > b2b-seo-topic-map-builder`, the current sta
 
 ## Core Workflow
 
-1. Confirm or infer `BRAND`, `TOPIC`, and `PRIMARY_KEYWORD`. Ask only if brand ambiguity creates a service-scope risk.
+1. Confirm or infer `BRAND`, `TOPIC`, `PRIMARY_SERVICE`, and `PRIMARY_KEYWORD`. Ask only if brand or primary-service ambiguity creates a service-scope risk.
 2. Read [Company Assets](references/company-assets.md), [Content Brief Contract](references/content-brief-contract.md), [SEO/GEO Planning Rules](references/seo-geo-planning-rules.md), and [Top-5 SERP Benchmark Workflow](references/serp-top-five-workflow.md).
 3. Search the project for relevant XMAKE, PlasticHubs, AI Prompt Data, Info, Roundup, technical, and process knowledge files. Load only relevant sources.
 4. Classify content type, primary and secondary intent, decision stage, target market, and conversion goal.
 5. Run the live Top-5 SERP benchmark before finalizing the brief. Record observed positions and URLs, analyze each article, distinguish ranking hypotheses from facts, and derive common strengths, gaps, borrowable patterns, and differentiation requirements.
 6. Build the keyword/query map: primary keyword, secondary candidates, natural query variants, buyer modifiers, questions, and entities. Never invent volume, CPC, difficulty, or live rankings.
 7. Define the persona's technical goal, information void, failure risk, and required information gain.
-8. Define `INTENT_COMPLETION_CRITERIA`, choose `ANSWER_FIRST_FORMAT`, and create a `SECTION_ROLE_MAP` with one distinct reader job per H2. Merge sections that would repeat the same selection logic.
+8. Define `INTENT_COMPLETION_CRITERIA`, choose `ANSWER_FIRST_FORMAT`, create a `SECTION_ROLE_MAP` with one distinct reader job per H2, and define `CROSS_SERVICE_LINK_PLAN`. Merge sections that would repeat the same selection logic.
 9. Carry forward user-set `MIN_WORD_COUNT`, `READABILITY_TARGET`, `DELIVERABLE_MODE`, `PREVIEW_FORMAT`, `WORD_STYLE_REFERENCE`, `REVISION_SCOPE`, and `SOURCE_ELEMENTS_TO_PRESERVE` without turning them into universal defaults.
 10. Select `COMMERCIAL_BRIDGE_MODE`: `none`, `soft`, or `explicit`. Match its intensity to the intent instead of forcing the same broker section into every brief.
 11. Build the GEO answer plan: direct-answer targets, fan-out questions, evidence requirements, quotable facts, and entity disambiguation. Treat these as content-quality tactics, not guaranteed ranking factors.

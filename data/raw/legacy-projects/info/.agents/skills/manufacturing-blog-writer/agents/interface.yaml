@@ -1,0 +1,22 @@
+interface:
+  display_name: "Manufacturing Blog Writer"
+  short_description: "Write or revise intent-complete manufacturing articles"
+  default_prompt: "Use $manufacturing-blog-writer. State the Info route, stage, and deliverable; execute the supplied Plan brief; preserve the primary service and requested source material; then run the recorded writer quality gate without issuing the final Audit verdict."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "codex"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    codex: "native-skill-source"
+    generic: "neutral-source"

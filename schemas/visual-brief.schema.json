@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Visual Brief",
+  "type": "object",
+  "required": ["run_id", "article_version", "audit_version", "brand", "assets", "public_text_policy"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "article_version": {"type": "string"},
+    "audit_version": {"type": "string"},
+    "brand": {"enum": ["XMAKE", "PlasticHubs"]},
+    "assets": {"type": "array", "items": {"type": "object"}},
+    "public_text_policy": {"type": "string"},
+    "private_source_forwarded": {"const": false}
+  },
+  "additionalProperties": false
+}
+

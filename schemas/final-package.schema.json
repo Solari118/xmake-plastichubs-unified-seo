@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Final Article Package",
+  "type": "object",
+  "required": ["run_id", "article_version", "audit_version", "verdict", "outputs", "qa_status", "terminal_state"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "article_version": {"type": "string"},
+    "audit_version": {"type": "string"},
+    "verdict": {"const": "GREEN"},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "qa_status": {"enum": ["Rendered QA", "Structural QA Only", "Markdown QA"]},
+    "terminal_state": {"enum": ["COMPLETED", "PHASE_COMPLETED"]}
+  },
+  "additionalProperties": false
+}
+

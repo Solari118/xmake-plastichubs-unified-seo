@@ -1,0 +1,10 @@
+{
+  "run_id": "fixture-article-001",
+  "entry_point": "audit",
+  "task_mode": "full_pipeline",
+  "detected_artifact": "article",
+  "requested_output": ["audited article", "article images", "final package"],
+  "user_constraints": {},
+  "approved_evidence_paths": [],
+  "raw_conversation_forwarding": false
+}

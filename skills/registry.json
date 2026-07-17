@@ -1,0 +1,16 @@
+{
+  "canonical_router": "manufacturing-content-pipeline",
+  "skills": [
+    {"name":"manufacturing-content-pipeline","role":"orchestrator","status":"active"},
+    {"name":"b2b-seo-topic-map-builder","role":"plan","status":"active"},
+    {"name":"manufacturing-blog-writer","role":"info","status":"active"},
+    {"name":"seo-geo-content-auditor","role":"audit","status":"active"},
+    {"name":"b2b-machining-image-generator","role":"b2b-image","status":"active"},
+    {"name":"xmake-plastichubs-website-ops","role":"final-output","status":"active"},
+    {"name":"seo-content-strategy","role":"campaign-strategy-neighbor","status":"active"},
+    {"name":"manufacturing-content-writer","role":"info-internal-support","status":"internal-only"},
+    {"name":"xmake-plastichubs-seo-expert","role":"brand-and-data-support","status":"internal-only"},
+    {"name":"unified-seo-pipeline","role":"legacy-alias","status":"compatibility-only"}
+  ]
+}
+

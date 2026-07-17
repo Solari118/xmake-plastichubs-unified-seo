@@ -1,0 +1,20 @@
+{
+  "brand": "PlasticHubs",
+  "query": "overmolding vs insert molding",
+  "database": "us",
+  "capture_date": "2026-07-17",
+  "file": "overmolding-vs-insert-molding_broad-match_us_2026-07-17.csv",
+  "row_count": 8,
+  "fields": [
+    "Keyword",
+    "Volume",
+    "Keyword Difficulty",
+    "CPC (USD)"
+  ],
+  "sha256": "99F9D2EB4D70515A2B1642EA8F893DEB63B48FD25A22635F9762F09FF0A4D6E1",
+  "classified_workbook_coverage": {
+    "matched_rows": 8,
+    "new_rows": 0,
+    "aggregation_action": "preserve snapshot; do not double-count"
+  }
+}

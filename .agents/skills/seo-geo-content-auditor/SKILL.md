@@ -14,7 +14,7 @@ At activation, report `Route: Audit > seo-geo-content-auditor`, the audit/revisi
 ## Workflow
 
 1. Read [Content Brief Contract](references/content-brief-contract.md), [Audit Rubric](references/audit-rubric.md), [SERP Benchmark Review Rules](references/serp-benchmark-review-rules.md), and the supplied brief.
-2. Identify public brand, content type, primary intent, primary keyword, and `COMMERCIAL_BRIDGE_MODE`.
+2. Identify public brand, content type, `PRIMARY_SERVICE`, primary intent, primary keyword, `CROSS_SERVICE_LINK_PLAN`, and `COMMERCIAL_BRIDGE_MODE`.
 3. Validate the Top-5 benchmark environment, five result records, exclusions/substitutions, status, ranking hypotheses, gaps, borrowable patterns, differentiation requirements, and originality guardrails.
 4. Compare the draft against the benchmark for intent fit, essential coverage, gap closure, original information gain, and derivative-structure risk.
 5. Test every `INTENT_COMPLETION_CRITERIA` item and locate the early core answer.
@@ -32,7 +32,7 @@ At activation, report `Route: Audit > seo-geo-content-auditor`, the audit/revisi
 
 Any hard-gate failure forces Red status regardless of numerical score:
 
-- Plastichubs/xmake appears in public copy, metadata, CTA, headings, image text, schema, or publishable notes.
+- RapidDirect appears in public copy, metadata, CTA, headings, image text, schema, or publishable notes.
 - A third-party brand name, third-party URL, competitor link, `Source:` label, or external-research attribution appears in public copy without explicit approval.
 - Public brand is mixed, wrong, or absent when the brief identifies one brand.
 - PlasticHubs is assigned an unsupported non-plastic direct service.
@@ -87,7 +87,7 @@ Do not require or reward invented markup percentages, savings percentages, unive
 - Replace generic `Quick Answer`, `Fast Guide`, or `Rapid Decision` headings when they add no task meaning; do not penalize a factual discussion of speed.
 - When `READABILITY_TARGET` exists, evaluate the English against it and check that technical terms are defined before use. When `MIN_WORD_COUNT` exists, verify the final word count without rewarding padding.
 - Run a literal Tone Check for: `delve`, `embark`, `craft`, `crafting`, `unlock`, `discover`, `utilize`, `utilizing`, `dive deep`, `unveil`, `harness`, `elucidate`, `enlightening`, `esteemed`, `game-changer`, `skyrocket`, `revolutionize`, `disruptive`, `groundbreaking`, `cutting-edge`, `remarkable`, `powerful`, `world-class`, `real-world`, `shed light`, `imagine`, `realm`, `abyss`, `tapestry`, `illuminate`, `glimpse into`, `navigating`, `landscape`, `stark`, `testament`, `bustling`, `opened up`, `ever-evolving`, `you're not alone`, `in a world where`, `it remains to be seen`, `pivotal`, `intricate`, `hence`, `furthermore`, `however`, `moreover`, `in summary`, `in conclusion`, and `in closing`.
-- Do not restore or reward Plastichubs/xmake public references, mixed brands, or unverified legacy metrics. Accurate qualifiers remain acceptable when process variability is real.
+- Do not restore or reward RapidDirect public references, mixed brands, or unverified legacy metrics. Accurate qualifiers remain acceptable when process variability is real.
 
 ## Output Boundary
 

@@ -1,0 +1,9 @@
+[
+  {"id":"full_from_plan","entry":"plan","mode":"full_pipeline","expected":["plan","info","audit","b2b-image","final-output"]},
+  {"id":"article_input_enters_audit","entry":"article","mode":"full_pipeline","expected":["audit","b2b-image","final-output"]},
+  {"id":"article_info_defect_rolls_back","entry":"article","mode":"full_pipeline","audit_defect":"info","expected":["audit","info","audit","b2b-image","final-output"]},
+  {"id":"article_plan_defect_rolls_back","entry":"article","mode":"full_pipeline","audit_defect":"plan","expected":["audit","plan","info","audit","b2b-image","final-output"]},
+  {"id":"audit_only","entry":"audit","mode":"phase_only","expected":["audit"]},
+  {"id":"standalone_image","entry":"b2b-image","mode":"standalone_image","expected":["b2b-image"]},
+  {"id":"article_linked_image","entry":"b2b-image","mode":"full_pipeline","expected":["plan","info","audit","b2b-image","final-output"]}
+]

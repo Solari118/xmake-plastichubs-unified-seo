@@ -1,0 +1,21 @@
+{
+  "name": "manufacturing-content-pipeline",
+  "version": "1.0.0",
+  "owner": "Lostk",
+  "updated_at": "2026-07-16",
+  "status": "active",
+  "maturity_tier": "governed",
+  "lifecycle_stage": "governed",
+  "context_budget_tier": "governed",
+  "review_cadence": "monthly",
+  "target_platforms": ["openai", "generic"],
+  "factory_components": ["agents", "references", "evals", "reports"],
+  "input_files": [
+    "file-backed fixture: evals/route-cases.json",
+    "file-backed fixture: ../../schemas/task-envelope.schema.json"
+  ],
+  "output_contract": "route trace, versioned stage artifacts, final package, terminal state",
+  "rollback_boundary": "last accepted immutable stage artifact",
+  "trust_report": "reports/trust-report.md"
+}
+

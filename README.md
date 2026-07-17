@@ -1,46 +1,55 @@
-# XMAKE / PlasticHubs Unified SEO Project
+# Manufacturing Content Pipeline
 
-This Plan root is the single active local project for the former Plan, Info, Audit, and B2B machining image workflows.
+这是 XMAKE / PlasticHubs 制造业内容的统一项目。它把原 `Plan`、`Info`、`Aduit`（兼容旧拼写）和 `B2B机加工生图` 四个项目整合为一个有顺序、有契约、有上下文隔离的执行系统。
 
-## Private deployment repository
+This is the canonical XMAKE / PlasticHubs manufacturing-content project. It combines the former Plan, Info, `Aduit`-named Audit, and B2B image projects into one ordered, contract-driven, context-isolated system.
 
-This repository is the portable deployment package for the complete workflow:
+## 固定流水线 / Fixed pipeline
 
-`SEO Core -> Plan -> Info/Blog -> Audit -> B2B Asset -> Website Ops/Word`
+`Plan → Info → Audit → B2B Image → Final Output`
 
-It includes the active project, Codex/agent discovery mirrors, hooks, configuration, source data, the B2B machining image-generation skill, and the preserved source snapshot. Generated articles, render caches, credentials, and local Git state are intentionally excluded.
+Audit 可把有问题的文章退回 Info 做定向修订；修订后必须重新 Audit，才能进入图片和最终输出阶段。
 
-在另一台 Windows 电脑上登录有权限的 GitHub 账户后，可以让 Codex 克隆本仓库并运行：
+Audit may return a defective draft to Info for targeted repair. The revised artifact must pass a new Audit before image generation and final output.
+
+## 入口 / Entry points
+
+推荐直接打开：`C:\Users\Lostk\Documents\agent-project`
+
+The preferred workspace is `C:\Users\Lostk\Documents\agent-project`.
+
+四个旧项目仍可作为入口，但其 `AGENTS.md` 只负责把任务转交给本项目。旧规则完整备份为 `AGENTS.legacy.md`，原始执行资产也保存在 `data/raw/legacy-projects/`。
+
+All four legacy workspaces remain valid entry points. Their `AGENTS.md` files delegate to this project; former instructions are retained as `AGENTS.legacy.md`, and source execution assets are preserved under `data/raw/legacy-projects/`.
+
+## 隔离模型 / Isolation model
+
+- Orchestrator 保留完整路由状态；阶段 Agent 只接收声明过的输入。
+- Plan、Info、Audit、Image 和 Final Output 使用不同工件命名空间。
+- 私有证据不会自动进入公开文章或图片文字。
+- 旧项目快照不会自动加载。
+
+- The orchestrator retains route state; phase agents receive only declared inputs.
+- Plan, Info, Audit, Image, and Final Output use separate artifact namespaces.
+- Private evidence never flows automatically into public copy or image text.
+- Legacy snapshots are not auto-loaded.
+
+## 验证 / Validation
 
 ```powershell
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify-deployment.ps1
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1
+python scripts/validate_project.py
+python -m unittest discover -s tests -p "test_*.py"
 ```
 
-The installer backs up conflicting local skills before installing the unified project and its active skills. Open the installed project folder in Codex after installation.
+同步 Skill 发现镜像：
 
-## Execution
+Synchronize skill discovery mirrors:
 
-Use `agents/unified-seo-pipeline.md` and `skills/unified-seo-pipeline/SKILL.md` as the default route. With a user-supplied primary keyword, the project runs:
+```powershell
+python scripts/sync_mirrors.py
+```
 
-`SEO Core -> Plan -> Info -> Audit -> B2B Asset -> Website Ops/Word`
+能力保存证明见 `docs/capability-preservation-matrix.md` 和 `data/processed/source-capability-inventory.json`。
 
-If the agent proposes the keyword, execution stops at `WAITING_FOR_KEYWORD_APPROVAL`. This is the only normal approval gate.
+See `docs/capability-preservation-matrix.md` and `data/processed/source-capability-inventory.json` for capability-preservation evidence.
 
-## Canonical Locations
-
-- Active skills: `skills/`
-- Discovery mirrors: `.agents/skills/` when filesystem permissions allow
-- Codex deployment mirror: `.codex/` when filesystem permissions allow
-- Active agent: `agents/unified-seo-pipeline.md`
-- B2B source snapshot: `integrated-assets/b2b-machining-image-generator/`
-- Article outputs: `outputs/`
-- Mirror sync: `powershell -ExecutionPolicy Bypass -File tools/sync_unified_project.ps1`
-- Deployment installer: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install.ps1`
-- Deployment verification: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/verify-deployment.ps1`
-
-The old sibling project folders are preserved as source and history. The Codex sidebar is controlled by the host application, not by a local Markdown file; this repository cannot rename, delete, or visually collapse sidebar items by itself.
-
-## Sidebar Completion
-
-In the Codex desktop UI, open the Plan root as the active project and rename that project to `XMAKE-PlasticHubs Unified SEO`. Archive or remove the old Info, Audit, and B2B image project entries from the sidebar only after confirming their files remain preserved on disk. Then reload the active project so it discovers the synchronized `.agents` and `.codex` mirrors.

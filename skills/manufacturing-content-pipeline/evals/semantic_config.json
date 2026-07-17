@@ -1,0 +1,54 @@
+{
+  "optimizer_hints": {
+    "capability": "Route manufacturing articles through Plan, Info, Audit, B2B Image, and Final Output with artifact-aware insertion and rollback",
+    "inputs": ["keyword", "Plan brief", "manufacturing article", "audit request", "legacy project entry", "制造业文章", "文章审核"],
+    "trigger_actions": ["complete article pipeline", "audit and continue", "repair upstream stage", "完整项目流程", "退回 Plan", "配图和最终输出"],
+    "exclusions": ["standalone image edit", "campaign calendar", "service page packaging only", "translation", "unrelated task"],
+    "artifacts": ["Plan brief", "article draft", "Audit verdict", "article images", "final package"]
+  },
+  "fallback_positive_concepts": ["article_pipeline", "artifact_entry", "audit_rollback", "legacy_entry"],
+  "positive_concepts": {
+    "article_pipeline": {
+      "weight": 0.48,
+      "phrases": ["complete article", "full pipeline", "Plan, Info, Audit", "writing, independent audit", "article images", "final package", "文章规划、写作、审核", "配图和最终输出", "完整项目流程"]
+    },
+    "artifact_entry": {
+      "weight": 0.36,
+      "phrases": ["existing manufacturing article", "approved Plan brief", "audit this manufacturing article", "audit only this manufacturing article", "supplied article", "这篇文章", "文章审核"]
+    },
+    "audit_rollback": {
+      "weight": 0.4,
+      "phrases": ["repair upstream", "rollback", "return to Plan", "return to Info", "退回 Plan", "大纲可能有问题", "修正"]
+    },
+    "legacy_entry": {
+      "weight": 0.34,
+      "phrases": ["Info project", "Plan project", "Audit project", "legacy entry", "Info 项目", "从 Info 项目下达任务"]
+    },
+    "manufacturing_scope": {
+      "weight": 0.18,
+      "phrases": ["manufacturing article", "PlasticHubs", "XMAKE", "制造业文章"]
+    }
+  },
+  "negative_concepts": {
+    "standalone_image": {
+      "weight": 1.0,
+      "exclusive": true,
+      "phrases": ["retouch this CNC factory photograph", "standalone image", "directly generate one image", "直接修图", "单独生图"]
+    },
+    "campaign_only": {
+      "weight": 0.85,
+      "exclusive": true,
+      "phrases": ["content calendar", "campaign strategy", "not an individual article", "内容日历"]
+    },
+    "website_packaging_only": {
+      "weight": 0.85,
+      "exclusive": true,
+      "phrases": ["approved service page", "WordPress blocks", "packaging only"]
+    },
+    "unrelated": {
+      "weight": 0.9,
+      "exclusive": true,
+      "phrases": ["translate this one sentence", "calculate the mass", "company logo", "meeting notes"]
+    }
+  }
+}
