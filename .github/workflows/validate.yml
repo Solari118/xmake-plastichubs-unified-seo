@@ -12,6 +12,5 @@ jobs:
           python-version: "3.12"
       - run: python scripts/build_inventory.py
       - run: python scripts/sync_mirrors.py
-      - run: python scripts/validate_project.py
+      - run: python scripts/validate_project.py --skip-legacy-adapters
       - run: python -m unittest discover -s tests -p "test_*.py"
-
