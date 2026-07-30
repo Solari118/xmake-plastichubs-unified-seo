@@ -1,4 +1,6 @@
-# Top-5 Organic SERP Benchmark Workflow
+# Top-5 Organic SERP Benchmark Workflow — Legacy Compatibility Only
+
+New runs must use `serp-top-ten-workflow.md`. Keep this file only to interpret older briefs; do not use it to plan new articles.
 
 ## Search Definition
 

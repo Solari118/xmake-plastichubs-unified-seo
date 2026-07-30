@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Technical Preflight"
+  short_description: "Check page readiness before SEO execution."
+  default_prompt: "Run a read-only technical SEO preflight and recommend CREATE, UPDATE, CONSOLIDATE, or BLOCKED."
+

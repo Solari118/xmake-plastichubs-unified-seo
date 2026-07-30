@@ -1,0 +1,61 @@
+name: manufacturing-content-pipeline
+version: 3
+canonical_order:
+  - plan
+  - info
+  - audit
+  - b2b-image
+  - final-output
+  - performance-review
+entry_detection:
+  topic_or_keyword: plan
+  accepted_plan_brief: info
+  article_draft: audit
+  audited_article_without_assets: b2b-image
+  audited_article_with_assets: final-output
+  standalone_image: b2b-image
+  published_article_with_metrics: performance-review
+transitions:
+  plan:
+    pass: info
+    keyword_approval_required: WAITING_FOR_KEYWORD_APPROVAL
+    intent_or_format_approval_required: WAITING_FOR_INTENT_APPROVAL
+    blocked: BLOCKED
+  info:
+    pass: audit
+    blocked: BLOCKED
+  audit:
+    pass: b2b-image
+    info_rollback: info
+    plan_rollback: plan
+    user_guidance_required: BLOCKED
+  b2b-image:
+    article_assets_complete: final-output
+    standalone_complete: PHASE_COMPLETED
+    blocked: BLOCKED
+  final-output:
+    pass: COMPLETED
+    structural_only: COMPLETED
+    published_monitoring_requested: performance-review
+    blocked: BLOCKED
+  performance-review:
+    review_complete: PHASE_COMPLETED
+    plan_feedback: plan
+    info_feedback: info
+    data_missing: WAITING_FOR_PERFORMANCE_DATA
+    blocked: BLOCKED
+limits:
+  audit_repair_cycles: 2
+  image_attempts_per_asset: 2
+artifact_mutation: immutable_versioned_successor
+conditional_research:
+  wechat:
+    trigger_phrases:
+      - 对微信公众号相关关键词文章进行参考
+      - 参考微信公众号文章
+      - 搜索微信公众号推文
+    skill: wechat-manufacturing-research
+    position: before-plan-or-info
+    artifact: private-wechat-reference-pack
+    replaces_google_top_ten: false
+    public_copy_permission: false

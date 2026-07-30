@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Learning Governor"
+  short_description: "Turn performance evidence into governed improvements."
+  default_prompt: "Evaluate completed SEO actions and propose evidence-backed learning changes without self-modification."
+

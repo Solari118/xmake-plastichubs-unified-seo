@@ -1,0 +1,20 @@
+{
+  "proposals": [
+    {
+      "proposal_id": "example-001",
+      "source_agent": "keyword-agent",
+      "brand": "PlasticHubs",
+      "target": "acrylic cnc machining",
+      "action_type": "CREATE",
+      "summary": "Example only",
+      "data_source": "Semrush and live SERP",
+      "fetched_at": "2026-07-29T00:00:00+08:00",
+      "confidence": 0.8,
+      "business_value": 4,
+      "urgency": 3,
+      "effort": 2,
+      "changes_search_intent": false,
+      "changes_content_format": false
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Backlink Intelligence"
+  short_description: "Installed inactive backlink opportunity research."
+  default_prompt: "Check activation status before researching backlink and citation opportunities."
+

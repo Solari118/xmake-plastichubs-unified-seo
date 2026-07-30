@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Governed Link Opportunity",
+  "type": "object",
+  "required": ["opportunity_id", "target_url", "opportunity_type", "data_source", "fetched_at", "relevance", "controllability", "confidence", "recommended_action", "external_action_status"],
+  "properties": {
+    "opportunity_id": {"type": "string"},
+    "target_url": {"type": "string"},
+    "opportunity_type": {"type": "string"},
+    "data_source": {"type": "string"},
+    "fetched_at": {"type": "string"},
+    "relevance": {"type": "number", "minimum": 0, "maximum": 1},
+    "controllability": {"enum": ["A", "B", "C"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "recommended_action": {"type": "string"},
+    "external_action_status": {"const": "WAITING_FOR_EXTERNAL_OUTREACH_APPROVAL"}
+  },
+  "additionalProperties": true
+}
+

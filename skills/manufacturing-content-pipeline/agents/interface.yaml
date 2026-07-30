@@ -1,7 +1,7 @@
 interface:
   display_name: "Manufacturing Content Pipeline"
-  short_description: "Route Plan, Info, Audit, B2B Image, and Final Output with artifact-aware insertion"
-  default_prompt: "Use $manufacturing-content-pipeline to detect the latest supplied artifact, enter at the safe stage, and execute or roll back through the unified manufacturing content workflow."
+  short_description: "Route Top-10 Plan, reference-shaped Info, corpus Audit, images, links, and performance review"
+  default_prompt: "Use $manufacturing-content-pipeline to detect the latest artifact; run the Google Top-10 reference-selection route with mandatory user-browser verification and explicit Best-effort downgrade approval when access is blocked; execute reference-shaped writing; audit article and corpus diversity; package images and verified links; and route published pages into 30/60/90-day performance review."
 compatibility:
   canonical_format: "agent-skills"
   adapter_targets:
@@ -20,4 +20,3 @@ compatibility:
   degradation:
     openai: "Use available browsing, image, document, and local-file capabilities; preserve stage truth when a capability is unavailable."
     generic: "Return contract-complete artifacts and prompts, marking unavailable execution or render steps explicitly."
-

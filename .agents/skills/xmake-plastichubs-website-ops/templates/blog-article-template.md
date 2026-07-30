@@ -24,12 +24,15 @@ Use this only to package a reviewed editorial draft.
 - Schema Type: `BlogPosting` or `Article`
 - Featured Image Requirements:
 - Image Alt Text:
-- Suggested Internal Links:
+- Injected Internal Links:
+- Internal Link Manifest:
 - External Evidence Links:
 
 ## Article Body
 
 Preserve the approved argument and structure. Do not force a standard sequence. Confirm that headings, answer blocks, tables, FAQs, media, and CTA are present only when they support the reader's task.
+
+Inject approved links into the article body. Markdown uses standard clickable syntax. WordPress HTML and DOCX use light-blue `#5B9BD5` clickable links.
 
 ## Source And Claim Ledger
 

@@ -1,0 +1,22 @@
+id: governed-link-building
+version: 0.1.0
+status: installed_inactive
+activation_phrase: 激活外链skill
+activation_requires_user_review: true
+pre_activation_policy:
+  allowed:
+    - existing read-only competitor-page-strength evidence
+    - existing read-only referring-domain evidence
+  blocked:
+    - backlink discovery run
+    - outreach drafting
+    - email or form submission
+    - guest-post or PR publication
+    - third-party contact
+post_activation_external_action_gate: WAITING_FOR_EXTERNAL_OUTREACH_APPROVAL
+skills:
+  - seo-backlink-intelligence
+  - seo-link-outreach
+automatic_sending: false
+automatic_publication: false
+

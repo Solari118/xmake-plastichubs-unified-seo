@@ -24,16 +24,17 @@
 - Select headings and order from the topic's reasoning needs.
 - Give each H2 one distinct reader job. Merge a table, checklist, and later sections when they repeat the same selection logic.
 - Prefer headings that name the decision, defect, material, process, or buyer task. Avoid generic `Quick Answer`, `Fast Guide`, and `Rapid Decision` labels unless speed is the actual subject.
-- Use FAQ only when real query questions remain after the main article.
-- Do not force FAQ or a fixed conclusion/FAQ sequence. When both appear, follow the approved brief and keep the CTA inside the concluding decision or action module rather than as a detached sales line.
+- Every Blog must include a visible topic-specific FAQ with 3–6 useful questions from `FAQ_PLAN`. Do not repeat body answers merely to fill the module.
+- Every Blog must include a visible topic-specific CTA with the selected brand, a concrete action, useful inputs, reader value, and verified direct same-brand URL. Vary FAQ/CTA headings, placement, answer form, and wording according to `STYLE_PROFILE`, the reference fingerprint, intent, and `COMMERCIAL_BRIDGE_MODE`; do not force one conclusion/FAQ/CTA sequence.
 - Use a table only for comparison or structured lookup.
 - Use a checklist for action verification, not as decoration.
 - Use diagrams or tools only when they reduce explanation cost or decision error.
 - Vary paragraph length and transitions naturally.
 - Make adjacent paragraphs advance through engineering cause, condition, consequence, or decision. Avoid a stack of disconnected micro-answers.
-- Keep public paragraphs to three sentences maximum. Vary sentence length and evidence form so the rule does not create mechanical rhythm.
+- Let paragraph and section lengths follow the selected reference rhythm and reader task. Do not impose a universal three-sentence cap or fixed H2 count.
 - For comparison topics, organize core sections by shared buyer criteria and keep both options visible. Do not publish long one-process explanations without stating their effect on the comparison.
-- Use a consequence-led SPEAR opening and an answer-first decision aid when the query asks the reader to choose.
+- Use the opening mode and first decision aid declared by `STYLE_PROFILE` and `STRUCTURE_ADAPTATION_MAP`. Consequence-led and answer-first forms are options, not defaults.
+- Execute the approved H1/H2/H3 hierarchy, title alignment, narrative sequence, section proportions, and table/list placement. The opening must resolve the primary intent at the briefed point.
 
 ## Language And Readability
 

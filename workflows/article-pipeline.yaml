@@ -1,30 +1,37 @@
 name: manufacturing-content-pipeline
-version: 1
+version: 5
 canonical_order:
   - plan
   - info
   - audit
   - b2b-image
   - final-output
+  - performance-review
 entry_detection:
+  campaign_or_weekly_keyword_selection: seo-opportunity-orchestrator
   topic_or_keyword: plan
   accepted_plan_brief: info
   article_draft: audit
   audited_article_without_assets: b2b-image
   audited_article_with_assets: final-output
   standalone_image: b2b-image
+  published_article_with_metrics: performance-review
 transitions:
   plan:
-    pass: info
+    pass_after_top_ten_shape_fingerprint_faq_cta_gate: info
     keyword_approval_required: WAITING_FOR_KEYWORD_APPROVAL
+    intent_or_format_approval_required: WAITING_FOR_INTENT_APPROVAL
+    google_verification_required: WAITING_FOR_USER_BROWSER_VERIFICATION
+    tool_or_sandbox_permission_required: WAITING_FOR_TOOL_PERMISSION
+    best_effort_downgrade_requires_explicit_approval: WAITING_FOR_USER_BROWSER_VERIFICATION
     blocked: BLOCKED
   info:
-    pass: audit
+    pass_after_conversion_and_corpus_self_check: audit
     blocked: BLOCKED
   audit:
-    pass: b2b-image
-    info_rollback: info
-    plan_rollback: plan
+    pass_after_green_hard_gates: b2b-image
+    execution_hierarchy_english_faq_cta_or_corpus_defect: info
+    intent_reference_format_archetype_or_rhythm_defect: plan
     user_guidance_required: BLOCKED
   b2b-image:
     article_assets_complete: final-output
@@ -33,9 +40,77 @@ transitions:
   final-output:
     pass: COMPLETED
     structural_only: COMPLETED
+    published_monitoring_requested: performance-review
+    blocked: BLOCKED
+  performance-review:
+    review_complete: PHASE_COMPLETED
+    plan_feedback: plan
+    info_feedback: info
+    data_missing: WAITING_FOR_PERFORMANCE_DATA
     blocked: BLOCKED
 limits:
   audit_repair_cycles: 2
   image_attempts_per_asset: 2
 artifact_mutation: immutable_versioned_successor
-
+hard_gates:
+  plan:
+    - browser-verification-or-tool-permission-resolved
+    - no-unapproved-best-effort-downgrade
+    - complete-top-ten-per-page-analysis
+    - reference-shape-fingerprint
+    - article-rhythm-route
+    - mandatory-faq-plan
+    - mandatory-visible-cta-plan
+  info:
+    - scripts/validate_blog_conversion_modules.py
+    - scripts/validate_blog_corpus_similarity.py
+  audit:
+    - machine-gates-pass
+    - semantic-shape-corpus-diversity
+    - green-required-before-final-output
+conditional_research:
+  wechat:
+    trigger_phrases:
+      - 对微信公众号相关关键词文章进行参考
+      - 参考微信公众号文章
+      - 搜索微信公众号推文
+    skill: wechat-manufacturing-research
+    position: before-plan-or-info
+    artifact: private-wechat-reference-pack
+    replaces_google_top_ten: false
+    public_copy_permission: false
+auxiliary_preflight:
+  health_check:
+    skill: seo-run-health-check
+    required_for:
+      - scheduled-run
+      - multi-agent-run
+      - post-deployment-smoke
+  data_foundation:
+    skill: seo-data-foundation
+    required_for:
+      - campaign-keyword-selection
+      - evidence-dependent-strategy
+    stale_or_missing: WAITING_FOR_FRESH_DATA
+    freshness_defaults:
+      gsc_days: 7
+      ga4_days: 7
+      semrush_days: 30
+      live_serp: current_run
+  technical_preflight:
+    skill: seo-technical-preflight
+    required_for:
+      - create-update-consolidate-decision
+      - existing-url-optimization
+    live_change_required: WAITING_FOR_LIVE_CHANGE_APPROVAL
+  opportunity_orchestrator:
+    skill: seo-opportunity-orchestrator
+    required_for:
+      - campaign-or-weekly-selection
+      - conflicting-agent-proposals
+    single_user_supplied_keyword: optional
+post_review_learning:
+  skill: seo-learning-governor
+  input: completed-action-linked-30-60-90-day-evidence
+  rule_change: WAITING_FOR_GOVERNANCE_APPROVAL
+  automatic_skill_mutation: false

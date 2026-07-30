@@ -1,9 +1,9 @@
 {
   "name": "b2b-machining-image-generator",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "owner": "Lostk",
   "license": "Proprietary",
-  "updated_at": "2026-07-14",
+  "updated_at": "2026-07-28",
   "status": "active",
   "maturity_tier": "production",
   "lifecycle_stage": "production",

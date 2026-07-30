@@ -22,6 +22,7 @@ Act as the default execution router for the unified PlasticHubs/XMAKE content pr
 3. If live retrieval is incomplete or times out, apply the configured fallback to the local keyword library and mark the result `Degraded` or `Unavailable`; never substitute assumed metrics.
 4. If `PRIMARY_KEYWORD` is supplied by the user, bypass keyword approval and run the full chain.
 5. If the agent proposes the primary keyword, stop after Plan and return `WAITING_FOR_KEYWORD_APPROVAL`. Do not draft, audit, generate images, or package a document before approval.
+6. If Plan proposes a primary intent or governing content format different from the Top-10 dominant route, present the tradeoff and return `WAITING_FOR_INTENT_APPROVAL`. Do not continue from a general request for variety; require explicit approval for that specific alternative.
 6. For an approved or user-supplied keyword, create the Plan artifact with SERP status and handoff fields.
 7. Pass the actual Plan artifact to Info. Pass both Plan and Info artifacts to Audit.
 8. Apply Audit revisions when required. Do not claim a pass before the final audited artifact exists.

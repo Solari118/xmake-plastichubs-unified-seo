@@ -1,0 +1,52 @@
+version: 1
+scope:
+  - agent-project
+  - XMAKE-PlasticHubs-SEO-Blueprint
+local_copy:
+  allowed: true
+  destination_root: knowledge/private-resources
+  mode: additive-update
+sources:
+  - id: stamping-2026-06-03
+    path: 'D:\6.3 冲压 已处理'
+    type: image-library
+  - id: apex-batch-1
+    path: 'D:\3.12 APEX 第一批（已处理）'
+    type: image-library
+  - id: apex-batch-2
+    path: 'D:\5.5 APEX 第二批（已处理）'
+    type: image-library
+  - id: tiger-products
+    path: 'D:\5.6 3D TIGER 产品图（已处理）'
+    type: image-library
+  - id: tiger-guangxi
+    path: 'D:\5.8 3D TIGER-广西-已处理'
+    type: image-library
+  - id: tiger-metal-3d-printing
+    path: 'D:\6.3 3D TIGER-金属3D打印-已处理'
+    type: image-library
+  - id: factory-images
+    path: 'D:\工厂图'
+    type: image-library
+  - id: enterprise-knowledge
+    path: 'C:\企业知识（保密）'
+    type: confidential-knowledge
+image_rules:
+  target_brand: selected-public-brand
+  replace_all_apex_tiger_marks: true
+  approved_replacements:
+    - XMAKE
+    - PlasticHubs
+  official_logo_required: true
+  visible_edit_required_when_no_source_mark: true
+  pixel_identical_reuse_forbidden: true
+enterprise_knowledge:
+  confidentiality: company-secret
+  engineering_and_process_use: direct-private-source
+  business_and_management_use: conditional-backup
+packaging_gate:
+  trigger: every-package-or-deployment-request
+  resource: enterprise-knowledge
+  default: exclude
+  fresh_confirmation_required: true
+  previous_confirmation_reusable: false

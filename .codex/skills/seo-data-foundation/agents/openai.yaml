@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Data Foundation"
+  short_description: "Normalize SEO evidence with freshness and confidence."
+  default_prompt: "Build or validate an SEO source manifest before downstream analysis."
+

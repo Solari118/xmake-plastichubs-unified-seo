@@ -1,7 +1,7 @@
 interface:
   display_name: "SEO/GEO Content Auditor"
   short_description: "Audit intent, evidence, structure, originality, and delivery readiness"
-  default_prompt: "Use $seo-geo-content-auditor. State the Audit route, stage, and deliverable; then issue evidence-backed findings, the 20-point verdict, and the smallest necessary revision scope."
+  default_prompt: "Use $seo-geo-content-auditor. State the Audit route, stage, and deliverable; verify the Top-10 selected-reference contract, originality, intent-driven modules, internal links, and corpus diversity; then issue evidence-backed findings and the smallest necessary revision scope."
 compatibility:
   canonical_format: "agent-skills"
   adapter_targets:

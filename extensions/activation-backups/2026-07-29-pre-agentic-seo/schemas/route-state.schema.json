@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Route State",
+  "type": "object",
+  "required": ["run_id", "current_stage", "route_trace", "artifact_versions", "terminal_state"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "current_stage": {"enum": ["plan", "info", "audit", "b2b-image", "final-output", "performance-review", "terminal"]},
+    "route_trace": {"type": "array", "items": {"type": "string"}},
+    "artifact_versions": {"type": "object"},
+    "repair_cycles": {"type": "integer", "minimum": 0, "maximum": 2},
+    "terminal_state": {"enum": ["ACTIVE", "COMPLETED", "PHASE_COMPLETED", "WAITING_FOR_KEYWORD_APPROVAL", "WAITING_FOR_INTENT_APPROVAL", "WAITING_FOR_PERFORMANCE_DATA", "REVISION_REQUIRED", "BLOCKED"]}
+  },
+  "additionalProperties": false
+}

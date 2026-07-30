@@ -8,10 +8,22 @@
     "article_version": {"type": "string"},
     "audit_version": {"type": "string"},
     "brand": {"enum": ["XMAKE", "PlasticHubs"]},
-    "assets": {"type": "array", "items": {"type": "object"}},
+    "assets": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["asset_id", "section", "visual_job"],
+        "properties": {
+          "asset_id": {"type": "string"},
+          "section": {"type": "string"},
+          "visual_job": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    },
     "public_text_policy": {"type": "string"},
     "private_source_forwarded": {"const": false}
   },
   "additionalProperties": false
 }
-

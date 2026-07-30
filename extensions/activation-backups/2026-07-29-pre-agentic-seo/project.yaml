@@ -1,0 +1,38 @@
+name: manufacturing-content-pipeline
+description: Unified XMAKE and PlasticHubs manufacturing content project
+version: 5.1.0
+owner: Lostk
+status: active
+maturity_tier: governed
+lifecycle_stage: governed
+review_cadence: monthly
+root: C:\Users\Lostk\Documents\agent-project
+default_agent: manufacturing-content-pipeline
+route:
+  - plan
+  - info
+  - audit
+  - b2b-image
+  - final-output
+  - performance-review
+skills_directory: skills
+agents_directory: agents
+workflow: workflows/article-pipeline.yaml
+context_policy: policies/context-isolation.md
+private_resources:
+  registry: config/private-resource-sources.yaml
+  local_copy_root: knowledge/private-resources
+  policy: policies/private-resource-policy.md
+  packaging_gate: scripts/assert_private_packaging_scope.ps1
+terminal_states:
+  - COMPLETED
+  - PHASE_COMPLETED
+  - WAITING_FOR_KEYWORD_APPROVAL
+  - REVISION_REQUIRED
+  - WAITING_FOR_PERFORMANCE_DATA
+  - BLOCKED
+legacy_entry_points:
+  plan: C:\Users\Lostk\Documents\文章规划提示词-Plan
+  info: C:\Users\Lostk\Documents\文章撰写提示词-Info
+  audit: C:\Users\Lostk\Documents\文章优化提示词2.0-Aduit
+  b2b-image: C:\Users\Lostk\Documents\B2B机加工生图

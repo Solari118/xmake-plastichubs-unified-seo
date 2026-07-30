@@ -1,6 +1,6 @@
 ---
 name: manufacturing-blog-writer
-description: Write and revise varied, technically credible SEO/GEO manufacturing articles and blog posts for XMAKE or PlasticHubs from a complete content brief and live Top-5 SERP benchmark. Use for informational blogs, troubleshooting guides, comparisons, roundups, material or process guides, and service-support articles that require competitor-pattern synthesis, original information gain, natural keyword coverage, controlled commercial positioning, source-aware claims, bilingual review output, and publishing metadata. Do not use for upstream strategy planning or final content auditing.
+description: Write and revise original XMAKE or PlasticHubs manufacturing articles by executing a complete Plan brief, Google Top-10 benchmark, selected single- or multi-source structure/style references, article archetype, adaptation map, module choices, verified internal links, and evidence boundaries. Use for informational blogs, troubleshooting, comparisons, materials, procurement, cost, case-led, technical-encyclopedia, and service-support articles. Do not create upstream strategy or issue the final Audit verdict.
 ---
 
 # Manufacturing Blog Writer
@@ -14,19 +14,21 @@ At activation, report `Route: Info > manufacturing-blog-writer`, the drafting/re
 ## Workflow
 
 1. Read [Content Brief Contract](references/content-brief-contract.md), [Brand And Evidence Policy](references/brand-and-evidence-policy.md), [SEO/GEO Writing Rules](references/seo-geo-writing-rules.md), and [SERP Synthesis Rules](references/serp-synthesis-rules.md).
-2. Validate the required brief fields, including `PRIMARY_SERVICE` and `CROSS_SERVICE_LINK_PLAN`. Infer optional fields only when the inference is low risk and label it in review notes.
-3. Validate the Top-5 benchmark. If required research is missing or `Blocked`, label the output `Provisional Draft` and stop before final-deliverable status.
+2. Validate the required brief fields, including `PRIMARY_SERVICE`, `CROSS_SERVICE_LINK_PLAN`, the complete Top-10 classifications, resolved SERP access/browser-verification state, explicit approval evidence for any `Best-effort` downgrade, and `PLAN_GATE_STATUS=PASS`. Reject `WAITING_FOR_INTENT_APPROVAL`, `WAITING_FOR_USER_BROWSER_VERIFICATION`, `WAITING_FOR_TOOL_PERMISSION`, an unapproved `Best-effort` downgrade, missing approval evidence for an alternative route, or a title-only SERP pack. Do not infer user approval.
+3. Validate the Top-10 benchmark, selected structure/style references, article archetype, adaptation map, style profile, module choices, site/competition context, and link deployment. If required research is missing or `Blocked`, label the output `Provisional Draft`.
 4. Load relevant project knowledge and user-provided sources. Verify exact standards, metrics, tolerances, certification scope, safety claims, and competitor facts before use.
-5. Compare the five pages' intent, outlines, reasoning, evidence, media, commercial treatment, strengths, and gaps. Treat ranking explanations as hypotheses.
-6. Build a new narrative architecture by synthesizing useful patterns across all five pages, then apply the brief's differentiation and originality requirements. Do not imitate one page's full outline.
-7. Draft the fastest useful answer first where appropriate, but do not force an answer box when the topic requires context or diagnosis.
+   If Plan includes a WeChat route, verify that its query portfolio covers the approved brand services and technical dimensions before loading the reference pack and adaptation notes. Use private raw captures only for targeted claim verification. Never translate or rewrite a WeChat article section by section.
+5. Review all ten pages, then use the explicitly selected reference set as the execution model for structure, pacing, evidence form, and high-level style. Treat ranking explanations as hypotheses.
+6. Execute `STRUCTURE_ADAPTATION_MAP`, `STYLE_PROFILE`, `REFERENCE_SHAPE_FINGERPRINT`, and `ARTICLE_RHYTHM_ROUTE`, including H1/H2/H3 hierarchy, title alignment, opening answer point, narrative order, section proportions, table/list placement, comprehension load, English naturalness, and AI-pattern guard. Borrow functional structure and high-level form while writing original prose, headings, examples, transitions, and information gain.
+7. Follow the selected opening mode. Do not replace it with a universal SPEAR, definition, answer box, or consequence-led opening.
 8. Check every `INTENT_COMPLETION_CRITERIA` item and resolve the core decision in the opening or first core H2.
 9. Apply `SECTION_ROLE_MAP`; merge sections whose reader job or selection logic overlaps.
-10. Develop information gain beyond the benchmark through engineering judgment, conditions, limitations, failure modes, selection criteria, examples, evidence, or target-brand operational knowledge.
+10. Develop information gain beyond the benchmark through the forms selected in the brief. Every Blog must include the planned FAQ and CTA. Failure modes, DFM, examples, tables, RFQs, and checklists remain optional rather than default evidence.
+    WeChat information gain must be transformed into independently verified questions, mechanisms, counterexamples, or an original synthesis; novelty alone is not evidence.
 11. Apply the declared `COMMERCIAL_BRIDGE_MODE` without increasing or suppressing commercial intensity arbitrarily.
 12. Add natural keyword/query coverage and entity clarity. Do not enforce exact-match placement quotas.
 13. Honor task-specific `READABILITY_TARGET`, `MIN_WORD_COUNT`, `DELIVERABLE_MODE`, `PREVIEW_FORMAT`, `WORD_STYLE_REFERENCE`, `REVISION_SCOPE`, and `SOURCE_ELEMENTS_TO_PRESERVE` without treating them as universal defaults.
-14. Complete publishing metadata, justified same-brand internal links, private external evidence notes, media requirements, and schema recommendation when applicable. Never place external evidence links in public copy by default.
+14. Insert every approved same-brand internal link from `INTERNAL_LINK_DEPLOYMENT` at its planned contextual location using a natural anchor and direct URL. Complete metadata, private external evidence notes, media requirements, and schema recommendation.
 15. Run [Writer Quality Checklist](evals/writer-quality-checklist.md), mark every applicable group `Pass`, `Fail`, or justified `N/A`, and repair failures before handoff. No hard fail may remain; three or more soft failures require revision; every English-quality failure requires correction. This is a writer self-check, not the final Audit verdict.
 16. Hand off the draft, original brief, writer self-check record, private claim/source ledger, and revision summary when applicable.
 
@@ -55,31 +57,47 @@ Choose the best-fit shape, including but not limited to:
 - design-rule guide
 - case-led analysis
 - risk/myth correction
+- procurement guide
+- cost-decision analysis
+- technical encyclopedia
+- material experiment
 
-Do not label the chosen pattern in public copy. Vary hooks, section rhythm, evidence forms, transitions, and CTA placement. FAQ, tables, checklists, calculators, and diagrams are optional. Keep public paragraphs within three sentences while varying sentence length and evidence form so the cadence does not become mechanical.
+Do not label the chosen pattern in public copy. Vary hooks, section rhythm, evidence forms, transitions, FAQ placement, FAQ answer form, and CTA placement. FAQ and CTA are mandatory for every Blog; tables, checklists, calculators, and diagrams are optional. Paragraph length and section density must follow the selected reference fingerprint and reader task; do not impose a universal three-sentence cap.
 
-SERP analysis does not override this diversity rule. Use the benchmark to understand what the query rewards, then create a distinct outline that combines multiple sources and closes documented gaps.
+SERP analysis drives the selected shape through the Plan reference contract. Execute one selected reference or a coherent multi-source combination; do not average every result into the same house outline.
+
+The former engineering-control guide remains a valid archetype when Plan selects it. It may include controls, risks, inspection, supplier inputs, or engineering-review logic, but it must not leak into articles routed to other archetypes.
 
 Each H2 must have one distinct reader job. Combine a decision matrix with later “when to choose” material when they answer the same question. Use task-specific headings; avoid generic `Quick Answer`, `Fast Guide`, or `Rapid Decision` labels unless speed itself is the query subject.
 
-Do not force FAQ, a fixed conclusion, or one universal ending sequence. If both a conclusion and FAQ are present, follow the approved brief. Keep the CTA integrated with the concluding decision or next-step module rather than adding a detached sales line.
+Do not force RFQ, DFM, a table, a fixed conclusion, or one universal ending sequence. Always execute the required FAQ and CTA, but follow `FAQ_PLAN`, `STYLE_PROFILE`, and the CTA plan so their location, number, heading, answer form, and wording do not become a universal template.
 
-## SPEAR And Comparison Execution
+## Reference And Archetype Execution
 
-1. Write a 3-5 sentence `SPEAR` opening that names the decision consequence, the buyer's technical goal, and the risk of choosing incorrectly. Do not define the topic first.
-2. Place an answer-first comparison table or checklist immediately after the opening for selection queries.
-3. For `A vs B` content, compare both options within each core decision dimension. Do not separate the article into long independent mini-guides that make the reader reconstruct the comparison.
-4. Keep one-sided technical detail only when it changes the decision; state that effect in the same section.
-5. Explain DFM as risk control tied to tool access, build orientation, material mismatch, tolerance, post-processing, inspection, or another concrete failure mode.
-6. Keep public paragraphs to three sentences maximum. Use Markdown tables for genuine comparisons or verified numeric data.
-7. Add 5-7 technical FAQs only when unresolved questions remain. Delete any FAQ that merely repeats a body answer.
-8. Integrate the selected brand through a proportional engineering-review or quotation bridge. Follow `COMMERCIAL_BRIDGE_MODE`; do not force a broker section.
-9. End with a specific same-brand CTA matched to search intent. Informational content should invite process-fit or technical review; supplier or roundup content may invite quotation, comparison, or shortlist action. Request useful project inputs instead of using a generic `Contact us` or `Get a quote` line.
+1. Use `ARTICLE_ARCHETYPE` as the article's governing form.
+2. Reproduce the selected reference's functional sequence, pacing, section proportions, heading grammar, paragraph cadence, evidence density, and high-level style only where the adaptation map and shape fingerprint authorize it.
+3. Create an original opening, headings, examples, explanations, and transitions. Do not copy distinctive expression or a near-duplicate outline.
+4. Include `FAQ` and `CTA` from `MANDATORY_MODULES` plus any other required modules; use `OPTIONAL_MODULES` when they improve intent completion; exclude `MODULES_TO_OMIT`.
+5. For `A vs B` content, compare both options within shared decision dimensions when the selected archetype requires it.
+6. Match the declared rhythm route while varying paragraph length and cadence within readability limits. Do not force every paragraph, section, or article to the same sentence count, H2 count, or length band.
+7. Place the commercial bridge and CTA where the style profile and intent require. The CTA may be mid-article, contextual, or closing, but it may not be absent. Make it visually identifiable, action-led, linked to the direct same-brand URL, and explicit about the useful inputs or next step.
+8. Record a `REFERENCE_ADAPTATION_RECORD` showing which reference functions were executed, changed, or rejected and why.
+9. Compare the draft with recent same-brand articles and record a `CORPUS_SIMILARITY_SELF_CHECK` for opening, H2 order, evidence form, CTA, and media logic.
+10. The self-check must compare semantic section roles and rhythm, not only exact headings or phrase overlap. Record H2 count, section-length distribution, heading grammar, paragraph cadence, list/table density, FAQ position/form, CTA position/form, and ending type.
+11. Run `scripts/validate_blog_conversion_modules.py` on the completed Blog and `scripts/validate_blog_corpus_similarity.py` against the declared same-brand comparison set before labeling the draft ready for independent Audit. A failure keeps the draft at Info.
+
+## Mandatory FAQ And CTA Gate
+
+- Use a topic-specific FAQ heading and answer 3–6 useful questions from `FAQ_PLAN`. Each answer must add a condition, distinction, objection response, or next decision not already resolved verbatim in the body.
+- Keep FAQ placement and answer length intent-driven. Do not force the FAQ to be the last technical section and do not reuse the same question skeleton across sibling articles.
+- Use a visible, topic-specific CTA heading or callout. Name the selected brand, one concrete action, useful submission inputs, reader value, and the direct same-brand URL.
+- Treat a generic final sentence such as `contact us for more information` as missing CTA.
+- Before handoff, run `../../scripts/validate_blog_conversion_modules.py <article.md> --brand <XMAKE|PlasticHubs>`. A failure blocks `Audit-ready Draft`.
 
 ## Engineering Depth And Scope Control
 
 - State go/no-go conditions for process, material, supplier-model, or production-path choices when applicable.
-- Name concrete failure modes and connect DFM advice to a defect, rework event, acceptance failure, or schedule consequence.
+- Name concrete failure modes or DFM controls only when the brief selects them or they are necessary to prevent a material technical omission.
 - Include traceability, inspection, material-record, certification, or standards context when it changes acceptance or compliance decisions; do not force it into unrelated topics.
 - Keep `PRIMARY_SERVICE` or the declared topic axis dominant. Cross-service content must support a real substitution, stage, combination, upstream/downstream, or problem-solving relationship.
 - For every cross-service link, verify the same-brand destination, useful placement, relationship, and accurate naturally varied anchor. Do not append a catalog of services.
@@ -128,7 +146,7 @@ Use [Article Output Template](templates/article-output-template.md).
 
 Default output is a bilingual review draft: Chinese first, English second. For English-market publication, keep the final English metadata and English article publishable; the Chinese layer supports review and must not alter keyword strings where translation reduces precision.
 
-Before using `Audit-ready Draft` status, confirm that `SERP_RESEARCH_REQUIRED` is satisfied, all five results were considered, the draft meets `DIFFERENTIATION_REQUIREMENTS`, and no competitor expression was copied. Otherwise use `Provisional Draft`.
+Before using `Audit-ready Draft` status, confirm that all ten results were considered, the selected reference structure/style was executed, the adaptation record is complete, the corpus similarity check passes, verified internal links are present, `DIFFERENTIATION_REQUIREMENTS` are met, and no competitor expression was copied.
 
 Include the completed writer self-check record in the output. Do not label the article publishable or replace the independent Audit stage with this self-check.
 

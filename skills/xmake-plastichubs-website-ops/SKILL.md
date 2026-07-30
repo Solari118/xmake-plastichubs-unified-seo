@@ -14,9 +14,9 @@ At activation, report `Route: Website Ops > xmake-plastichubs-website-ops`, the 
 ## Workflow
 
 1. Identify `BRAND`, page type, output stage, deliverable mode, preview format, and source pack.
-2. Read [Manufacturing Claims Control](references/manufacturing-claims-control.md) and [Delivery And Variation Framework](references/delivery-and-variation-framework.md), then load only the relevant brand, process, technical, keyword, and template references.
+2. Read [Manufacturing Claims Control](references/manufacturing-claims-control.md), [Delivery And Variation Framework](references/delivery-and-variation-framework.md), and [Internal Link Deployment](references/internal-link-deployment.md), then load only the relevant brand, process, technical, keyword, and template references.
 3. Establish process facts and claim boundaries.
-4. Create the requested operational page, or package an approved article without changing its editorial argument unless asked.
+4. Create the requested operational page, or package an approved article without changing its editorial argument, selected structure/style, or module choices unless asked.
 5. Apply natural keyword/query coverage from [SEO Keyword Rules](references/seo-keyword-rules.md).
 6. Run the relevant checks. Do not issue the final cross-project publish verdict.
 
@@ -47,8 +47,12 @@ At activation, report `Route: Website Ops > xmake-plastichubs-website-ops`, the 
 1. `Bilingual Review Draft`: Chinese first, English second.
 2. `Paginated Preview`: create the requested preview format and inspect every page; a link alone is not visual QA.
 3. `Publish-ready English`: only after review approval.
-4. `WordPress-ready`: include approved metadata, headings, links, media requirements, and schema recommendation.
-5. `Word-ready`: generate only after content approval; use the document workflow and render/inspect fonts, bilingual punctuation, tables, headings, links, and page breaks.
+4. `WordPress-ready`: inject every approved internal link at its exact contextual location with the verified URL. Provide standard Markdown links and, when HTML is requested, use clickable `<a>` elements with `style="color:#5B9BD5;"`.
+5. `Word-ready`: generate only after content approval; create real clickable hyperlink relationships, style internal-link text light blue `#5B9BD5`, and render/inspect fonts, punctuation, tables, headings, links, and page breaks.
+
+Every full article package must contain at least three approved standalone images, each with a contextual placement and alt text. Three concepts, variants, or collage panels do not satisfy this gate.
+
+Every final article package must include an internal-link manifest containing anchor, URL, source section, target relationship, validation status, and injected output formats. Do not deliver link suggestions separately when the user requested deployed links.
 
 For approved blog packaging, use [Blog Article Publishing Template](templates/blog-article-template.md). For service-page Markdown, run `scripts/validate_surface_page.py <page.md>` and resolve errors.
 

@@ -1,8 +1,8 @@
 {
   "name": "xmake-plastichubs-website-ops",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "owner": "Lostk",
-  "updated_at": "2026-07-03",
+  "updated_at": "2026-07-28",
   "status": "active",
   "maturity_tier": "production",
   "lifecycle_stage": "library",

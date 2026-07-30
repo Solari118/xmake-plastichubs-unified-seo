@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEO Content Performance Review"
+  short_description: "Review published content at 30, 60, and 90 days"
+  default_prompt: "Use $seo-content-performance-review to evaluate this published XMAKE or PlasticHubs article with dated GSC/GA4 evidence, diagnose indexation, query, CTR, ranking, conversion, archetype, and internal-link performance, and route evidence-backed changes to Plan, Info, or Final Output."

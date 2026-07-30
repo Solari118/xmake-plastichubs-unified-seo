@@ -1,7 +1,7 @@
 interface:
   display_name: "B2B Machining Visual Strategist"
   short_description: "Diagnose, generate, and retouch industrial machining visuals"
-  default_prompt: "Use $b2b-machining-image-generator to diagnose this manufacturing content, propose three differentiated industrial visual concepts, and generate the selected image. If I request direct generation or direct factory-photo editing, submit one image call immediately and apply the eight-minute, one-retry runtime limits."
+  default_prompt: "Use $b2b-machining-image-generator to diagnose this manufacturing content. For an audited article, deliver at least three independent section-mapped images with distinct visual jobs; for a standalone image, propose three differentiated concepts unless I request direct generation or direct editing. Apply the eight-minute, one-retry limits per asset."
 compatibility:
   canonical_format: "agent-skills"
   adapter_targets:

@@ -5,9 +5,9 @@
   "required": ["run_id", "entry_point", "task_mode", "detected_artifact", "requested_output", "user_constraints"],
   "properties": {
     "run_id": {"type": "string", "minLength": 8},
-    "entry_point": {"enum": ["canonical", "plan", "info", "audit", "b2b-image"]},
-    "task_mode": {"enum": ["full_pipeline", "phase_only", "standalone_image"]},
-    "detected_artifact": {"enum": ["none", "topic", "plan_brief", "article", "audited_article", "article_with_assets"]},
+    "entry_point": {"enum": ["canonical", "plan", "info", "audit", "b2b-image", "final-output", "performance-review"]},
+    "task_mode": {"enum": ["full_pipeline", "phase_only", "standalone_image", "performance_review"]},
+    "detected_artifact": {"enum": ["none", "topic", "plan_brief", "article", "audited_article", "article_with_assets", "published_article"]},
     "requested_output": {"type": "array", "items": {"type": "string"}},
     "user_constraints": {"type": "object"},
     "approved_evidence_paths": {"type": "array", "items": {"type": "string"}},
@@ -15,4 +15,3 @@
   },
   "additionalProperties": false
 }
-

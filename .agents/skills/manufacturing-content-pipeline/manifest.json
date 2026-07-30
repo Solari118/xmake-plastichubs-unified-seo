@@ -1,8 +1,8 @@
 {
   "name": "manufacturing-content-pipeline",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "owner": "Lostk",
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-28",
   "status": "active",
   "maturity_tier": "governed",
   "lifecycle_stage": "governed",
@@ -14,8 +14,7 @@
     "file-backed fixture: evals/route-cases.json",
     "file-backed fixture: ../../schemas/task-envelope.schema.json"
   ],
-  "output_contract": "route trace, versioned stage artifacts, final package, terminal state",
+  "output_contract": "route trace, versioned stage artifacts, final package, internal-link manifest, performance review, terminal state",
   "rollback_boundary": "last accepted immutable stage artifact",
   "trust_report": "reports/trust-report.md"
 }
-

@@ -21,12 +21,16 @@ Choose structure from intent and evidence. Useful patterns include:
 - case-led analysis
 - myth/risk correction
 
-Do not label these patterns in public copy. Do not reuse one pattern for every article. FAQ, tables, checklists, calculators, and diagrams are conditional tools, not mandatory blocks.
+Do not label these patterns in public copy. Do not reuse one pattern for every article. The former engineering-control guide remains one valid pattern when SERP/reference evidence selects it; it is neither erased nor the default. FAQ and CTA are mandatory Blog modules, but their headings, placement, answer form, and wording must vary. Tables, RFQs, DFM, failure modes, checklists, calculators, diagrams, and conclusions remain conditional.
+
+Content diversity does not authorize a silent intent change. First preserve the dominant SERP intent and format while differentiating the angle, examples, evidence, structure details, or information gain. If the proposed article changes the primary intent or governing format, obtain explicit user approval after stating the tradeoff.
 
 ## Intent, Section, And Readability Design
 
 - Convert the primary intent into observable completion criteria, not a broad label such as `informational`.
 - Identify the earliest point where the core answer must appear. A long article can still be intent-first when the decision is resolved early and deeper sections are optional.
+- Record how the selected Top-10 reference uses H1/H2/H3, which reader job each level performs, how the logic moves from one section to the next, and where tables or lists appear.
+- Test whether every planned core section advances the title promise and whether the intended English complexity matches the target reader.
 - Assign one reader job to every H2. If a decision table and later “when to choose” sections repeat the same criteria, consolidate them under one decision module.
 - Use headings that name the buyer task, decision, defect, material, or process criterion. Avoid generic speed labels such as `Quick Answer`, `Fast Guide`, or `Rapid Decision` unless speed itself is the query subject.
 - Carry user-specified minimum length and readability targets into the brief. Do not use word count as a proxy for completeness and do not impose a universal minimum.

@@ -5,13 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED_ROOT = [
     "AGENTS.md", "project.yaml", "codex-project.yaml", "README.md", "LICENSE", "CHANGELOG.md",
-    "agents", "skills", "tools", "workflows", "prompts", "schemas", "memory", "knowledge",
+    "agents", "skills", "tools", "workflows", "prompts", "schemas", "memory", "knowledge", "config",
     "data/raw", "data/processed", "data/fixtures", "templates", "scripts", "examples", "docs",
     "tests", "evals", "observability", "policies", "deployments", ".codex", ".agents", ".github",
     ".gitignore", ".env.example", "Dockerfile", "requirements.lock"
@@ -22,6 +23,21 @@ STAGES = [
     ("audit", "seo-geo-content-auditor"),
     ("b2b-image", "b2b-machining-image-generator"),
     ("final-output", "xmake-plastichubs-website-ops"),
+    ("performance-review", "seo-content-performance-review"),
+]
+AUXILIARY_SKILLS = [
+    "seo-data-foundation",
+    "seo-opportunity-orchestrator",
+    "seo-technical-preflight",
+    "seo-run-health-check",
+    "seo-learning-governor",
+]
+AUXILIARY_AGENTS = [
+    "seo-data-agent.md",
+    "seo-opportunity-orchestrator.md",
+    "seo-technical-preflight-agent.md",
+    "seo-health-check-agent.md",
+    "seo-learning-governor-agent.md",
 ]
 LEGACY = {
     "plan": Path(r"C:\Users\Lostk\Documents\文章规划提示词-Plan"),
@@ -50,13 +66,59 @@ def main() -> int:
     for stage, skill in STAGES:
         if not (ROOT / "agents" / f"{stage}.md").exists():
             failures.append(f"missing agent: {stage}")
-        if not (ROOT / "skills" / skill / "SKILL.md").exists():
+        skill_path = ROOT / "skills" / skill / "SKILL.md"
+        if not skill_path.exists():
             failures.append(f"missing skill: {skill}")
+        else:
+            skill_text = skill_path.read_text(encoding="utf-8")
+            frontmatter = re.match(r"^---\r?\n(.*?)\r?\n---", skill_text, re.DOTALL)
+            if not frontmatter:
+                failures.append(f"missing or invalid skill frontmatter: {skill}")
+            elif not re.search(rf"(?m)^name:\s*{re.escape(skill)}\s*$", frontmatter.group(1)):
+                failures.append(f"skill frontmatter name mismatch: {skill}")
+            elif not re.search(r"(?m)^description:\s*\S", frontmatter.group(1)):
+                failures.append(f"skill description missing: {skill}")
+    for skill in AUXILIARY_SKILLS:
+        if not (ROOT / "skills" / skill / "SKILL.md").exists():
+            failures.append(f"missing auxiliary skill: {skill}")
+    for agent in AUXILIARY_AGENTS:
+        if not (ROOT / "agents" / agent).exists():
+            failures.append(f"missing auxiliary agent: {agent}")
     workflow = (ROOT / "workflows" / "article-pipeline.yaml").read_text(encoding="utf-8")
     order = [workflow.find(f"  - {stage}\n") for stage, _ in STAGES]
     if any(index < 0 for index in order) or order != sorted(order):
         failures.append("canonical route order is missing or incorrect")
-    required_contract = {"PRIMARY_SERVICE:", "CROSS_SERVICE_LINK_PLAN:"}
+    required_contract = {
+        "PRIMARY_SERVICE:",
+        "CROSS_SERVICE_LINK_PLAN:",
+        "TOP_TEN_SERP_RESULTS:",
+        "TOP_TEN_COMPLETENESS_STATUS:",
+        "SERP_INTENT_DISTRIBUTION:",
+        "DOMINANT_SERP_INTENT:",
+        "SERP_AUDIENCE_DISTRIBUTION:",
+        "DOMINANT_AUDIENCE:",
+        "SERP_FORMAT_DISTRIBUTION:",
+        "DOMINANT_CONTENT_FORMAT:",
+        "SELECTED_PRIMARY_INTENT:",
+        "SELECTED_CONTENT_FORMAT:",
+        "ANGLE_ALIGNMENT_STATUS:",
+        "USER_INTENT_APPROVAL:",
+        "SERP_ACCESS_STATUS:",
+        "USER_BROWSER_VERIFICATION_STATUS:",
+        "BEST_EFFORT_DOWNGRADE_APPROVAL:",
+        "BEST_EFFORT_DOWNGRADE_APPROVAL_EVIDENCE:",
+        "PLAN_GATE_STATUS:",
+        "PRIMARY_STRUCTURE_REFERENCE:",
+        "STRUCTURE_ADAPTATION_MAP:",
+        "STYLE_PROFILE:",
+        "REFERENCE_SHAPE_FINGERPRINT:",
+        "ARTICLE_RHYTHM_ROUTE:",
+        "ARTICLE_ARCHETYPE:",
+        "FAQ_PLAN:",
+        "CTA:",
+        "INTERNAL_LINK_DEPLOYMENT:",
+        "COMPETITOR_PAGE_STRENGTH:",
+    }
     contracts = [
         ROOT / "skills" / "b2b-seo-topic-map-builder" / "references" / "content-brief-contract.md",
         ROOT / "skills" / "manufacturing-blog-writer" / "references" / "content-brief-contract.md",
@@ -67,12 +129,120 @@ def main() -> int:
         for field in required_contract:
             if field not in text:
                 failures.append(f"contract field {field} missing from {contract.relative_to(ROOT)}")
+    required_schemas = [
+        "task-envelope.schema.json",
+        "plan-brief.schema.json",
+        "article-bundle.schema.json",
+        "audit-report.schema.json",
+        "final-package.schema.json",
+        "route-state.schema.json",
+        "performance-review.schema.json",
+        "visual-brief.schema.json",
+    ]
+    for schema_name in required_schemas:
+        schema_path = ROOT / "schemas" / schema_name
+        if not schema_path.exists():
+            failures.append(f"missing schema: {schema_name}")
+            continue
+        try:
+            json.loads(schema_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            failures.append(f"invalid JSON schema {schema_name}: {exc}")
+    plan_schema = json.loads((ROOT / "schemas" / "plan-brief.schema.json").read_text(encoding="utf-8"))
+    for field in [
+        "SERP_ACCESS_STATUS", "USER_BROWSER_VERIFICATION_STATUS",
+        "BEST_EFFORT_DOWNGRADE_APPROVAL", "BEST_EFFORT_DOWNGRADE_APPROVAL_EVIDENCE",
+        "REFERENCE_SHAPE_FINGERPRINT", "ARTICLE_RHYTHM_ROUTE", "FAQ_PLAN", "CTA",
+    ]:
+        if field not in plan_schema.get("required", []):
+            failures.append(f"Plan schema missing required field: {field}")
+    top_ten = plan_schema["properties"].get("TOP_TEN_SERP_RESULTS", {})
+    if top_ten.get("minItems") != 10 or top_ten.get("maxItems") != 10:
+        failures.append("Plan schema does not require exactly ten SERP records")
+    result_required = set(top_ten.get("items", {}).get("required", []))
+    for field in [
+        "primary_intent", "primary_audience", "content_format", "outline",
+        "title_alignment", "heading_hierarchy", "narrative_sequence",
+        "opening_mode", "intent_resolution_point", "section_length_pattern",
+        "list_table_placement", "pacing", "style_profile", "complexity_load",
+        "english_naturalness", "ai_pattern_risks", "evidence_form",
+        "commercial_intensity", "cta_position", "strengths", "gaps",
+        "ranking_hypotheses",
+    ]:
+        if field not in result_required:
+            failures.append(f"Plan schema SERP record missing required field: {field}")
+    route_schema = json.loads((ROOT / "schemas" / "route-state.schema.json").read_text(encoding="utf-8"))
+    terminal_states = route_schema["properties"]["terminal_state"].get("enum", [])
+    for terminal_state in [
+        "WAITING_FOR_INTENT_APPROVAL",
+        "WAITING_FOR_USER_BROWSER_VERIFICATION",
+        "WAITING_FOR_TOOL_PERMISSION",
+        "WAITING_FOR_FRESH_DATA",
+        "WAITING_FOR_LIVE_CHANGE_APPROVAL",
+        "WAITING_FOR_GOVERNANCE_APPROVAL",
+    ]:
+        if terminal_state not in terminal_states:
+            failures.append(f"route state missing {terminal_state}")
+    if "intent_or_format_approval_required: WAITING_FOR_INTENT_APPROVAL" not in workflow:
+        failures.append("workflow missing intent/format approval transition")
+    if "google_verification_required: WAITING_FOR_USER_BROWSER_VERIFICATION" not in workflow:
+        failures.append("workflow missing Google browser-verification transition")
+    if "tool_or_sandbox_permission_required: WAITING_FOR_TOOL_PERMISSION" not in workflow:
+        failures.append("workflow missing tool-permission transition")
+    if not (ROOT / "scripts" / "validate_plan_gate.py").exists():
+        failures.append("missing deterministic Plan gate validator")
+    if not (ROOT / "scripts" / "validate_blog_conversion_modules.py").exists():
+        failures.append("missing deterministic Blog FAQ/CTA gate validator")
+    if not (ROOT / "scripts" / "validate_blog_corpus_similarity.py").exists():
+        failures.append("missing deterministic semantic/shape corpus validator")
+    visual_schema = json.loads((ROOT / "schemas" / "visual-brief.schema.json").read_text(encoding="utf-8"))
+    if visual_schema["properties"]["assets"].get("minItems", 0) < 3:
+        failures.append("visual brief does not require at least three article images")
+    final_schema = json.loads((ROOT / "schemas" / "final-package.schema.json").read_text(encoding="utf-8"))
+    if final_schema["properties"].get("visual_asset_manifest", {}).get("minItems", 0) < 3:
+        failures.append("final package does not require at least three article images")
+    output_skill = (ROOT / "skills" / "xmake-plastichubs-website-ops" / "SKILL.md").read_text(encoding="utf-8")
+    if "#5B9BD5" not in output_skill:
+        failures.append("light-blue internal-link output rule missing")
+    private_files = [
+        ROOT / "config" / "private-resource-sources.yaml",
+        ROOT / "policies" / "private-resource-policy.md",
+        ROOT / "scripts" / "sync_private_resources.ps1",
+        ROOT / "scripts" / "assert_private_packaging_scope.ps1",
+    ]
+    for private_file in private_files:
+        if not private_file.exists():
+            failures.append(f"missing private-resource control: {private_file.relative_to(ROOT)}")
+    private_policy = (ROOT / "policies" / "private-resource-policy.md").read_text(encoding="utf-8")
+    for required_text in [
+        "Local project copies are allowed",
+        "replace every visible `APEX`, `TIGER`",
+        "must not be pixel-identical",
+        "Every packaging request requires a fresh question",
+    ]:
+        if required_text not in private_policy:
+            failures.append(f"private-resource policy rule missing: {required_text}")
     for mirror_name in [".agents", ".codex"]:
-        for _, skill in STAGES:
+        for skill in [item[1] for item in STAGES] + AUXILIARY_SKILLS:
             source = ROOT / "skills" / skill / "SKILL.md"
             mirror = ROOT / mirror_name / "skills" / skill / "SKILL.md"
             if not mirror.exists() or sha(source) != sha(mirror):
                 failures.append(f"mirror mismatch: {mirror_name}/skills/{skill}/SKILL.md")
+    extension = ROOT / "extensions" / "agentic-seo" / "extension.yaml"
+    if not extension.exists() or "status: active" not in extension.read_text(encoding="utf-8"):
+        failures.append("agentic SEO extension is not active")
+    link_extension = ROOT / "extensions" / "link-building" / "extension.yaml"
+    if not link_extension.exists() or "status: installed_inactive" not in link_extension.read_text(encoding="utf-8"):
+        failures.append("link-building extension must remain installed_inactive")
+    project_text = (ROOT / "project.yaml").read_text(encoding="utf-8")
+    for required_text in [
+        "slack:",
+        "google_sheets:",
+        "warning_non_blocking",
+        "WAITING_FOR_GOVERNANCE_APPROVAL",
+    ]:
+        if required_text not in project_text:
+            failures.append(f"project governance/output rule missing: {required_text}")
     if not args.skip_legacy_adapters:
         for name, legacy in LEGACY.items():
             adapter = legacy / "AGENTS.md"

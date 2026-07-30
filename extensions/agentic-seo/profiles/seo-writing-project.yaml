@@ -1,0 +1,18 @@
+project_mode: seo-writing-project
+root: C:\Users\Lostk\Documents\agent-project
+activation_scope:
+  required:
+    - source readiness before campaign keyword selection
+    - intent approval before intentional SERP deviation
+    - technical preflight for CREATE UPDATE or CONSOLIDATE decisions
+    - learning governance after existing 30 60 90 day performance review
+  optional:
+    - opportunity orchestration for a single user-supplied keyword
+existing_route_preserved:
+  - Plan
+  - Info
+  - Audit
+  - B2B Image
+  - Final Output
+  - Performance Review
+
