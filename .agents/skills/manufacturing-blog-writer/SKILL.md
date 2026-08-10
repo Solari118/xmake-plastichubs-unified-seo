@@ -19,10 +19,10 @@ At activation, report `Route: Info > manufacturing-blog-writer`, the drafting/re
 4. Load relevant project knowledge and user-provided sources. Verify exact standards, metrics, tolerances, certification scope, safety claims, and competitor facts before use.
    If Plan includes a WeChat route, verify that its query portfolio covers the approved brand services and technical dimensions before loading the reference pack and adaptation notes. Use private raw captures only for targeted claim verification. Never translate or rewrite a WeChat article section by section.
 5. Review all ten pages, then use the explicitly selected reference set as the execution model for structure, pacing, evidence form, and high-level style. Treat ranking explanations as hypotheses.
-6. Execute `STRUCTURE_ADAPTATION_MAP`, `STYLE_PROFILE`, `REFERENCE_SHAPE_FINGERPRINT`, and `ARTICLE_RHYTHM_ROUTE`, including H1/H2/H3 hierarchy, title alignment, opening answer point, narrative order, section proportions, table/list placement, comprehension load, English naturalness, and AI-pattern guard. Borrow functional structure and high-level form while writing original prose, headings, examples, transitions, and information gain.
+6. Execute `STRUCTURE_ADAPTATION_MAP`, `SECTION_REFERENCE_MAP`, `STYLE_PROFILE`, `REFERENCE_SHAPE_FINGERPRINT`, and `ARTICLE_RHYTHM_ROUTE`, including H1/H2/H3 hierarchy, title alignment, opening answer point, narrative order, section proportions, table/list placement, comprehension load, English naturalness, and AI-pattern guard. Preserve each planned H2's reader question, first-paragraph answer requirement, body scope, exclusions, and Top-10-derived information order. Borrow functional structure and high-level form while writing original prose, headings, examples, transitions, and information gain.
 7. Follow the selected opening mode. Do not replace it with a universal SPEAR, definition, answer box, or consequence-led opening.
 8. Check every `INTENT_COMPLETION_CRITERIA` item and resolve the core decision in the opening or first core H2.
-9. Apply `SECTION_ROLE_MAP`; merge sections whose reader job or selection logic overlaps.
+9. Apply `SECTION_ROLE_MAP` and `SECTION_REFERENCE_MAP`; merge sections whose reader job or selection logic overlaps. Do not freely rename an H2. Any heading change requires `HEADING_CHANGE_RECORD` with old heading, new heading, reason, affected reader question, body changes, and confirmation that the first paragraph now answers the new heading. A slogan, metaphor, or broader/narrower promise is invalid unless the section body is revised to match.
 10. Develop information gain beyond the benchmark through the forms selected in the brief. Every Blog must include the planned FAQ and CTA. Failure modes, DFM, examples, tables, RFQs, and checklists remain optional rather than default evidence.
     WeChat information gain must be transformed into independently verified questions, mechanisms, counterexamples, or an original synthesis; novelty alone is not evidence.
 11. Apply the declared `COMMERCIAL_BRIDGE_MODE` without increasing or suppressing commercial intensity arbitrarily.
@@ -30,7 +30,7 @@ At activation, report `Route: Info > manufacturing-blog-writer`, the drafting/re
 13. Honor task-specific `READABILITY_TARGET`, `MIN_WORD_COUNT`, `DELIVERABLE_MODE`, `PREVIEW_FORMAT`, `WORD_STYLE_REFERENCE`, `REVISION_SCOPE`, and `SOURCE_ELEMENTS_TO_PRESERVE` without treating them as universal defaults.
 14. Insert every approved same-brand internal link from `INTERNAL_LINK_DEPLOYMENT` at its planned contextual location using a natural anchor and direct URL. Complete metadata, private external evidence notes, media requirements, and schema recommendation.
 15. Run [Writer Quality Checklist](evals/writer-quality-checklist.md), mark every applicable group `Pass`, `Fail`, or justified `N/A`, and repair failures before handoff. No hard fail may remain; three or more soft failures require revision; every English-quality failure requires correction. This is a writer self-check, not the final Audit verdict.
-16. Hand off the draft, original brief, writer self-check record, private claim/source ledger, and revision summary when applicable.
+16. Hand off the draft, original brief, writer self-check record, `HEADING_CHANGE_RECORD`, private claim/source ledger, and revision summary when applicable.
 
 ## Public Brand And Evidence Boundary
 
@@ -70,6 +70,8 @@ The former engineering-control guide remains a valid archetype when Plan selects
 
 Each H2 must have one distinct reader job. Combine a decision matrix with later “when to choose” material when they answer the same question. Use task-specific headings; avoid generic `Quick Answer`, `Fast Guide`, or `Rapid Decision` labels unless speed itself is the query subject.
 
+For each H2, perform a literal three-part check before handoff: what the heading promises, what the first paragraph answers, and what the full section explains. All three must describe the same reader question. A heading such as `what it can produce` requires actual part/application examples; suitability criteria or process comparisons cannot substitute for that answer.
+
 Do not force RFQ, DFM, a table, a fixed conclusion, or one universal ending sequence. Always execute the required FAQ and CTA, but follow `FAQ_PLAN`, `STYLE_PROFILE`, and the CTA plan so their location, number, heading, answer form, and wording do not become a universal template.
 
 ## Reference And Archetype Execution
@@ -84,15 +86,17 @@ Do not force RFQ, DFM, a table, a fixed conclusion, or one universal ending sequ
 8. Record a `REFERENCE_ADAPTATION_RECORD` showing which reference functions were executed, changed, or rejected and why.
 9. Compare the draft with recent same-brand articles and record a `CORPUS_SIMILARITY_SELF_CHECK` for opening, H2 order, evidence form, CTA, and media logic.
 10. The self-check must compare semantic section roles and rhythm, not only exact headings or phrase overlap. Record H2 count, section-length distribution, heading grammar, paragraph cadence, list/table density, FAQ position/form, CTA position/form, and ending type.
-11. Run `scripts/validate_blog_conversion_modules.py` on the completed Blog and `scripts/validate_blog_corpus_similarity.py` against the declared same-brand comparison set before labeling the draft ready for independent Audit. A failure keeps the draft at Info.
+11. Run `scripts/validate_blog_conversion_modules.py`, `scripts/validate_blog_narrative_quality.py`, and `scripts/validate_blog_corpus_similarity.py` against the completed Blog and declared Plan/comparison set before labeling the draft ready for independent Audit. A failure keeps the draft at Info.
 
 ## Mandatory FAQ And CTA Gate
 
 - Use a topic-specific FAQ heading and answer 3–6 useful questions from `FAQ_PLAN`. Each answer must add a condition, distinction, objection response, or next decision not already resolved verbatim in the body.
 - Keep FAQ placement and answer length intent-driven. Do not force the FAQ to be the last technical section and do not reuse the same question skeleton across sibling articles.
+- Do not place a core section after FAQ unless `FAQ_PLAN` explicitly enables and names that exception with a selected Top-10 placement rationale. Otherwise finish the substantive narrative before FAQ.
 - Use a visible, topic-specific CTA heading or callout. Name the selected brand, one concrete action, useful submission inputs, reader value, and the direct same-brand URL.
 - Treat a generic final sentence such as `contact us for more information` as missing CTA.
 - Before handoff, run `../../scripts/validate_blog_conversion_modules.py <article.md> --brand <XMAKE|PlasticHubs>`. A failure blocks `Audit-ready Draft`.
+- Before handoff, also run `../../scripts/validate_blog_narrative_quality.py <plan.json> <article.md>`. It deterministically blocks forbidden tone terms, an unapproved FAQ interruption, and a narrow negative-comparison H2 governing several H3 topics.
 
 ## Engineering Depth And Scope Control
 

@@ -14,6 +14,8 @@
 - The selected primary intent or governing format differs from the dominant route without explicit user approval evidence.
 - `PLAN_GATE_STATUS` is not `PASS` at Plan-to-Info handoff.
 - The brief claims exact Top-10 positions without the search environment or uses `Validated` when only best-effort search evidence exists.
+- Any `SECTION_REFERENCE_MAP` item lacks its sequence index/reason or heading-scope mode.
+- A core section follows FAQ without the exact affected headings, explicit exception, reader-benefit rationale, and supporting Top-10 URL in `FAQ_PLAN`.
 - No primary structure reference is selected, or the selected references do not produce an executable adaptation map and style profile.
 - `REFERENCE_SHAPE_FINGERPRINT` omits heading hierarchy, title alignment, opening answer point, narrative sequence, section proportions, table/list placement, comprehension load, English naturalness, or AI-pattern risk.
 - `ARTICLE_RHYTHM_ROUTE` does not identify one primary controller or does not prevent sibling-article cadence convergence.

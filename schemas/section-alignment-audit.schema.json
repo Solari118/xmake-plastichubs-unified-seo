@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Section Alignment Audit",
+  "type": "object",
+  "required": [
+    "article_path", "article_sha256", "reviewer_stage",
+    "overall_verdict", "sections"
+  ],
+  "properties": {
+    "article_path": {"type": "string", "minLength": 1},
+    "article_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reviewer_stage": {"const": "Audit"},
+    "overall_verdict": {"enum": ["PASS", "FAIL"]},
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "heading", "reader_question", "heading_meaning",
+          "first_paragraph_evidence_excerpt", "section_evidence_excerpt",
+          "section_summary", "reference_sources",
+          "reference_structure_pattern", "verdict",
+          "defect_origin", "required_route"
+        ],
+        "properties": {
+          "heading": {"type": "string", "minLength": 1},
+          "reader_question": {"type": "string", "minLength": 1},
+          "heading_meaning": {"type": "string", "minLength": 1},
+          "first_paragraph_evidence_excerpt": {"type": "string", "minLength": 1},
+          "section_evidence_excerpt": {"type": "string", "minLength": 1},
+          "section_summary": {"type": "string", "minLength": 1},
+          "reference_sources": {
+            "type": "array", "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "reference_structure_pattern": {"type": "string", "minLength": 1},
+          "verdict": {"enum": ["PASS", "FAIL"]},
+          "defect_origin": {"enum": ["none", "info", "plan"]},
+          "required_route": {"enum": ["none", "Info -> Audit", "Plan -> Info -> Audit"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

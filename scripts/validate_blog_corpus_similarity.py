@@ -6,6 +6,7 @@ import argparse
 import json
 import math
 import re
+import tempfile
 from itertools import combinations
 from pathlib import Path
 
@@ -23,15 +24,19 @@ def role(heading: str) -> str:
     value = heading.lower()
     patterns = [
         ("faq", r"\bfaq\b|frequently asked|questions .* ask"),
-        ("action", r"\breview\b|\bprepare\b|\bsend\b|\bquote|\bcontact\b|\bupload\b"),
+        (
+            "action",
+            r"\bplastichubs\b|\bxmake\b|^(?:ask|request|send|review|contact|upload|"
+            r"talk|discuss|evaluate|check|submit|get)\b",
+        ),
         ("specification", r"\bspecif|\binspect|\baccept|\btolerance"),
-        ("comparison", r"\bcompare|\bversus\b|\bvs\.?\b|\bor\b|\bdifference"),
-        ("selection", r"\bchoose|\bwhich\b|\bwhen should|\bright process|\bright material"),
-        ("risk-control", r"\brisk|\bstress|\bdefect|\bfail|\bcontrol|\bmatters"),
-        ("design", r"\bdesign|\bgeometry|\btool access"),
-        ("process", r"\bmachin|\bprint|\bmold|\bcast|\bprocess|\bmanufactur"),
+        ("selection", r"^start with\b|^match\b|\bchoose\b|\bwhich\b|\bwhen should\b|\bright process|\bright material|\bdecision\b"),
         ("finish", r"\bfinish|\btexture|\bpolish|\bSPI\b|\bVDI\b"),
+        ("comparison", r"\bcompare|\bversus\b|\bvs\.?\b|\bor\b|\bdifference"),
+        ("risk-control", r"\brisk|\bstress|\bdefect|\bfail|\bcontrol|\bmatters"),
         ("cost", r"\bcost|\bprice|\blead time"),
+        ("design", r"\bdesign|\bgeometry|\btool access"),
+        ("process", r"\bmachin|\bprint|\bmold|\bcast|\bprocess|\bmanufactur|\bways to make\b|\bproduction\b"),
         ("orientation", r"^what\b|^why\b|^understanding\b|^guide\b"),
     ]
     for label, pattern in patterns:
@@ -179,12 +184,149 @@ def self_test() -> int:
         root / "data/processed/runs/ph-week-20260727-three-articles/final"
         / "small-batch-plastic-manufacturing/small-batch-plastic-manufacturing.v3.md",
     ]
-    if not all(path.exists() for path in current):
-        print("SKIP: current three-article corpus fixture is unavailable")
-        return 0
-    result = validate(current)
+    role_cases = {
+        "Start with the decision your batch must support": "selection",
+        "Four ways to make a small plastic batch": "process",
+        "Cost changes when the design is still changing": "cost",
+        "Ask PlasticHubs to compare the process routes": "action",
+        "Finishing options for machined acrylic parts": "finish",
+        "Review plastic finish samples with PlasticHubs before approval": "action",
+    }
+    role_errors = {
+        heading: {"expected": expected, "actual": role(heading)}
+        for heading, expected in role_cases.items()
+        if role(heading) != expected
+    }
+    duplicate_a = """# Process Route A
+
+## How the process works
+
+Material is prepared, processed, and inspected in sequence.
+
+## Choose the route for the part
+
+Geometry, material, and quantity define the selection.
+
+## Cost changes with setup
+
+Setup and tooling move cost between early and repeated units.
+
+## Frequently asked questions
+
+### What affects fit?
+
+Geometry and material affect fit.
+
+### What affects cost?
+
+Setup and quantity affect cost.
+
+### What needs inspection?
+
+Dimensions and finish need inspection.
+
+## Ask PlasticHubs to review the part
+
+Send the model and drawing for review.
+"""
+    duplicate_b = """# Manufacturing Route B
+
+## How production operates
+
+Stock is prepared, processed, and checked in sequence.
+
+## Select the method for the component
+
+Shape, resin, and batch size define the selection.
+
+## Cost depends on preparation
+
+Preparation and tools move cost between early and repeated units.
+
+## Questions buyers often ask
+
+### What affects suitability?
+
+Shape and resin affect suitability.
+
+### What affects price?
+
+Preparation and quantity affect price.
+
+### What needs verification?
+
+Dimensions and appearance need verification.
+
+## Request a PlasticHubs part review
+
+Send the CAD file and drawing for review.
+"""
+    diverse_c = """# Plastic Finish Specification
+
+## Separate molded texture from secondary finishing
+
+Mold texture originates in tooling, while secondary finishing changes an individual part.
+
+### Mold texture
+
+Tooling transfers texture during molding.
+
+### Secondary finishing
+
+Polishing or coating changes the molded part.
+
+## Write the acceptance requirement
+
+Define gloss, color, viewing conditions, and protected functional zones.
+
+| Requirement | Inspection |
+|---|---|
+| Gloss | Approved sample |
+| Color | Controlled lighting |
+
+## Frequently asked questions about finish control
+
+### Can one part use two finishes?
+
+Yes, when zones and boundaries are defined.
+
+### Does texture hide defects?
+
+Not every defect is hidden by texture.
+
+### Is a sample enough?
+
+The sample also needs documented viewing conditions.
+
+## Review finish samples with PlasticHubs
+
+Send the material, process, finish zones, and acceptance method for review.
+"""
+    with tempfile.TemporaryDirectory() as temporary:
+        fixture_root = Path(temporary)
+        duplicate_a_path = fixture_root / "duplicate-a.md"
+        duplicate_b_path = fixture_root / "duplicate-b.md"
+        diverse_path = fixture_root / "diverse.md"
+        duplicate_a_path.write_text(duplicate_a, encoding="utf-8")
+        duplicate_b_path.write_text(duplicate_b, encoding="utf-8")
+        diverse_path.write_text(diverse_c, encoding="utf-8")
+        duplicate_result = validate([duplicate_a_path, duplicate_b_path])
+        diverse_result = validate([duplicate_a_path, diverse_path])
+    legacy_result = validate(current) if all(path.exists() for path in current) else None
+    result = {
+        "role_errors": role_errors,
+        "portable_duplicate_status": duplicate_result["status"],
+        "portable_diverse_status": diverse_result["status"],
+        "legacy_fixture_status": legacy_result["status"] if legacy_result else "NOT_AVAILABLE",
+    }
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    return 0 if result["status"] == "FAIL" else 1
+    passed = (
+        not role_errors
+        and duplicate_result["status"] == "FAIL"
+        and diverse_result["status"] == "PASS"
+        and (legacy_result is None or legacy_result["status"] == "FAIL")
+    )
+    return 0 if passed else 1
 
 
 def main() -> int:

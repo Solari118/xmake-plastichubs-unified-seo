@@ -40,11 +40,20 @@ RHYTHM_FIELDS = (
 )
 FAQ_FIELDS = (
     "heading", "question_count", "question_sources", "placement",
-    "questions", "duplication_guard",
+    "questions", "duplication_guard", "allow_substantive_sections_after_faq",
+    "substantive_sections_after_faq", "placement_rationale",
+    "placement_reference_urls",
 )
 CTA_FIELDS = (
     "heading_or_callout", "placement", "action", "destination_url",
     "input_request", "reader_value", "same_brand_url_status", "variation_note",
+)
+SECTION_REFERENCE_FIELDS = (
+    "planned_heading", "section_kind", "sequence_index", "sequence_reason",
+    "heading_scope_mode", "reference_result_positions",
+    "reference_urls", "reference_heading_patterns", "reference_information_order",
+    "reader_question", "first_paragraph_answer_requirement", "body_scope",
+    "excluded_scope", "adaptation_note", "originality_guard",
 )
 BRAND_DOMAINS = {
     "XMAKE": "xmake.com",
@@ -77,6 +86,91 @@ def validate_blog_contract(data: dict[str, Any], errors: list[str]) -> None:
             if not nonempty(value.get(required)):
                 errors.append(f"{field} missing {required}")
 
+    section_map = data.get("SECTION_REFERENCE_MAP")
+    if not isinstance(section_map, list) or len(section_map) < 3:
+        errors.append("SECTION_REFERENCE_MAP must contain at least three planned public H2 sections")
+    else:
+        top_ten = data.get("TOP_TEN_SERP_RESULTS")
+        top_urls = {
+            str(row.get("url", "")).strip()
+            for row in top_ten
+            if isinstance(row, dict)
+        } if isinstance(top_ten, list) else set()
+        headings: list[str] = []
+        section_kinds: set[str] = set()
+        for index, section in enumerate(section_map, start=1):
+            if not isinstance(section, dict):
+                errors.append(f"SECTION_REFERENCE_MAP item {index} must be an object")
+                continue
+            for field in SECTION_REFERENCE_FIELDS:
+                if field == "excluded_scope":
+                    if not isinstance(section.get(field), list):
+                        errors.append(f"SECTION_REFERENCE_MAP item {index} {field} must be an array")
+                elif not nonempty(section.get(field)):
+                    errors.append(f"SECTION_REFERENCE_MAP item {index} missing {field}")
+            heading = str(section.get("planned_heading", "")).strip()
+            if heading:
+                headings.append(heading.casefold())
+            section_kind = str(section.get("section_kind", "")).strip().lower()
+            section_kinds.add(section_kind)
+            if section.get("sequence_index") != index:
+                errors.append(
+                    f"SECTION_REFERENCE_MAP item {index} sequence_index must equal its 1-based position"
+                )
+            if len(str(section.get("sequence_reason", "")).split()) < 5:
+                errors.append(
+                    f"SECTION_REFERENCE_MAP item {index} sequence_reason is too thin"
+                )
+            scope_mode = str(section.get("heading_scope_mode", "")).strip()
+            allowed_scope_modes = {
+                "core": {"single-topic", "comparison", "multi-topic-umbrella"},
+                "faq": {"faq"},
+                "cta": {"cta"},
+            }
+            if scope_mode not in allowed_scope_modes.get(section_kind, set()):
+                errors.append(
+                    f"SECTION_REFERENCE_MAP item {index} heading_scope_mode is incompatible with section_kind"
+                )
+            positions = section.get("reference_result_positions")
+            if not isinstance(positions, list) or not positions or any(
+                not isinstance(position, int) or not 1 <= position <= 10
+                for position in positions
+            ):
+                errors.append(
+                    f"SECTION_REFERENCE_MAP item {index} reference_result_positions must use Top-10 positions 1-10"
+                )
+            urls = section.get("reference_urls")
+            if not isinstance(urls, list) or not urls:
+                errors.append(f"SECTION_REFERENCE_MAP item {index} reference_urls must be non-empty")
+            else:
+                for url in urls:
+                    if str(url).strip() not in top_urls:
+                        errors.append(
+                            f"SECTION_REFERENCE_MAP item {index} reference URL is not in TOP_TEN_SERP_RESULTS: {url}"
+                        )
+        if len(headings) != len(set(headings)):
+            errors.append("SECTION_REFERENCE_MAP planned_heading values must be unique")
+        if "faq" not in section_kinds:
+            errors.append("SECTION_REFERENCE_MAP must contain a FAQ section")
+        if "cta" not in section_kinds:
+            errors.append("SECTION_REFERENCE_MAP must contain a CTA section")
+        faq_headings = [
+            str(section.get("planned_heading", "")).strip()
+            for section in section_map
+            if isinstance(section, dict) and section.get("section_kind") == "faq"
+        ]
+        planned_faq_heading = str(data.get("FAQ_PLAN", {}).get("heading", "")).strip()
+        if planned_faq_heading and faq_headings != [planned_faq_heading]:
+            errors.append("SECTION_REFERENCE_MAP FAQ heading must match FAQ_PLAN heading")
+        cta_headings = [
+            str(section.get("planned_heading", "")).strip()
+            for section in section_map
+            if isinstance(section, dict) and section.get("section_kind") == "cta"
+        ]
+        planned_cta_heading = str(data.get("CTA", {}).get("heading_or_callout", "")).strip()
+        if planned_cta_heading and cta_headings != [planned_cta_heading]:
+            errors.append("SECTION_REFERENCE_MAP CTA heading must match CTA heading_or_callout")
+
     mandatory = data.get("MANDATORY_MODULES")
     normalized = {
         str(item).strip().lower()
@@ -100,7 +194,13 @@ def validate_blog_contract(data: dict[str, Any], errors: list[str]) -> None:
         errors.append("FAQ_PLAN must be a complete object")
     else:
         for field in FAQ_FIELDS:
-            if not nonempty(faq.get(field)):
+            if field == "substantive_sections_after_faq":
+                if not isinstance(faq.get(field), list):
+                    errors.append(f"FAQ_PLAN {field} must be an array")
+            elif field == "allow_substantive_sections_after_faq":
+                if not isinstance(faq.get(field), bool):
+                    errors.append(f"FAQ_PLAN {field} must be boolean")
+            elif not nonempty(faq.get(field)):
                 errors.append(f"FAQ_PLAN missing {field}")
         questions = faq.get("questions")
         count = faq.get("question_count")
@@ -110,6 +210,43 @@ def validate_blog_contract(data: dict[str, Any], errors: list[str]) -> None:
             errors.append("FAQ_PLAN question_count must be between 3 and 6")
         elif isinstance(questions, list) and count != len(questions):
             errors.append("FAQ_PLAN question_count must match questions length")
+        if isinstance(section_map, list):
+            faq_indexes = [
+                index for index, section in enumerate(section_map)
+                if isinstance(section, dict) and section.get("section_kind") == "faq"
+            ]
+            if len(faq_indexes) == 1:
+                faq_index = faq_indexes[0]
+                actual_after = [
+                    str(section.get("planned_heading", "")).strip()
+                    for section in section_map[faq_index + 1:]
+                    if isinstance(section, dict) and section.get("section_kind") == "core"
+                ]
+                declared_after = faq.get("substantive_sections_after_faq")
+                if declared_after != actual_after:
+                    errors.append(
+                        "FAQ_PLAN substantive_sections_after_faq must match core sections placed after FAQ"
+                    )
+                if actual_after and faq.get("allow_substantive_sections_after_faq") is not True:
+                    errors.append(
+                        "core sections after FAQ require allow_substantive_sections_after_faq=true"
+                    )
+                if not actual_after and faq.get("allow_substantive_sections_after_faq") is not False:
+                    errors.append(
+                        "allow_substantive_sections_after_faq must be false when no core section follows FAQ"
+                    )
+        if len(str(faq.get("placement_rationale", "")).split()) < 8:
+            errors.append("FAQ_PLAN placement_rationale is too thin")
+        placement_urls = faq.get("placement_reference_urls")
+        top_urls = {
+            str(row.get("url", "")).strip()
+            for row in data.get("TOP_TEN_SERP_RESULTS", [])
+            if isinstance(row, dict)
+        }
+        if not isinstance(placement_urls, list) or not placement_urls:
+            errors.append("FAQ_PLAN placement_reference_urls must be non-empty")
+        elif any(str(url).strip() not in top_urls for url in placement_urls):
+            errors.append("FAQ_PLAN placement_reference_urls must belong to TOP_TEN_SERP_RESULTS")
 
     cta = data.get("CTA")
     if not isinstance(cta, dict):
@@ -287,6 +424,8 @@ def receipt(data: dict[str, Any], status: str, errors: list[str]) -> dict[str, A
         "user_intent_approval": data.get("USER_INTENT_APPROVAL"),
         "faq_gate": "PASS" if isinstance(data.get("FAQ_PLAN"), dict) else "FAIL",
         "cta_gate": "PASS" if isinstance(data.get("CTA"), dict) else "FAIL",
+        "section_reference_count": len(data.get("SECTION_REFERENCE_MAP", []))
+        if isinstance(data.get("SECTION_REFERENCE_MAP"), list) else 0,
         "errors": errors,
     }
 
@@ -366,6 +505,76 @@ def sample(alternative: bool, approved: bool = False) -> dict[str, Any]:
             "rhythm_rationale": "matches the dominant buyer-guide intent",
             "anti_convergence_guard": "do not reuse explanation-caution-supplier-input sequencing",
         },
+        "SECTION_REFERENCE_MAP": [
+            {
+                "planned_heading": "What the process is and when it fits",
+                "section_kind": "core",
+                "sequence_index": 1,
+                "sequence_reason": "Resolve the definition and fit decision before process detail.",
+                "heading_scope_mode": "single-topic",
+                "reference_result_positions": [1],
+                "reference_urls": ["https://example1.com/guide"],
+                "reference_heading_patterns": ["plain definition followed by a fit decision"],
+                "reference_information_order": ["definition", "fit boundary"],
+                "reader_question": "What is this process, and is it suitable for my part?",
+                "first_paragraph_answer_requirement": "Define the process and state its main fit condition immediately.",
+                "body_scope": ["definition", "fit conditions"],
+                "excluded_scope": ["detailed defect diagnosis"],
+                "adaptation_note": "Use the reference's accessible order with original examples.",
+                "originality_guard": "Do not copy the reference heading or prose.",
+            },
+            {
+                "planned_heading": "How the process works",
+                "section_kind": "core",
+                "sequence_index": 2,
+                "sequence_reason": "Explain the operating sequence after establishing process fit.",
+                "heading_scope_mode": "single-topic",
+                "reference_result_positions": [1, 3],
+                "reference_urls": ["https://example1.com/guide", "https://example3.com/guide"],
+                "reference_heading_patterns": ["stepwise process explanation"],
+                "reference_information_order": ["setup", "operation", "result"],
+                "reader_question": "How does the process turn stock into a finished part?",
+                "first_paragraph_answer_requirement": "Summarize the process sequence before adding detail.",
+                "body_scope": ["setup", "operation", "result"],
+                "excluded_scope": ["supplier-selection checklist"],
+                "adaptation_note": "Combine the primary sequence with one bounded explanatory pattern.",
+                "originality_guard": "Use original sequencing language and examples.",
+            },
+            {
+                "planned_heading": "Questions Buyers Ask Before Choosing This Route",
+                "section_kind": "faq",
+                "sequence_index": 3,
+                "sequence_reason": "Resolve remaining buyer objections after the complete core narrative.",
+                "heading_scope_mode": "faq",
+                "reference_result_positions": [1],
+                "reference_urls": ["https://example1.com/guide"],
+                "reference_heading_patterns": ["compact end-of-guide FAQ"],
+                "reference_information_order": ["unresolved boundary questions"],
+                "reader_question": "What practical questions remain before choosing the process?",
+                "first_paragraph_answer_requirement": "Answer the first unresolved buyer question directly.",
+                "body_scope": ["three non-duplicate buyer questions"],
+                "excluded_scope": ["repeating the body verbatim"],
+                "adaptation_note": "Use the reference FAQ position but query-specific questions.",
+                "originality_guard": "Do not copy question wording.",
+            },
+            {
+                "planned_heading": "Review Your Plastic Part With PlasticHubs",
+                "section_kind": "cta",
+                "sequence_index": 4,
+                "sequence_reason": "Close with a selected-brand action after buyer questions are resolved.",
+                "heading_scope_mode": "cta",
+                "reference_result_positions": [1],
+                "reference_urls": ["https://example1.com/guide"],
+                "reference_heading_patterns": ["action-led closing next step"],
+                "reference_information_order": ["action", "inputs", "reader value"],
+                "reader_question": "What should the buyer send for a process review?",
+                "first_paragraph_answer_requirement": "Name the selected-brand action and required inputs.",
+                "body_scope": ["brand action", "inputs", "direct URL", "reader value"],
+                "excluded_scope": ["generic contact sentence"],
+                "adaptation_note": "Use the reference CTA position with a topic-specific action.",
+                "originality_guard": "Write original CTA wording.",
+            },
+        ],
         "MANDATORY_MODULES": ["FAQ", "CTA"],
         "OPTIONAL_MODULES": ["comparison list"],
         "MODULES_TO_OMIT": ["RFQ table"],
@@ -380,6 +589,10 @@ def sample(alternative: bool, approved: bool = False) -> dict[str, Any]:
                 "What should be verified before production?",
             ],
             "duplication_guard": "each answer adds a new boundary not repeated in the body",
+            "allow_substantive_sections_after_faq": False,
+            "substantive_sections_after_faq": [],
+            "placement_rationale": "The FAQ resolves remaining objections only after every core decision section is complete.",
+            "placement_reference_urls": ["https://example1.com/guide"],
         },
         "CTA": {
             "heading_or_callout": "Review Your Plastic Part With PlasticHubs",
@@ -437,6 +650,12 @@ def self_test() -> int:
     missing_cta = sample(False)
     del missing_cta["CTA"]
     missing_cta_status, _ = validate(missing_cta)
+    missing_section_map = sample(False)
+    del missing_section_map["SECTION_REFERENCE_MAP"]
+    missing_section_map_status, _ = validate(missing_section_map)
+    foreign_reference = sample(False)
+    foreign_reference["SECTION_REFERENCE_MAP"][0]["reference_urls"] = ["https://outside.example/guide"]
+    foreign_reference_status, _ = validate(foreign_reference)
     verification_wait = sample(False)
     verification_wait.update({
         "SERP_BENCHMARK_STATUS": "Blocked",
@@ -477,6 +696,8 @@ def self_test() -> int:
         or incomplete_status != "BLOCKED"
         or missing_faq_status != "BLOCKED"
         or missing_cta_status != "BLOCKED"
+        or missing_section_map_status != "BLOCKED"
+        or foreign_reference_status != "BLOCKED"
         or (verification_status, verification_errors) != ("WAITING_FOR_USER_BROWSER_VERIFICATION", [])
         or (permission_status, permission_errors) != ("WAITING_FOR_TOOL_PERMISSION", [])
         or unapproved_best_effort_status != "BLOCKED"
@@ -490,13 +711,15 @@ def self_test() -> int:
             "incomplete": incomplete_status,
             "missing_faq": missing_faq_status,
             "missing_cta": missing_cta_status,
+            "missing_section_map": missing_section_map_status,
+            "foreign_reference": foreign_reference_status,
             "verification_wait": [verification_status, verification_errors],
             "permission_wait": [permission_status, permission_errors],
             "unapproved_best_effort": unapproved_best_effort_status,
             "approved_best_effort": [approved_best_effort_status, approved_best_effort_errors],
         }, ensure_ascii=False, indent=2))
         return 1
-    print("PASS: browser verification, tool permission, Best-effort approval, intent, Top-10, FAQ, and CTA gates")
+    print("PASS: browser verification, tool permission, Best-effort approval, intent, Top-10, section-reference, FAQ, and CTA gates")
     return 0
 
 

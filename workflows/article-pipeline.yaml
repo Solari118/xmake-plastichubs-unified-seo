@@ -18,7 +18,7 @@ entry_detection:
   published_article_with_metrics: performance-review
 transitions:
   plan:
-    pass_after_top_ten_shape_fingerprint_faq_cta_gate: info
+    pass_after_top_ten_section_reference_shape_fingerprint_faq_cta_gate: info
     keyword_approval_required: WAITING_FOR_KEYWORD_APPROVAL
     intent_or_format_approval_required: WAITING_FOR_INTENT_APPROVAL
     google_verification_required: WAITING_FOR_USER_BROWSER_VERIFICATION
@@ -26,19 +26,19 @@ transitions:
     best_effort_downgrade_requires_explicit_approval: WAITING_FOR_USER_BROWSER_VERIFICATION
     blocked: BLOCKED
   info:
-    pass_after_conversion_and_corpus_self_check: audit
+    pass_after_heading_lock_conversion_and_corpus_self_check: audit
     blocked: BLOCKED
   audit:
-    pass_after_green_hard_gates: b2b-image
-    execution_hierarchy_english_faq_cta_or_corpus_defect: info
-    intent_reference_format_archetype_or_rhythm_defect: plan
+    pass_after_green_and_section_alignment_hard_gates: b2b-image
+    execution_heading_body_alignment_hierarchy_english_faq_cta_or_corpus_defect: info
+    intent_reference_section_map_format_archetype_or_rhythm_defect: plan
     user_guidance_required: BLOCKED
   b2b-image:
     article_assets_complete: final-output
     standalone_complete: PHASE_COMPLETED
     blocked: BLOCKED
   final-output:
-    pass: COMPLETED
+    pass_after_unified_release_gate_receipt: COMPLETED
     structural_only: COMPLETED
     published_monitoring_requested: performance-review
     blocked: BLOCKED
@@ -57,17 +57,26 @@ hard_gates:
     - browser-verification-or-tool-permission-resolved
     - no-unapproved-best-effort-downgrade
     - complete-top-ten-per-page-analysis
+    - section-reference-map
     - reference-shape-fingerprint
     - article-rhythm-route
     - mandatory-faq-plan
     - mandatory-visible-cta-plan
   info:
+    - heading-change-record
     - scripts/validate_blog_conversion_modules.py
+    - scripts/validate_blog_narrative_quality.py
     - scripts/validate_blog_corpus_similarity.py
   audit:
+    - scripts/validate_heading_content_alignment.py
+    - scripts/validate_blog_narrative_quality.py
+    - section-alignment-audit
     - machine-gates-pass
     - semantic-shape-corpus-diversity
     - green-required-before-final-output
+  final-output:
+    - scripts/validate_final_blog_release.py
+    - unified-release-gate-pass
 conditional_research:
   wechat:
     trigger_phrases:

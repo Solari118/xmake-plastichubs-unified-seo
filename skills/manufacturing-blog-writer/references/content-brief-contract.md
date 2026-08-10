@@ -44,6 +44,7 @@ GEO_ANSWER_TARGETS:
 OPENING_MODE:
 ANSWER_FIRST_FORMAT: # legacy compatibility only; use Not applicable unless an answer-first opening is selected
 SECTION_ROLE_MAP:
+SECTION_REFERENCE_MAP:
 ARTICLE_ARCHETYPE:
 STRUCTURE_REFERENCE_MODE: single | multi-source
 PRIMARY_STRUCTURE_REFERENCE:
@@ -142,6 +143,7 @@ NOTES:
 - `OPENING_MODE` must name the selected opening behavior from the reference adaptation, such as diagnostic scene, decision boundary, comparison frame, experiment result, case event, definition, or direct answer.
 - `ANSWER_FIRST_FORMAT` is a legacy compatibility field only. Use `table`, `checklist`, `short prose`, `diagnostic flow`, `tool/calculator`, or `Not applicable` only when the selected reference and intent actually require answer-first behavior.
 - `SECTION_ROLE_MAP` must assign one distinct reader job to each proposed H2. Merge modules that would repeat the same decision logic.
+- `SECTION_REFERENCE_MAP` must define every planned public H2, including FAQ and CTA, with `planned_heading`, `section_kind`, `sequence_index`, `sequence_reason`, `heading_scope_mode`, selected Top-10 result positions and URLs, observed heading patterns and information order, `reader_question`, `first_paragraph_answer_requirement`, `body_scope`, `excluded_scope`, `adaptation_note`, and `originality_guard`. Every URL must belong to `TOP_TEN_SERP_RESULTS`. Abstract labels alone are invalid.
 - `ARTICLE_ARCHETYPE` must follow the Top-10 intent and reference evidence rather than rotate randomly.
 - `TOP_TEN_SERP_RESULTS` must contain exactly ten complete editorial/blog records. `SERP_INTENT_DISTRIBUTION`, `SERP_AUDIENCE_DISTRIBUTION`, and `SERP_FORMAT_DISTRIBUTION` must be calculated from those records rather than estimated separately.
 - `SELECTED_PRIMARY_INTENT` and `SELECTED_CONTENT_FORMAT` may differ from the corresponding dominant classifications only after the user approves a specific `INTENT_CHANGE_PROPOSAL`. A general request for originality is not approval.
@@ -152,7 +154,7 @@ NOTES:
 - `STYLE_PROFILE` must specify opening mode, narrative stance, pacing, paragraph rhythm, evidence density, example usage, transitions, technical tone, and ending form at a high level.
 - `REFERENCE_SHAPE_FINGERPRINT` must record the selected reference's observable H1/H2/H3 hierarchy, title-to-section alignment, opening answer point, narrative sequence, section count and proportions, heading grammar, paragraph cadence, evidence density, table/list use and placement, FAQ/CTA position and form, ending form, comprehension load, English naturalness, and AI-pattern risks.
 - `ARTICLE_RHYTHM_ROUTE` must name one primary rhythm controller and bound any secondary contributions. It must not average all ten results into a universal house cadence.
-- Every Blog must place `FAQ` and `CTA` in `MANDATORY_MODULES`; neither may appear in `MODULES_TO_OMIT`. `FAQ_PLAN` must define 3–6 non-duplicative questions, their sources, heading, placement, and answer guard. `CTA` must define a topic-specific visible callout, selected-brand action, useful inputs, reader value, verified direct same-brand URL, and variation note. Tables, RFQs, failure modes, DFM, conclusions, and the exact FAQ/CTA position remain conditional.
+- Every Blog must place `FAQ` and `CTA` in `MANDATORY_MODULES`; neither may appear in `MODULES_TO_OMIT`. `FAQ_PLAN` must define 3–6 non-duplicative questions, their sources, heading, placement, answer guard, whether core sections may follow FAQ, the exact affected headings, a placement rationale, and supporting Top-10 URLs. `CTA` must define a topic-specific visible callout, selected-brand action, useful inputs, reader value, verified direct same-brand URL, and variation note. Tables, RFQs, failure modes, DFM, conclusions, and the exact FAQ/CTA position remain conditional.
 - `RECENT_ARTICLE_COMPARISON_SET` must identify recent same-brand articles used to check opening, H2 order, evidence form, CTA placement, and image logic. Use the latest relevant set available; do not fabricate unavailable articles.
 - `EVIDENCE_REQUIREMENTS` must identify exact claims, standards, statistics, or technical boundaries that need support.
 - `READABILITY_TARGET`, `MIN_WORD_COUNT`, `DELIVERABLE_MODE`, `PREVIEW_FORMAT`, and `WORD_STYLE_REFERENCE` must preserve explicit user constraints. Use `Not provided` when absent; do not invent defaults or silently discard a requested artifact format.

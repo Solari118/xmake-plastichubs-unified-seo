@@ -16,7 +16,7 @@ At activation, report `Route: Website Ops > xmake-plastichubs-website-ops`, the 
 1. Identify `BRAND`, page type, output stage, deliverable mode, preview format, and source pack.
 2. Read [Manufacturing Claims Control](references/manufacturing-claims-control.md), [Delivery And Variation Framework](references/delivery-and-variation-framework.md), and [Internal Link Deployment](references/internal-link-deployment.md), then load only the relevant brand, process, technical, keyword, and template references.
 3. Establish process facts and claim boundaries.
-4. Create the requested operational page, or package an approved article without changing its editorial argument, selected structure/style, or module choices unless asked.
+4. Create the requested operational page, or package an approved article without changing its editorial argument, selected structure/style, or module choices unless asked. For a Blog, run `../../scripts/validate_final_blog_release.py` with the accepted Plan, article, independent section audit, heading-change record when present, brand, and recent same-brand corpus. Require its machine-readable `PASS` receipt, including `narrative_quality_gate=PASS`; separate partial gate results or a narrative GREEN are insufficient.
 5. Apply natural keyword/query coverage from [SEO Keyword Rules](references/seo-keyword-rules.md).
 6. Run the relevant checks. Do not issue the final cross-project publish verdict.
 
@@ -38,7 +38,7 @@ At activation, report `Route: Website Ops > xmake-plastichubs-website-ops`, the 
 - Use the primary topic naturally in page-defining elements when accurate; cover secondary terms, entities, questions, and buyer language where useful.
 - Use a consequence-led opening and an answer-first decision aid for selection content.
 - Use tables, FAQ, checklists, diagrams, and tools only when they improve the buyer's decision.
-- Keep public paragraphs to three sentences maximum. Include FAQs only when they answer unresolved questions without duplicating the body.
+- For service and operational pages, use paragraph length and FAQ only when they improve the page task. For Blogs, preserve the approved reference-driven cadence and mandatory non-duplicate FAQ; do not impose a universal three-sentence paragraph cap or make the Blog FAQ optional during packaging.
 - For batch or sibling pages, create a private variation plan before drafting: selected architecture, hero angle, first decision aid, evidence form, CTA placement, and modules to omit. Do not repeat the same architecture across consecutive pages unless the query requires it.
 - Treat the surface-finishing template as a coverage library, not a fixed public outline. Each visible H2 must have a distinct buyer job.
 

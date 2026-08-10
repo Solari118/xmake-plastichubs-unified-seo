@@ -113,6 +113,7 @@ def main() -> int:
         "STYLE_PROFILE:",
         "REFERENCE_SHAPE_FINGERPRINT:",
         "ARTICLE_RHYTHM_ROUTE:",
+        "SECTION_REFERENCE_MAP:",
         "ARTICLE_ARCHETYPE:",
         "FAQ_PLAN:",
         "CTA:",
@@ -138,6 +139,7 @@ def main() -> int:
         "route-state.schema.json",
         "performance-review.schema.json",
         "visual-brief.schema.json",
+        "section-alignment-audit.schema.json",
     ]
     for schema_name in required_schemas:
         schema_path = ROOT / "schemas" / schema_name
@@ -152,7 +154,8 @@ def main() -> int:
     for field in [
         "SERP_ACCESS_STATUS", "USER_BROWSER_VERIFICATION_STATUS",
         "BEST_EFFORT_DOWNGRADE_APPROVAL", "BEST_EFFORT_DOWNGRADE_APPROVAL_EVIDENCE",
-        "REFERENCE_SHAPE_FINGERPRINT", "ARTICLE_RHYTHM_ROUTE", "FAQ_PLAN", "CTA",
+        "REFERENCE_SHAPE_FINGERPRINT", "ARTICLE_RHYTHM_ROUTE", "SECTION_REFERENCE_MAP",
+        "FAQ_PLAN", "CTA",
     ]:
         if field not in plan_schema.get("required", []):
             failures.append(f"Plan schema missing required field: {field}")
@@ -171,6 +174,21 @@ def main() -> int:
     ]:
         if field not in result_required:
             failures.append(f"Plan schema SERP record missing required field: {field}")
+    section_required = set(
+        plan_schema["properties"]["SECTION_REFERENCE_MAP"]["items"].get("required", [])
+    )
+    for field in ("sequence_index", "sequence_reason", "heading_scope_mode"):
+        if field not in section_required:
+            failures.append(f"Plan schema section map missing required field: {field}")
+    faq_required = set(plan_schema["properties"]["FAQ_PLAN"].get("required", []))
+    for field in (
+        "allow_substantive_sections_after_faq",
+        "substantive_sections_after_faq",
+        "placement_rationale",
+        "placement_reference_urls",
+    ):
+        if field not in faq_required:
+            failures.append(f"Plan schema FAQ plan missing required field: {field}")
     route_schema = json.loads((ROOT / "schemas" / "route-state.schema.json").read_text(encoding="utf-8"))
     terminal_states = route_schema["properties"]["terminal_state"].get("enum", [])
     for terminal_state in [
@@ -195,12 +213,47 @@ def main() -> int:
         failures.append("missing deterministic Blog FAQ/CTA gate validator")
     if not (ROOT / "scripts" / "validate_blog_corpus_similarity.py").exists():
         failures.append("missing deterministic semantic/shape corpus validator")
+    if not (ROOT / "scripts" / "validate_blog_narrative_quality.py").exists():
+        failures.append("missing deterministic Blog tone, flow, and H2-scope validator")
+    if not (ROOT / "scripts" / "validate_heading_content_alignment.py").exists():
+        failures.append("missing deterministic H2-to-content alignment gate")
+    if not (ROOT / "scripts" / "validate_final_blog_release.py").exists():
+        failures.append("missing unified Final Blog release gate")
+    legacy_serp = (
+        ROOT / "skills" / "b2b-seo-topic-map-builder" / "references" / "serp-top-five-workflow.md"
+    ).read_text(encoding="utf-8")
+    for required_text in (
+        "Legacy Compatibility Only",
+        "Do not use this file for active planning",
+        "exact Google Top-10 workflow",
+    ):
+        if required_text not in legacy_serp:
+            failures.append(f"legacy Top-5 redirect missing safeguard: {required_text}")
+    if "Capture the first five" in legacy_serp or "Use `Best-effort` when" in legacy_serp:
+        failures.append("legacy Top-5 file still contains executable obsolete instructions")
+    for required_text in [
+        "scripts/validate_heading_content_alignment.py",
+        "scripts/validate_blog_narrative_quality.py",
+        "section-alignment-audit",
+    ]:
+        if required_text not in workflow:
+            failures.append(f"workflow missing H2 alignment control: {required_text}")
     visual_schema = json.loads((ROOT / "schemas" / "visual-brief.schema.json").read_text(encoding="utf-8"))
     if visual_schema["properties"]["assets"].get("minItems", 0) < 3:
         failures.append("visual brief does not require at least three article images")
     final_schema = json.loads((ROOT / "schemas" / "final-package.schema.json").read_text(encoding="utf-8"))
     if final_schema["properties"].get("visual_asset_manifest", {}).get("minItems", 0) < 3:
         failures.append("final package does not require at least three article images")
+    if final_schema["properties"].get("section_alignment_gate_status", {}).get("const") != "PASS":
+        failures.append("final package does not hard-require a passing H2 alignment gate")
+    if final_schema["properties"].get("narrative_quality_gate_status", {}).get("const") != "PASS":
+        failures.append("final package does not hard-require a passing narrative-quality gate")
+    final_release = (ROOT / "scripts" / "validate_final_blog_release.py").read_text(encoding="utf-8")
+    for required_text in ("validate_blog_narrative_quality", "narrative_quality_gate"):
+        if required_text not in final_release:
+            failures.append(f"unified release gate missing narrative-quality binding: {required_text}")
+    if final_schema["properties"].get("release_gate_status", {}).get("const") != "PASS":
+        failures.append("final package does not hard-require the unified release gate")
     output_skill = (ROOT / "skills" / "xmake-plastichubs-website-ops" / "SKILL.md").read_text(encoding="utf-8")
     if "#5B9BD5" not in output_skill:
         failures.append("light-blue internal-link output rule missing")

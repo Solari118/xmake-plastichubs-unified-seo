@@ -14,7 +14,7 @@
     "SELECTED_CONTENT_ANGLE", "ANGLE_ALIGNMENT_STATUS", "INTENT_CHANGE_PROPOSAL",
     "USER_INTENT_APPROVAL", "USER_INTENT_APPROVAL_EVIDENCE", "PLAN_GATE_STATUS",
     "BORROWABLE_PATTERNS", "DIFFERENTIATION_REQUIREMENTS", "ORIGINALITY_GUARDRAILS",
-    "OPENING_MODE", "SECTION_ROLE_MAP", "ARTICLE_ARCHETYPE", "STRUCTURE_REFERENCE_MODE",
+    "OPENING_MODE", "SECTION_ROLE_MAP", "SECTION_REFERENCE_MAP", "ARTICLE_ARCHETYPE", "STRUCTURE_REFERENCE_MODE",
     "PRIMARY_STRUCTURE_REFERENCE", "SECONDARY_PATTERN_REFERENCES", "STRUCTURE_ADAPTATION_MAP",
     "STYLE_PROFILE", "REFERENCE_SHAPE_FINGERPRINT", "ARTICLE_RHYTHM_ROUTE",
     "MANDATORY_MODULES", "OPTIONAL_MODULES", "MODULES_TO_OMIT", "FAQ_PLAN", "CTA",
@@ -163,6 +163,57 @@
     "OPENING_MODE": {"type": "string"},
     "ANSWER_FIRST_FORMAT": {"type": "string", "description": "Legacy compatibility only; optional for new briefs"},
     "SECTION_ROLE_MAP": {"type": "object"},
+    "SECTION_REFERENCE_MAP": {
+      "type": "array",
+      "minItems": 3,
+      "allOf": [
+        {"contains": {"type": "object", "properties": {"section_kind": {"const": "faq"}}, "required": ["section_kind"]}},
+        {"contains": {"type": "object", "properties": {"section_kind": {"const": "cta"}}, "required": ["section_kind"]}}
+      ],
+      "items": {
+        "type": "object",
+        "required": [
+          "planned_heading", "section_kind", "sequence_index", "sequence_reason",
+          "heading_scope_mode", "reference_result_positions",
+          "reference_urls", "reference_heading_patterns",
+          "reference_information_order", "reader_question",
+          "first_paragraph_answer_requirement", "body_scope", "excluded_scope",
+          "adaptation_note", "originality_guard"
+        ],
+        "properties": {
+          "planned_heading": {"type": "string", "minLength": 1},
+          "section_kind": {"enum": ["core", "faq", "cta"]},
+          "sequence_index": {"type": "integer", "minimum": 1},
+          "sequence_reason": {"type": "string", "minLength": 1},
+          "heading_scope_mode": {
+            "enum": ["single-topic", "comparison", "multi-topic-umbrella", "faq", "cta"]
+          },
+          "reference_result_positions": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"type": "integer", "minimum": 1, "maximum": 10}
+          },
+          "reference_urls": {
+            "type": "array", "minItems": 1, "uniqueItems": true,
+            "items": {"type": "string", "format": "uri"}
+          },
+          "reference_heading_patterns": {
+            "type": "array", "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "reference_information_order": {
+            "type": "array", "minItems": 1,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "reader_question": {"type": "string", "minLength": 1},
+          "first_paragraph_answer_requirement": {"type": "string", "minLength": 1},
+          "body_scope": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "excluded_scope": {"type": "array", "items": {"type": "string"}},
+          "adaptation_note": {"type": "string", "minLength": 1},
+          "originality_guard": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
     "ARTICLE_ARCHETYPE": {"type": "string"},
     "STRUCTURE_REFERENCE_MODE": {"enum": ["single", "multi-source"]},
     "PRIMARY_STRUCTURE_REFERENCE": {"type": "object"},
@@ -232,7 +283,9 @@
       "type": "object",
       "required": [
         "heading", "question_count", "question_sources", "placement",
-        "questions", "duplication_guard"
+        "questions", "duplication_guard", "allow_substantive_sections_after_faq",
+        "substantive_sections_after_faq", "placement_rationale",
+        "placement_reference_urls"
       ],
       "properties": {
         "heading": {"type": "string", "minLength": 1},
@@ -245,7 +298,16 @@
           "type": "array", "minItems": 3, "maxItems": 6,
           "items": {"type": "string", "minLength": 1}
         },
-        "duplication_guard": {"type": "string", "minLength": 1}
+        "duplication_guard": {"type": "string", "minLength": 1},
+        "allow_substantive_sections_after_faq": {"type": "boolean"},
+        "substantive_sections_after_faq": {
+          "type": "array", "items": {"type": "string", "minLength": 1}
+        },
+        "placement_rationale": {"type": "string", "minLength": 1},
+        "placement_reference_urls": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"type": "string", "format": "uri"}
+        }
       }
     },
     "CTA": {

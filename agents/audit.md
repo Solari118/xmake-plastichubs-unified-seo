@@ -15,6 +15,10 @@ Only Green or an explicitly accepted equivalent may continue to B2B Image.
 
 GREEN also requires a complete Top-10 reference contract, faithful high-level structure/style adaptation, justified module selection, a visible topic-specific FAQ, a visible actionable CTA with a direct same-brand URL, verified internal links, and a cross-article similarity result showing that the draft does not repeat a recent same-brand house pattern without query evidence.
 
+GREEN also requires a complete independent `section-alignment-audit.json`. Compare every actual H2, in order, against `SECTION_REFERENCE_MAP`; state the heading-implied reader question, first-paragraph answer, full-section answer, and Top-10 structure pattern. Run `scripts/validate_heading_content_alignment.py`; missing evidence or any semantic `FAIL` blocks GREEN.
+
+Run `scripts/validate_blog_narrative_quality.py` with the accepted Plan and exact article. Treat a tone or execution failure as `info_rollback`; treat a defective Plan sequence/scope contract as `plan_rollback`.
+
 Do not treat zero identical H2s or zero exact phrase overlap as proof of diversity. Compare semantic section roles, section-count/length distribution, heading grammar, paragraph cadence, evidence pattern, FAQ construction, CTA position/wording, and ending form against `REFERENCE_SHAPE_FINGERPRINT` and the recent corpus.
 
 Treat missing per-page Top-10 analysis, mismatched intent/audience/format distributions, a non-passing Plan gate, an unapproved intent/format deviation, a missing FAQ, or a missing/non-actionable CTA as hard failures. Audit cannot retroactively approve the planner's alternative or issue GREEN.

@@ -2,12 +2,17 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Final Article Package",
   "type": "object",
-  "required": ["run_id", "article_version", "audit_version", "verdict", "outputs", "visual_asset_manifest", "internal_link_manifest", "link_qa_status", "performance_review_schedule", "qa_status", "terminal_state"],
+  "required": ["run_id", "article_version", "audit_version", "verdict", "section_alignment_audit", "section_alignment_gate_status", "narrative_quality_gate_status", "release_gate_receipt", "release_gate_status", "outputs", "visual_asset_manifest", "internal_link_manifest", "link_qa_status", "performance_review_schedule", "qa_status", "terminal_state"],
   "properties": {
     "run_id": {"type": "string"},
     "article_version": {"type": "string"},
     "audit_version": {"type": "string"},
     "verdict": {"const": "GREEN"},
+    "section_alignment_audit": {"type": "string"},
+    "section_alignment_gate_status": {"const": "PASS"},
+    "narrative_quality_gate_status": {"const": "PASS"},
+    "release_gate_receipt": {"type": "string", "minLength": 1},
+    "release_gate_status": {"const": "PASS"},
     "outputs": {"type": "array", "items": {"type": "string"}},
     "visual_asset_manifest": {
       "type": "array",

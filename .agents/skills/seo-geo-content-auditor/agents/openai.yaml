@@ -1,4 +1,4 @@
 interface:
   display_name: "SEO/GEO Content Auditor"
   short_description: "Audit manufacturing content with hard gates"
-  default_prompt: "Use $seo-geo-content-auditor. State the Audit route, stage, and deliverable; audit the article against its brief and live Top-10 pattern contract; verify hierarchy, title alignment, answer timing, narrative order, table/list placement, complexity, natural English, FAQ, CTA, internal links, and semantic/shape corpus diversity; treat machine-gate failures as hard fails; route strategy defects to Plan and execution defects to Info; allow Final Output only after GREEN."
+  default_prompt: "Use $seo-geo-content-auditor. State the Audit route, stage, and deliverable; audit the article against SECTION_REFERENCE_MAP and the live Top-10 pattern contract; create an independent per-H2 section-alignment-audit.json with article-grounded evidence; run heading alignment, narrative-quality, conversion, and corpus gates; block forbidden tone, an unapproved FAQ interruption, or a narrow H2 over multi-topic H3 content; route defective planning to Plan and execution defects to Info; allow Final Output only after every hard gate and GREEN."

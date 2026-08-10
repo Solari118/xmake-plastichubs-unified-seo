@@ -57,6 +57,14 @@ Use all eight rubric dimensions and explain deductions.
 - FAQ Gate:
 - CTA Gate:
 
+### Per-H2 Heading-to-Content Alignment
+
+- `section-alignment-audit.json`:
+- `validate_heading_content_alignment.py` result:
+- Coverage: every actual H2 in order / incomplete
+- For each H2: heading-implied reader question; first-paragraph answer; full-section answer; Top-10 structure pattern; evidence excerpts; PASS/FAIL; defect origin; required return route.
+- GREEN Eligibility:
+
 ### Cross-Article Similarity Review
 
 - Recent Same-Brand Comparison Set:

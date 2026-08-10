@@ -36,9 +36,12 @@ Every applicable failure must be repaired before handoff.
 ### A3. Structure And Intent Checks
 
 16. H1/H2/H3 hierarchy, opening answer point, narrative sequence, section proportions, table/list placement, pacing, evidence form, comprehension load, and ending execute `REFERENCE_SHAPE_FINGERPRINT`, `ARTICLE_RHYTHM_ROUTE`, and `STRUCTURE_ADAPTATION_MAP` rather than a universal house pattern.
+16a. Every actual H2 maps to `SECTION_REFERENCE_MAP`; its heading promise, first paragraph, and complete section answer the same reader question. Every heading change is recorded in `HEADING_CHANGE_RECORD`, and any changed promise is reflected in the body.
 17. Every Blog has a visible topic-specific CTA at the approved location and intensity, with a selected-brand action, useful project inputs, reader value, and verified direct same-brand URL.
 18. Every Blog has a visible topic-specific FAQ with 3–6 questions drawn from the approved `FAQ_PLAN`.
 19. Every FAQ answer adds a commercial, procurement, scale-up, compliance, acceptance, or technical distinction not already resolved in the body.
+19a. No core section follows FAQ unless `FAQ_PLAN` explicitly names and justifies that Top-10-supported exception.
+19b. Every H2 with three or more distinct H3 topics uses the approved multi-topic umbrella or valid comparison scope; a narrow negative comparison cannot govern a broad catalog.
 
 ### A4. Brand, Scope, And Article-Type Checks
 
@@ -61,6 +64,7 @@ Every applicable failure must be repaired before handoff.
 - An explicit minimum length, readability target, or requested deliverable format is ignored in a final-labeled artifact.
 - A local or sectional revision becomes a full rewrite without necessity, or protected source elements are removed without explanation.
 - A Blog lacks a visible FAQ, has fewer than three useful FAQ answers, or merely repeats body sections.
+- `validate_blog_narrative_quality.py` reports a forbidden tone term, unapproved FAQ interruption, or H2 scope defect.
 - A Blog lacks a visible topic-specific CTA, concrete selected-brand action, useful input request, reader value, or verified direct same-brand URL.
 - H1/H2/H3 hierarchy is unclear, the opening delays the primary intent answer without reference support, or core sections drift from the title promise.
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "Manufacturing Blog Writer"
   short_description: "Write varied SEO/GEO manufacturing articles"
-  default_prompt: "Use $manufacturing-blog-writer. State the Info route, stage, and deliverable; execute the selected Top-10 reference fingerprint and rhythm route for hierarchy, title alignment, answer timing, narrative order, section proportions, tables/lists, cadence, complexity, and natural English without copying expression; include the mandatory varied FAQ and visible actionable CTA; inject approved internal links; run conversion and semantic-corpus gates; and do not claim the final Audit verdict."
+  default_prompt: "Use $manufacturing-blog-writer. State the Info route, stage, and deliverable; execute SECTION_REFERENCE_MAP plus the selected Top-10 fingerprint and rhythm route without copying expression; keep every H2 promise, first paragraph, full section, scope mode, and sequence on the same reader task; record every heading change and revise the body when the promise changes; include the mandatory varied FAQ and visible CTA; run conversion, narrative-quality, and corpus gates; and do not claim the final Audit verdict."
