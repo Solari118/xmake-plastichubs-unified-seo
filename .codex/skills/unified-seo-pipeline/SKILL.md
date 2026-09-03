@@ -7,7 +7,6 @@ description: Compatibility alias for the former unified SEO route. Use only when
 
 Load `../manufacturing-content-pipeline/SKILL.md` and execute it as the only source of route truth.
 
-Canonical route: `Plan → Info → Audit → B2B Image → Final Output`.
+Canonical route: `Plan (Google Top-10 + selected structure/style references) → Info → Audit (article + corpus) → B2B Image → Final Output (verified links)`, with `Performance Review` at days 30/60/90 after publication.
 
 Do not create independent state, load legacy snapshots, or forward historical route instructions into specialist context.
-

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SEO Content Performance Review",
+  "type": "object",
+  "required": [
+    "run_id", "published_url", "publication_date", "review_day", "data_window",
+    "indexation_status", "impressions", "clicks", "ctr", "query_coverage",
+    "average_position", "conversions", "article_archetype", "reference_mode",
+    "diagnosis", "recommended_route", "evidence_status"
+  ],
+  "properties": {
+    "run_id": {"type": "string"},
+    "published_url": {"type": "string"},
+    "publication_date": {"type": "string"},
+    "review_day": {"enum": [30, 60, 90]},
+    "data_window": {"type": "object"},
+    "indexation_status": {"type": "string"},
+    "impressions": {},
+    "clicks": {},
+    "ctr": {},
+    "query_coverage": {},
+    "average_position": {},
+    "conversions": {},
+    "article_archetype": {"type": "string"},
+    "reference_mode": {"enum": ["single", "multi-source"]},
+    "diagnosis": {"type": "array"},
+    "recommended_route": {"enum": ["none", "plan", "info", "final-output", "user"]},
+    "evidence_status": {"enum": ["Validated", "Best-effort", "Missing evidence"]},
+    "backlink_scope": {"const": "Excluded — user-managed"}
+  },
+  "additionalProperties": false
+}

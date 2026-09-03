@@ -10,3 +10,5 @@ reports/generated/
 dist/
 *.tmp
 ~$*
+knowledge/private-resources/**
+!knowledge/private-resources/.gitkeep

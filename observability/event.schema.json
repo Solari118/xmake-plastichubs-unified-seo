@@ -5,11 +5,10 @@
   "properties":{
     "timestamp":{"type":"string"},
     "run_id":{"type":"string"},
-    "stage":{"enum":["plan","info","audit","b2b-image","final-output","orchestrator"]},
-    "event":{"enum":["started","completed","rollback","blocked","artifact_created"]},
+    "stage":{"enum":["plan","info","audit","b2b-image","final-output","performance-review","orchestrator"]},
+    "event":{"enum":["started","completed","rollback","blocked","artifact_created","review_scheduled","data_received"]},
     "artifact_version":{"type":["string","null"]},
     "reason_code":{"type":["string","null"]}
   },
   "additionalProperties":false
 }
-

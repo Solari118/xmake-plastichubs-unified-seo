@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Link Outreach"
+  short_description: "Installed inactive governed outreach preparation."
+  default_prompt: "Check activation and external-action approval before preparing or sending any outreach."
+

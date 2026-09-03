@@ -1,10 +1,10 @@
 {
   "optimizer_hints": {
-    "capability": "Route manufacturing articles through Plan, Info, Audit, B2B Image, and Final Output with artifact-aware insertion and rollback",
-    "inputs": ["keyword", "Plan brief", "manufacturing article", "audit request", "legacy project entry", "制造业文章", "文章审核"],
-    "trigger_actions": ["complete article pipeline", "audit and continue", "repair upstream stage", "完整项目流程", "退回 Plan", "配图和最终输出"],
+    "capability": "Route manufacturing articles through Top-10 reference planning, reference-shaped writing, corpus audit, images, linked final output, and performance review",
+    "inputs": ["keyword", "Plan brief", "manufacturing article", "audit request", "published article metrics", "legacy project entry", "制造业文章", "文章审核"],
+    "trigger_actions": ["complete article pipeline", "audit and continue", "repair upstream stage", "30/60/90 performance review", "完整项目流程", "退回 Plan", "配图和最终输出"],
     "exclusions": ["standalone image edit", "campaign calendar", "service page packaging only", "translation", "unrelated task"],
-    "artifacts": ["Plan brief", "article draft", "Audit verdict", "article images", "final package"]
+    "artifacts": ["Top-10 Plan brief", "article draft", "Audit verdict", "article images", "internal-link manifest", "final package", "performance review"]
   },
   "fallback_positive_concepts": ["article_pipeline", "artifact_entry", "audit_rollback", "legacy_entry"],
   "positive_concepts": {

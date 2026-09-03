@@ -1,0 +1,25 @@
+name: manufacturing-content-pipeline
+description: Top-10 reference planning to varied writing, corpus audit, images, linked output, and performance review
+version: 5.1.0
+instructions: AGENTS.md
+default_skill: manufacturing-content-pipeline
+skills:
+  directory: skills
+  discovery_mirrors:
+    - .agents/skills
+    - .codex/skills
+agents:
+  directory: agents
+workflow:
+  state_machine: workflows/article-pipeline.yaml
+  handoff_contract: workflows/handoff-contract.md
+policies:
+  context_isolation: policies/context-isolation.md
+  capability_preservation: policies/capability-preservation.md
+  private_resources: policies/private-resource-policy.md
+resources:
+  private_registry: config/private-resource-sources.yaml
+  local_copy_root: knowledge/private-resources
+  packaging_gate: scripts/assert_private_packaging_scope.ps1
+validation:
+  command: python scripts/validate_project.py

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SEO Run Receipt",
+  "type": "object",
+  "required": ["run_id", "started_at", "completed_at", "stage_results", "evidence_boundary"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "started_at": {"type": "string"},
+    "completed_at": {"type": "string"},
+    "stage_results": {"type": "array"},
+    "evidence_boundary": {
+      "enum": ["structural_only", "live_sources_partial", "live_sources_complete"]
+    }
+  },
+  "additionalProperties": true
+}
+

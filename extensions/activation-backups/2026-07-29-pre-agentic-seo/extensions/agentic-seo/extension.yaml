@@ -1,0 +1,36 @@
+id: agentic-seo-governance
+version: 0.1.0
+status: staged_pending_integration_approval
+source_inspiration:
+  - Talko90/seo-agentic-system
+  - growthbyagent.com/project/Agentic-SEO
+borrowed_patterns:
+  - proposal_buffer_single_writer
+  - evidence_provenance_freshness_confidence
+  - cross_agent_conflict_resolution
+  - technical_preconditions
+  - action_history_learning_loop
+excluded_patterns:
+  - automatic_content_approval
+  - automatic_skill_mutation
+  - dangerously_skip_permissions
+  - vendor_specific_constants
+  - mandatory_slack_or_google_sheets
+  - backlink_outreach_automation
+activation:
+  active: false
+  reason: existing router files require user-reviewed modifications
+proposed_gates:
+  - WAITING_FOR_FRESH_DATA
+  - WAITING_FOR_INTENT_APPROVAL
+  - WAITING_FOR_LIVE_CHANGE_APPROVAL
+  - WAITING_FOR_GOVERNANCE_APPROVAL
+proposed_route:
+  - seo-run-health-check
+  - seo-data-foundation
+  - seo-technical-preflight
+  - seo-opportunity-orchestrator
+  - existing-project-router
+  - existing-performance-review
+  - seo-learning-governor
+

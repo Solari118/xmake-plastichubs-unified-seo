@@ -1,0 +1,258 @@
+{
+  "brands": {
+    "xmake": {
+      "services": [
+        "cnc-machining",
+        "3d-printing",
+        "sheet-metal",
+        "injection-molding",
+        "vacuum-casting",
+        "die-casting",
+        "surface-finishing",
+        "extended-metal-processes"
+      ]
+    },
+    "plastichubs": {
+      "services": [
+        "plastic-cnc",
+        "plastic-3d-printing",
+        "injection-molding",
+        "vacuum-casting",
+        "plastic-materials",
+        "plastic-surface-finishing",
+        "plastic-prototyping"
+      ]
+    }
+  },
+  "services": {
+    "cnc-machining": {
+      "label": "CNC machining",
+      "english_terms": ["cnc machining", "cnc milling", "cnc turning", "precision machining", "machining"],
+      "wechat_terms": ["CNC加工", "数控加工", "机械加工", "机加工"],
+      "dimensions": {
+        "process": ["五轴CNC加工", "车铣复合加工", "深腔加工", "薄壁零件加工"],
+        "material": ["铝合金CNC加工", "不锈钢CNC加工", "钛合金加工", "铜合金加工", "工程塑料机加工"],
+        "mechanism": ["切削热对尺寸的影响", "刀具磨损与加工质量", "切屑排出与积屑瘤", "薄壁件装夹变形", "CNC加工振刀原因"],
+        "quality": ["CNC加工公差控制", "形位公差与基准", "表面粗糙度控制", "机加工尺寸检测", "热变形误差控制"],
+        "finishing": ["机加工刀纹处理", "去毛刺工艺", "CNC零件阳极氧化尺寸影响"],
+        "design": ["CNC可制造性设计", "内圆角与刀具半径", "深孔深槽设计"],
+        "business": ["CNC加工成本构成", "小批量CNC加工", "机加工供应商质量审核"]
+      }
+    },
+    "plastic-cnc": {
+      "label": "Plastic CNC machining",
+      "english_terms": ["plastic cnc", "cnc plastic", "plastic machining", "machining plastic", "pmma machining", "peek machining", "pom machining"],
+      "wechat_terms": ["塑料CNC加工", "工程塑料机加工", "塑料精密加工"],
+      "dimensions": {
+        "process": ["塑料CNC加工方法", "透明塑料CNC加工", "塑料薄壁件加工"],
+        "material": ["POM加工", "PEEK加工", "亚克力PMMA加工", "聚碳酸酯PC加工", "尼龙PA加工", "PTFE加工"],
+        "mechanism": ["塑料切削热与熔化", "塑料机加工应力开裂", "塑料吸湿与尺寸变化", "塑料加工毛刺原因", "塑料装夹变形"],
+        "quality": ["塑料加工公差", "塑料零件尺寸稳定性", "透明塑料外观检验", "塑料表面粗糙度"],
+        "finishing": ["亚克力抛光与应力", "塑料机加工刀纹处理", "塑料喷涂附着力"],
+        "design": ["塑料CNC可制造性设计", "塑料螺纹与嵌件设计", "塑料薄壁结构设计"],
+        "business": ["塑料CNC加工成本", "小批量塑料零件加工", "塑料机加工材料选择"]
+      }
+    },
+    "3d-printing": {
+      "label": "Plastic and metal 3D printing",
+      "english_terms": ["3d printing", "additive manufacturing", "fdm", "sla", "sls", "mjf", "slm", "metal 3d printing"],
+      "wechat_terms": ["3D打印", "增材制造"],
+      "dimensions": {
+        "process": ["SLA光固化打印", "SLS尼龙打印", "MJF尼龙打印", "FDM打印", "金属SLM打印"],
+        "material": ["3D打印材料选择", "光敏树脂性能", "尼龙PA12打印", "金属3D打印铝合金"],
+        "mechanism": ["3D打印翘曲原因", "层间结合强度", "打印方向对性能的影响", "支撑结构与变形"],
+        "quality": ["3D打印尺寸精度", "打印孔径偏差", "增材制造表面粗糙度", "3D打印零件检测"],
+        "finishing": ["3D打印后处理", "树脂打印喷漆", "尼龙染色", "金属打印表面处理"],
+        "design": ["增材制造DFAM设计", "3D打印最小壁厚", "支撑与打印方向设计"],
+        "business": ["3D打印成本", "小批量3D打印", "3D打印与CNC怎么选"]
+      }
+    },
+    "plastic-3d-printing": {
+      "label": "Plastic 3D printing",
+      "english_terms": ["plastic 3d printing", "3d printing", "fdm", "sla", "sls", "mjf", "resin printing", "nylon printing"],
+      "wechat_terms": ["塑料3D打印", "树脂3D打印", "尼龙3D打印"],
+      "dimensions": {
+        "process": ["SLA光固化塑料打印", "SLS尼龙打印", "MJF尼龙打印", "FDM塑料打印"],
+        "material": ["光敏树脂材料", "PA12尼龙打印", "TPU柔性打印", "耐高温树脂打印"],
+        "mechanism": ["塑料3D打印翘曲", "打印方向与各向异性", "树脂固化收缩", "支撑痕迹形成原因"],
+        "quality": ["塑料3D打印精度", "打印孔径偏差", "3D打印外观检验", "打印件尺寸稳定性"],
+        "finishing": ["树脂打印打磨喷漆", "尼龙染色", "3D打印表面光滑处理"],
+        "design": ["塑料3D打印DFAM", "打印最小壁厚", "空腔排液孔设计"],
+        "business": ["塑料3D打印成本", "3D打印小批量生产", "塑料3D打印与CNC对比"]
+      }
+    },
+    "sheet-metal": {
+      "label": "Sheet metal fabrication",
+      "english_terms": ["sheet metal", "laser cutting", "metal bending", "sheet metal fabrication", "stamping"],
+      "wechat_terms": ["钣金加工", "钣金制造"],
+      "dimensions": {
+        "process": ["激光切割", "钣金折弯", "钣金焊接", "数控冲压", "压铆工艺"],
+        "material": ["铝板折弯", "不锈钢钣金", "冷轧板加工", "铜板钣金"],
+        "mechanism": ["钣金折弯回弹", "焊接热变形", "激光切割热影响区", "冲压开裂原因"],
+        "quality": ["钣金公差控制", "折弯角度检测", "焊接变形检测", "钣金平面度"],
+        "finishing": ["钣金喷粉膜厚", "钣金阳极氧化", "拉丝与喷砂", "电泳表面处理"],
+        "design": ["钣金DFM", "折弯半径与展开", "孔边距与折弯距离"],
+        "business": ["钣金加工成本", "小批量钣金加工", "钣金供应商审核"]
+      }
+    },
+    "injection-molding": {
+      "label": "Injection molding and tooling",
+      "english_terms": ["injection molding", "plastic injection", "insert molding", "overmolding", "mold making", "injection moulding"],
+      "wechat_terms": ["注塑成型", "塑料注塑", "注塑模具"],
+      "dimensions": {
+        "process": ["注塑成型工艺", "包胶注塑", "嵌件注塑", "注塑模具制造", "试模与量产"],
+        "material": ["ABS注塑", "PC注塑", "尼龙注塑", "POM注塑", "玻纤增强塑料注塑"],
+        "mechanism": ["注塑缩水原因", "注塑翘曲变形", "熔接痕形成原因", "困气烧焦", "残余应力开裂"],
+        "quality": ["注塑件公差", "注塑尺寸稳定性", "首件检验FAI", "注塑外观缺陷标准"],
+        "finishing": ["注塑模具纹理", "SPI表面等级", "塑料喷涂与印刷", "纹理与脱模斜度"],
+        "design": ["注塑DFM", "壁厚与缩水", "加强筋与缩痕", "浇口位置设计", "脱模斜度"],
+        "business": ["注塑模具成本", "小批量注塑", "注塑供应商审核", "开模还是机加工"]
+      }
+    },
+    "vacuum-casting": {
+      "label": "Vacuum and urethane casting",
+      "english_terms": ["vacuum casting", "urethane casting", "polyurethane casting", "silicone molding", "silicone mould"],
+      "wechat_terms": ["真空复模", "硅胶复模", "聚氨酯浇注"],
+      "dimensions": {
+        "process": ["真空复模工艺", "硅胶模具制作", "聚氨酯真空浇注"],
+        "material": ["复模树脂材料", "软胶复模材料", "透明复模材料"],
+        "mechanism": ["真空复模气泡", "硅胶模具撕裂", "复模收缩变形", "树脂固化影响"],
+        "quality": ["真空复模尺寸精度", "复模外观检验", "母模质量控制"],
+        "finishing": ["复模喷漆", "复模颜色与纹理", "透明复模抛光"],
+        "design": ["复模分型设计", "复模壁厚设计", "母模可制造性"],
+        "business": ["真空复模成本", "小批量复模", "复模与注塑怎么选"]
+      }
+    },
+    "die-casting": {
+      "label": "Metal die casting",
+      "english_terms": ["die casting", "aluminum casting", "zinc die casting", "pressure die casting"],
+      "wechat_terms": ["压铸", "金属压铸"],
+      "dimensions": {
+        "process": ["铝合金压铸", "锌合金压铸", "压铸模具"],
+        "material": ["ADC12压铸", "铝合金压铸材料", "锌合金压铸材料"],
+        "mechanism": ["压铸气孔原因", "冷隔与欠铸", "压铸缩孔", "压铸件变形"],
+        "quality": ["压铸件公差", "压铸气密性检测", "压铸内部缺陷检测"],
+        "finishing": ["压铸件喷粉", "压铸件电镀", "压铸件阳极氧化"],
+        "design": ["压铸DFM", "压铸壁厚与圆角", "压铸脱模斜度"],
+        "business": ["压铸模具成本", "小批量压铸", "压铸供应商审核"]
+      }
+    },
+    "surface-finishing": {
+      "label": "Metal surface finishing",
+      "english_terms": ["surface finishing", "surface finish", "anodizing", "powder coating", "electroplating", "polishing", "bead blasting"],
+      "wechat_terms": ["金属表面处理", "机械零件表面处理"],
+      "dimensions": {
+        "process": ["阳极氧化", "硬质阳极氧化", "电镀", "喷粉", "喷砂", "拉丝", "抛光"],
+        "material": ["铝合金表面处理", "不锈钢表面处理", "钢件防腐处理", "铜件表面处理"],
+        "mechanism": ["表面处理附着力失效", "镀层起泡脱落", "阳极氧化色差", "喷粉橘皮"],
+        "quality": ["膜厚检测", "表面处理尺寸变化", "色差与光泽检验", "盐雾测试"],
+        "finishing": ["表面粗糙度与前处理", "遮蔽保护设计", "螺纹孔表面处理"],
+        "design": ["表面处理余量设计", "挂点设计", "表面处理区域标注"],
+        "business": ["表面处理成本", "表面处理供应商审核", "表面处理工艺选择"]
+      }
+    },
+    "plastic-surface-finishing": {
+      "label": "Plastic surface finishing",
+      "english_terms": ["plastic surface finish", "plastic finishing", "plastic polishing", "vapor smoothing", "plastic painting", "mold texture"],
+      "wechat_terms": ["塑料表面处理", "塑胶表面处理"],
+      "dimensions": {
+        "process": ["塑料喷涂", "塑料抛光", "塑料印刷", "塑料镭雕", "模具纹理"],
+        "material": ["ABS喷涂", "PC表面处理", "亚克力抛光", "尼龙染色"],
+        "mechanism": ["塑料涂层附着力", "塑料应力开裂", "抛光对尺寸的影响", "塑料表面缩痕"],
+        "quality": ["塑料外观检验", "塑料表面光泽度", "色差与限度样板", "涂层耐磨测试"],
+        "finishing": ["模内纹理与二次处理", "塑料哑光处理", "透明塑料表面处理"],
+        "design": ["塑料表面处理分区", "喷涂遮蔽设计", "纹理与脱模斜度"],
+        "business": ["塑料表面处理成本", "塑料外观样板确认", "表面处理供应商审核"]
+      }
+    },
+    "plastic-materials": {
+      "label": "Plastic materials",
+      "english_terms": ["plastic material", "engineering plastic", "peek", "pom", "delrin", "pmma", "acrylic", "polycarbonate", "nylon", "ptfe", "abs"],
+      "wechat_terms": ["工程塑料材料", "塑料材料选择"],
+      "dimensions": {
+        "process": ["工程塑料加工方法", "塑料材料与制造工艺匹配"],
+        "material": ["PEEK材料性能", "POM材料性能", "PMMA亚克力材料", "PC聚碳酸酯", "尼龙材料", "PTFE材料"],
+        "mechanism": ["塑料蠕变", "塑料吸湿", "塑料热膨胀", "塑料残余应力", "塑料化学应力开裂"],
+        "quality": ["塑料材料证明", "塑料尺寸稳定性", "塑料批次一致性"],
+        "finishing": ["不同塑料的表面处理", "透明塑料抛光", "工程塑料喷涂"],
+        "design": ["塑料材料选型", "塑料零件壁厚设计", "塑料紧固件设计"],
+        "business": ["工程塑料成本", "塑料材料替代", "塑料供应商材料追溯"]
+      }
+    },
+    "plastic-prototyping": {
+      "label": "Plastic prototyping and low-volume production",
+      "english_terms": ["plastic prototype", "rapid prototyping", "low volume plastic", "small batch plastic", "bridge production"],
+      "wechat_terms": ["塑料快速原型", "小批量塑料制造"],
+      "dimensions": {
+        "process": ["塑料原型制造方法", "小批量塑料加工工艺", "桥接生产"],
+        "material": ["原型材料与量产材料差异", "小批量塑料材料选择"],
+        "mechanism": ["原型验证失真", "材料替代验证风险", "小批量一致性问题"],
+        "quality": ["塑料原型检验", "小批量首件检验", "试产验收标准"],
+        "finishing": ["外观样件表面处理", "颜色纹理样板确认"],
+        "design": ["原型到量产DFM", "设计冻结与工艺切换"],
+        "business": ["小批量塑料制造成本", "CNC 3D打印复模注塑怎么选", "原型到量产路线"]
+      }
+    },
+    "extended-metal-processes": {
+      "label": "Extended metal processes",
+      "english_terms": ["metal extrusion", "aluminum extrusion", "forging", "powder metallurgy", "metal fabrication"],
+      "wechat_terms": ["金属成形工艺", "金属零件制造"],
+      "dimensions": {
+        "process": ["铝型材挤压", "金属锻造", "粉末冶金"],
+        "material": ["铝型材材料", "锻造合金钢", "粉末冶金材料"],
+        "mechanism": ["锻造流线", "挤压变形", "粉末冶金孔隙"],
+        "quality": ["锻件检测", "铝型材公差", "粉末冶金密度检测"],
+        "finishing": ["铝型材阳极氧化", "锻件表面处理"],
+        "design": ["挤压型材DFM", "锻件圆角与拔模", "粉末冶金设计"],
+        "business": ["金属成形工艺选择", "挤压与CNC怎么选", "锻造成本"]
+      }
+    }
+  },
+  "translation_terms": {
+    "3d printing materials": "3D打印材料",
+    "plastic injection molding": "塑料注塑成型",
+    "low volume plastic injection molding": "小批量塑料注塑",
+    "small batch plastic manufacturing": "小批量塑料制造",
+    "plastic machining services": "塑料机加工服务",
+    "surface finish": "表面处理",
+    "surface finishing": "表面处理",
+    "tolerance": "公差",
+    "accuracy": "精度",
+    "roughness": "表面粗糙度",
+    "warpage": "翘曲",
+    "shrinkage": "收缩",
+    "stress cracking": "应力开裂",
+    "heat resistant": "耐高温",
+    "thermal deformation": "热变形",
+    "thermal": "热影响",
+    "heat": "热影响",
+    "tool wear": "刀具磨损",
+    "defect": "缺陷",
+    "material": "材料",
+    "cost": "成本",
+    "design": "设计",
+    "dfm": "可制造性设计",
+    "inspection": "检测",
+    "quality": "质量控制",
+    "low volume": "小批量",
+    "prototype": "原型",
+    "acrylic": "亚克力PMMA",
+    "pmma": "PMMA亚克力",
+    "peek": "PEEK",
+    "pom": "POM",
+    "delrin": "POM赛钢",
+    "polycarbonate": "PC聚碳酸酯",
+    "nylon": "尼龙PA",
+    "ptfe": "PTFE",
+    "aluminum": "铝合金",
+    "stainless steel": "不锈钢",
+    "titanium": "钛合金"
+  },
+  "noise_terms": [
+    "free", "download", "file", "files", "ideas", "designs", "pen", "software", "jobs", "salary",
+    "course", "reddit", "youtube", "near me", "news", "toy", "dragon", "stl", "thingiverse",
+    "nail", "drone", "kit", "oz.", "novus", "amazon", "walmart", "castin' craft",
+    "environmental technology", "study ai", "sculpteo",
+    "xometry", "protolabs", "hubs", "rapid direct", "rapiddirect"
+  ]
+}

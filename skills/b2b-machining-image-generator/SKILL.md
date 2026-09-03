@@ -32,6 +32,9 @@ Skip diagnosis and options. Build the closed RD prompt and submit one image call
 ## Execution Rules
 
 - Read [Industrial Visual Protocol](references/industrial-visual-protocol.md) once per task before concepting or generation; do not reread it in later turns of the same task.
+- When using the registered APEX/TIGER/factory image libraries, read `../../policies/private-resource-policy.md`. Replace every visible APEX/TIGER mark—including clothing, signage, equipment, packaging, labels, screens, reflections, and watermarks—with the selected brand's approved XMAKE or PlasticHubs logo/wordmark.
+- Even when no source mark is visible, make a material visual edit so the deliverable is not pixel-identical. Preserve engineering geometry and numeric meaning; filename changes, recompression, or metadata edits do not qualify.
+- For a full article pipeline, produce at least three standalone, section-mapped images for every article. Select distinct visual jobs from the audited article and its `STYLE_PROFILE`/media logic; do not reuse a fixed hero/process/CTA trio across articles.
 - Search images when available, but never claim whole-web coverage. Combine geometry, material, viewpoint, and diagram patterns from multiple sources without copying one source or artist style.
 - Generate each asset independently with one image call. No collage, montage, contact sheet, or unrelated grid; a coherent technical comparison is allowed.
 - If generation is unavailable, return the verified English prompt and state the capability gap.
@@ -47,4 +50,4 @@ Skip diagnosis and options. Build the closed RD prompt and submit one image call
 
 ## Output Gate
 
-Before generation, apply [Quality Checklist](evals/quality-checklist.md). Technical accuracy and visual truthfulness outrank decoration.
+Before generation, apply [Quality Checklist](evals/quality-checklist.md). For article-linked work, the gate fails if fewer than three approved standalone assets or placements are present. Technical accuracy and visual truthfulness outrank decoration.

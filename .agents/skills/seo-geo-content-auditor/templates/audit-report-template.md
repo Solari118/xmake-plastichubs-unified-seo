@@ -30,16 +30,51 @@ For each finding:
 
 Use all eight rubric dimensions and explain deductions.
 
-### Top-5 SERP Benchmark Review
+### Google Top-10 SERP Benchmark Review
 
 - Search Environment And Status:
-- Five-Result Completeness:
+- Ten-Result Completeness:
 - Dominant Intent Match:
 - Common Strengths Adapted:
 - Content Gaps Closed:
 - Differentiation Delivered:
 - Ranking-Hypothesis Discipline:
 - Originality And Derivative-Risk Check:
+
+### Selected Reference Adaptation
+
+- Article Archetype:
+- Primary/Secondary References:
+- Structure Adaptation:
+- Style Profile Execution:
+- Reference Shape Fingerprint Execution:
+- Article Rhythm Route Execution:
+- H1/H2/H3 Hierarchy And Title Alignment:
+- Opening Intent-Resolution Point:
+- Narrative Order And Table/List Placement:
+- Comprehension Load / English Naturalness / AI-Pattern Risk:
+- Mandatory/Optional/Omitted Modules:
+- FAQ Gate:
+- CTA Gate:
+
+### Per-H2 Heading-to-Content Alignment
+
+- `section-alignment-audit.json`:
+- `validate_heading_content_alignment.py` result:
+- Coverage: every actual H2 in order / incomplete
+- For each H2: heading-implied reader question; first-paragraph answer; full-section answer; Top-10 structure pattern; evidence excerpts; PASS/FAIL; defect origin; required return route.
+- GREEN Eligibility:
+
+### Cross-Article Similarity Review
+
+- Recent Same-Brand Comparison Set:
+- Opening Similarity:
+- Semantic Role / H2 / Sequence Similarity:
+- Section Proportion / Paragraph Cadence Similarity:
+- FAQ / CTA Form And Position Similarity:
+- Evidence/Module Similarity:
+- CTA/Media Similarity:
+- GREEN Eligibility:
 
 ### Brief And Publishing Contract
 
@@ -49,6 +84,8 @@ Report missing, conflicting, or completed fields. Check brand, keyword validatio
 
 - Intent Completion Criteria:
 - Core Answer Location:
+- H1/H2/H3 Clarity And Title Alignment:
+- Narrative Complexity And English Naturalness:
 - Section Role Overlap:
 - Heading Specificity:
 - English Word Count / Minimum:
@@ -64,6 +101,12 @@ Report missing, conflicting, or completed fields. Check brand, keyword validatio
 ### Required Revision Order
 
 List the smallest high-value correction sequence.
+
+State the mandatory return route:
+
+- `Plan → Info → Audit` for intent, Top-10 classification, reference selection, format, archetype, or rhythm-contract defects.
+- `Info → Audit` for execution, hierarchy, title alignment, answer timing, English, complexity, FAQ, CTA, or corpus-diversity defects.
+- `Audit → Final Output` only after GREEN and all hard gates pass.
 
 Include these categories when applicable:
 

@@ -1,6 +1,6 @@
 # Writer Quality Checklist
 
-Use this gate after drafting or revision and before independent Audit. Mark each item `Pass`, `Fail`, or justified `N/A`, record the evidence location, and repair required failures. This adapts the supplied RapidDirect final-check concepts to XMAKE/PlasticHubs; it does not import RapidDirect branding, its Mechanical/Electronics type matrix, or a universal mandatory-FAQ structure.
+Use this gate after drafting or revision and before independent Audit. Mark each item `Pass`, `Fail`, or justified `N/A`, record the evidence location, and repair required failures. This adapts the supplied RapidDirect final-check concepts to XMAKE/PlasticHubs; it does not import RapidDirect branding or its Mechanical/Electronics type matrix.
 
 ## Handoff Preconditions
 
@@ -35,10 +35,13 @@ Every applicable failure must be repaired before handoff.
 
 ### A3. Structure And Intent Checks
 
-16. The ending sequence follows the approved brief. Do not impose a universal `Conclusion`-before-FAQ rule; if the brief specifies both and their order, follow it.
-17. The CTA is part of the concluding decision or next-step module, not a detached generic sales line.
-18. FAQ is present only when required by the brief or when unresolved query questions remain; absence is acceptable when the article already completes intent.
-19. Every FAQ adds a commercial, procurement, scale-up, compliance, acceptance, or technical answer not already resolved in the body.
+16. H1/H2/H3 hierarchy, opening answer point, narrative sequence, section proportions, table/list placement, pacing, evidence form, comprehension load, and ending execute `REFERENCE_SHAPE_FINGERPRINT`, `ARTICLE_RHYTHM_ROUTE`, and `STRUCTURE_ADAPTATION_MAP` rather than a universal house pattern.
+16a. Every actual H2 maps to `SECTION_REFERENCE_MAP`; its heading promise, first paragraph, and complete section answer the same reader question. Every heading change is recorded in `HEADING_CHANGE_RECORD`, and any changed promise is reflected in the body.
+17. Every Blog has a visible topic-specific CTA at the approved location and intensity, with a selected-brand action, useful project inputs, reader value, and verified direct same-brand URL.
+18. Every Blog has a visible topic-specific FAQ with 3–6 questions drawn from the approved `FAQ_PLAN`.
+19. Every FAQ answer adds a commercial, procurement, scale-up, compliance, acceptance, or technical distinction not already resolved in the body.
+19a. No core section follows FAQ unless `FAQ_PLAN` explicitly names and justifies that Top-10-supported exception.
+19b. Every H2 with three or more distinct H3 topics uses the approved multi-topic umbrella or valid comparison scope; a narrow negative comparison cannot govern a broad catalog.
 
 ### A4. Brand, Scope, And Article-Type Checks
 
@@ -60,6 +63,10 @@ Every applicable failure must be repaired before handoff.
 - Ranking hypotheses are repeated as proven causes.
 - An explicit minimum length, readability target, or requested deliverable format is ignored in a final-labeled artifact.
 - A local or sectional revision becomes a full rewrite without necessity, or protected source elements are removed without explanation.
+- A Blog lacks a visible FAQ, has fewer than three useful FAQ answers, or merely repeats body sections.
+- `validate_blog_narrative_quality.py` reports a forbidden tone term, unapproved FAQ interruption, or H2 scope defect.
+- A Blog lacks a visible topic-specific CTA, concrete selected-brand action, useful input request, reader value, or verified direct same-brand URL.
+- H1/H2/H3 hierarchy is unclear, the opening delays the primary intent answer without reference support, or core sections drift from the title promise.
 
 ## B. Soft-Quality Checks
 
@@ -68,8 +75,8 @@ Repair individual failures when material. Three or more failures require revisio
 ### B1. Content Depth
 
 23. The article gives go/no-go boundaries for choosing or rejecting the process, material, supplier model, or production path when applicable.
-24. It names specific failure modes, process limits, or application risks rather than saying only that an option is “not always suitable.”
-25. Manufacturing guidance contains usable DFM constraints or checks tied to defect, rework, delay, or acceptance risk.
+24. When the brief selects failure modes, DFM, or risk analysis, each item is concrete; otherwise this check is justified `N/A`.
+25. When the brief selects DFM, manufacturing guidance contains usable constraints or checks tied to defect, rework, delay, or acceptance risk; otherwise this check is justified `N/A`.
 26. Traceability, inspection, material records, certification, or standards context appears when it affects selection, compliance, or acceptance; use `N/A` with a reason when irrelevant.
 
 ### B2. Reader Experience
@@ -77,37 +84,41 @@ Repair individual failures when material. Three or more failures require revisio
 27. Paragraphs and sections progress as one technical briefing through cause, condition, consequence, and decision rather than as disconnected micro-answers.
 28. Adjacent H2/H3 sections have distinct reader jobs and do not restate the same process or choice logic.
 29. Tables, bullets, checklists, or diagrams are used when they reduce decision effort; dense prose is not retained when structured lookup is more useful.
-30. The reader finishes with a clear next decision, input request, verification step, or production action.
+30. The draft includes only approved mandatory/optional modules and omits `MODULES_TO_OMIT`.
+31. `REFERENCE_ADAPTATION_RECORD` shows how heading hierarchy, narrative order, answer timing, table/list placement, section proportions, and high-level style were executed without copying expression.
+32. `CORPUS_SIMILARITY_SELF_CHECK` compares semantic section roles, heading hierarchy and grammar, H2 count, section-length distribution, paragraph cadence, table/list density, FAQ/CTA form and position, ending type, and media logic—not only identical headings or n-grams.
+33. The reader finishes with a clear next decision, input request, verification step, or production action.
 
-### B3. Selected-Brand Integration And CTA
+### B3. Selected-Brand Integration, Links, And CTA
 
-31. XMAKE or PlasticHubs appears through relevant engineering review, DFM, inspection, quoting, traceability, or accountability context, not an unsupported partner claim.
-32. Roundups or supplier comparisons position the selected brand by supported buyer fit; the brand is not forced into first place.
-33. The CTA names a specific action and useful inputs, such as process-fit review, CAD/requirement review, quotation inputs, or shortlist comparison.
-34. The CTA matches search intent: informational content favors technical confirmation; supplier/roundup content may favor quote, comparison, or shortlist action.
+34. XMAKE or PlasticHubs appears through relevant engineering review, DFM, inspection, quoting, traceability, or accountability context, not an unsupported partner claim.
+35. Roundups or supplier comparisons position the selected brand by supported buyer fit; the brand is not forced into first place.
+36. The mandatory CTA names a specific selected-brand action, useful inputs, reader value, and verified direct same-brand URL.
+37. CTA form and placement match search intent, selected reference behavior, and commercial mode.
 
 ### B4. Same-Brand Cross-Service Link Quality
 
-35. Each cross-service mention has a real substitution, stage, combination, upstream/downstream, or problem-solving relationship.
-36. Each link appears where that relationship is explained—in body context, a comparison, next-step module, or relevant CTA—not in a fixed service catalog.
-37. Cross-service content does not weaken `PRIMARY_SERVICE` or turn into a second article topic.
-38. Anchor text is accurate, naturally varied, and describes the destination; repeated exact-match anchors and mislabeled destinations are absent.
+38. Each cross-service mention has a real substitution, stage, combination, upstream/downstream, or problem-solving relationship.
+39. Every approved internal link uses its verified same-brand URL, natural anchor, and planned contextual location rather than a fixed service catalog.
+40. Cross-service content does not weaken `PRIMARY_SERVICE` or turn into a second article topic.
+41. Anchor text is accurate, naturally varied, and describes the destination; repeated exact-match anchors and mislabeled destinations are absent.
 
 ## C. English Quality Checks
 
 Repair every failure before writer handoff. Independent Audit still owns the publication verdict.
 
-39. English is written directly and naturally, without Chinese word order, translated connective patterns, or literal phrasing.
-40. Vague phrases such as `ensure the quality`, `meet the requirements`, and `has a good performance` name the exact characteristic, criterion, or result.
-41. Manufacturing terms distinguish grade/alloy/temper, tolerance/accuracy/precision, PCB/PCBA/EMS, and other domain concepts correctly.
-42. The article maintains one peer-to-peer B2B technical voice; it does not shift from consultant-level engineering analysis into sales slogans.
+42. English is written directly and naturally, without Chinese word order, translated connective patterns, or literal phrasing.
+43. Vague phrases such as `ensure the quality`, `meet the requirements`, and `has a good performance` name the exact characteristic, criterion, or result.
+44. Manufacturing terms distinguish grade/alloy/temper, tolerance/accuracy/precision, PCB/PCBA/EMS, and other domain concepts correctly.
+45. The article maintains one peer-to-peer B2B technical voice; it does not shift from consultant-level engineering analysis into sales slogans.
 
 ## D. Project Quality Checks
 
 - Every `INTENT_COMPLETION_CRITERIA` item is satisfied, and the core answer appears in the opening or first core H2.
-- The outline synthesizes useful patterns across all five benchmark pages, addresses documented gaps, and delivers visible differentiation.
+- The article executes the approved selected-reference adaptation, uses the rest of the Top-10 benchmark for validation and gap detection, and delivers visible differentiation.
 - Keyword use is natural; variants, entities, and internal-link anchors improve meaning rather than satisfy quotas.
-- Public paragraphs contain no more than three sentences while sentence length and evidence form vary naturally.
+- Paragraph and section lengths follow the selected reference rhythm and reader task; there is no universal three-sentence cap or fixed H2 count.
+- English reads as natural editorial prose, stays easy enough for the selected audience, and avoids symmetric labels, repeated transitions, and other AI-template signals.
 - Requested preview or Word artifacts are created only at the correct stage; corrections are persisted and visual-QA claims match render evidence.
 
 ## E. Writer Gate Decision Record

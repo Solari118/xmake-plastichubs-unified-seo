@@ -1,0 +1,20 @@
+interface:
+  display_name: "SEO Content Performance Review"
+  short_description: "Review published content at 30, 60, and 90 days"
+  default_prompt: "Use $seo-content-performance-review to evaluate this published XMAKE or PlasticHubs article with dated GSC/GA4 evidence, diagnose indexation, query, CTR, ranking, conversion, archetype, reference-mode, and internal-link performance, and route evidence-backed changes."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "powershell"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+

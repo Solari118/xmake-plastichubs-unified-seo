@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Run Health Check"
+  short_description: "Validate SEO extension readiness and mirror parity."
+  default_prompt: "Run the Agentic SEO extension health check and separate structural from live-runtime evidence."
+

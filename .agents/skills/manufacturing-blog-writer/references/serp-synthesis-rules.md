@@ -2,7 +2,7 @@
 
 ## Read The Pack
 
-Use the Plan brief's observed search environment, five result records, ranking hypotheses, common strengths, gaps, borrowable patterns, patterns to avoid, differentiation requirements, and originality guardrails.
+Use the Plan brief's observed search environment, ten result records, selected structure/style references, article archetype, adaptation map, style profile, module choices, ranking hypotheses, gaps, differentiation requirements, and originality guardrails.
 
 Do not independently change observed positions. If a URL is inaccessible or the pack is incomplete, report the gap.
 
@@ -26,14 +26,15 @@ Do not copy or lightly paraphrase:
 - unique tables or visual concepts
 - a single page's complete heading sequence
 
-## Build A New Article
+## Execute The Selected Reference Contract
 
-1. Identify the minimum content consensus needed to satisfy intent.
-2. Select useful patterns from at least two benchmark pages when possible.
-3. Reorganize around the target reader's job and the brief's information void.
-4. Add differentiated value that the benchmark pages do not provide.
-5. Use XMAKE or PlasticHubs evidence and practical manufacturing judgment where relevant.
-6. Check that the result is coherent on its own rather than a stitched summary.
+1. Review all ten pages for context.
+2. Use the selected single reference or multi-source set as the article's structural and high-level style model.
+3. Follow `STRUCTURE_ADAPTATION_MAP`, `STYLE_PROFILE`, and `ARTICLE_ARCHETYPE`.
+4. Include or omit modules exactly as the brief requires.
+5. Add differentiated value that the benchmark pages do not provide.
+6. Use XMAKE or PlasticHubs evidence and practical manufacturing judgment where relevant.
+7. Check that the result is coherent, original, and recognizably different from recent same-brand articles.
 
 ## Final Comparison
 
@@ -43,6 +44,8 @@ Before final output, confirm:
 - essential benchmark coverage is present
 - documented gaps are addressed
 - differentiation requirements are visible
-- the outline is not substantially identical to one competitor
+- the functional structure and high-level style reflect the selected reference set
+- the outline is not a derivative copy of one competitor
+- the article does not revert to a habitual house sequence
 - ranking hypotheses are not repeated as facts
 - citations and quotations comply with source and copyright limits

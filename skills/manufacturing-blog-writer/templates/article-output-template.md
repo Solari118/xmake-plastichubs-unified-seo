@@ -8,6 +8,18 @@
 - Primary Intent:
 - Intent Completion Criteria:
 - Answer-first Format:
+- Article Archetype:
+- Structure Reference Mode:
+- Primary Structure Reference:
+- Secondary Pattern References:
+- Style Profile:
+- Reference Shape Fingerprint:
+- Article Rhythm Route:
+- Mandatory Modules:
+- Optional Modules:
+- Modules To Omit:
+- FAQ Plan:
+- CTA Plan:
 - Section Role Map:
 - Commercial Bridge Mode:
 - Keyword Validation Status:
@@ -49,7 +61,7 @@
 - Schema Type:
 - Featured Image Requirements:
 - Image Alt Text:
-- Suggested Internal Links:
+- Injected Internal Links And URLs:
 - Cross-Service Link Plan And Rationale:
 - Private External Evidence Links (`Internal — Not for Publication`):
 
@@ -65,6 +77,10 @@ Write the complete English article with the best-fit structure. Do not force a f
 
 - Intent criteria satisfied:
 - Core answer location:
+- H1/H2/H3 hierarchy and title-alignment check:
+- Narrative sequence and table/list placement check:
+- FAQ gate (`3–6`, non-duplicative):
+- Visible CTA gate (brand/action/inputs/value/direct URL):
 - Overlapping sections merged:
 - Hard-fail groups: `Pass | Fail` — failed items:
 - Soft-quality failures: count and item IDs:
@@ -73,7 +89,10 @@ Write the complete English article with the best-fit structure. Do not force a f
 - Fact/evidence scan:
 - Primary-service/topic-axis check:
 - Go/no-go, failure-mode, DFM, and applicable traceability check:
-- CTA-to-intent check:
+- CTA-to-intent and variation check:
+- Reference adaptation record:
+- Semantic/shape cross-article similarity self-check:
+- Internal-link manifest:
 - Cross-service link relationship, placement, destination, and anchor check:
 - English word count:
 - Readability result when required:

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SEO Candidate Action Queue",
+  "type": "object",
+  "required": ["action_queue", "proposal_count"],
+  "properties": {
+    "proposal_count": {"type": "integer", "minimum": 0},
+    "action_queue": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {"$ref": "proposal.schema.json"},
+          {
+            "type": "object",
+            "required": ["priority_score", "consensus_agents", "conflict", "status"],
+            "properties": {
+              "priority_score": {"type": "number"},
+              "consensus_agents": {"type": "array", "items": {"type": "string"}},
+              "conflict": {"type": "boolean"},
+              "status": {"enum": ["CANDIDATE", "WAITING_FOR_INTENT_APPROVAL"]}
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+

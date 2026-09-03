@@ -1,7 +1,7 @@
 interface:
   display_name: "Xmake-Plastichubs Website Operations"
   short_description: "Build varied, verified manufacturing website pages and publishing artifacts"
-  default_prompt: "Use $xmake-plastichubs-website-ops. State the route, output stage, and deliverable; apply the batch-variation framework; create or package the requested XMAKE or PlasticHubs page; and verify preview or Word artifacts before claiming visual QA."
+  default_prompt: "Use $xmake-plastichubs-website-ops. State the route, output stage, and deliverable; package the approved varied article, inject verified same-brand internal links as clickable light-blue text, return the link manifest, and verify preview or Word artifacts before claiming visual QA."
 compatibility:
   canonical_format: "agent-skills"
   adapter_targets:

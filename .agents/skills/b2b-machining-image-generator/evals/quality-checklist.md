@@ -2,6 +2,7 @@
 
 Before every image-tool call, verify:
 
+- [ ] For article-linked work, the complete visual brief contains at least three independent assets with distinct section placements and explanatory jobs.
 - [ ] The content is suitable for AI and does not require tolerance, measurement, microscopy, or certification accuracy.
 - [ ] One visual angle explains the main technical point; redundant illustration density was rejected.
 - [ ] Reference research covered geometry, material, process/failure logic, and more than one source pattern when search was available.

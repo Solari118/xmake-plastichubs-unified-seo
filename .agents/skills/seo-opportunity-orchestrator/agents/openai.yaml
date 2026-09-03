@@ -1,0 +1,5 @@
+interface:
+  display_name: "SEO Opportunity Orchestrator"
+  short_description: "Reconcile proposals into a governed action queue."
+  default_prompt: "Merge SEO proposals, flag conflicts, and produce a transparent candidate action queue."
+

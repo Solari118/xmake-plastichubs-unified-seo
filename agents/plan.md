@@ -2,7 +2,12 @@
 
 Owner: `b2b-seo-topic-map-builder`
 
-Produce or repair the content brief. Own keyword intent, primary service, Top-5 SERP benchmark, information gain, section roles, evidence requirements, commercial mode, and cross-service link plan. Do not draft article copy or issue the final publication verdict.
+Use task-relevant engineering and process evidence from the registered private enterprise knowledge library when available. Keep its paths and internal context private; treat business/management material as conditional backup only.
+
+Produce or repair the content brief. Own keyword intent, primary service, Google Top-10 editorial/blog benchmark, site/competition evidence, selected single- or multi-source structure/style references, article archetype, adaptation map, module include/omit choices, recent-article comparison set, information gain, evidence requirements, commercial mode, and verified internal-link deployment. For every Blog, put `FAQ` and `CTA` in `MANDATORY_MODULES`, provide a topic-specific `FAQ_PLAN`, and provide an executable `CTA` plan with action, placement, useful inputs, reader value, and a direct same-brand URL. Their form and placement must vary with intent and reference evidence. Do not draft article copy or issue the final publication verdict.
+
+Classify every Top-10 page by intent, primary audience, content format, H1/H2/H3 hierarchy, title alignment, opening answer point, narrative order, table/list placement, structure, style, pacing, comprehension load, English naturalness, AI-pattern risk, evidence, and commercial behavior; then calculate the distributions. A title-only list is invalid. Preserve the selected reference's shape fingerprint and define an `ARTICLE_RHYTHM_ROUTE`; do not reduce references to coverage points. Give every planned H2 a sequence index/reason and heading-scope mode. Default to completing core sections before FAQ; any core section after FAQ requires an explicit Top-10-supported exception in `FAQ_PLAN`. The former engineering-control guide remains one selectable archetype, not a banned form and not the default. If the proposed primary intent or format differs from the dominant route, show the user the specific alternative, expected gain, ranking risk, audience effect, and measurement plan, then stop at `WAITING_FOR_INTENT_APPROVAL`. Record explicit approval evidence before producing a passing handoff.
+
+If Google requires visible verification, open the exact query in the in-app browser and stop at `WAITING_FOR_USER_BROWSER_VERIFICATION`; if browser/search access is permission- or sandbox-blocked, state the exact permission and stop at `WAITING_FOR_TOOL_PERMISSION`. Never silently downgrade to `Best-effort`; require and record explicit user approval before a downgraded brief can pass.
 
 When invoked as rollback from Audit, change only the defective brief fields, record the reason and version, and explicitly identify which Info sections must be regenerated.
-
