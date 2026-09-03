@@ -20,6 +20,21 @@ At activation, report `Route: Website Ops > xmake-plastichubs-website-ops`, the 
 5. Apply natural keyword/query coverage from [SEO Keyword Rules](references/seo-keyword-rules.md).
 6. Run the relevant checks. Do not issue the final cross-project publish verdict.
 
+## Service Page Design And Deployment Hardening
+
+- Keep an append-only requirement ledger during screenshot and annotation review. A new correction does not erase an earlier accepted requirement unless the user explicitly replaces it.
+- Align sibling service pages to the real site header/navigation, container width, typography, buttons, radii, section rhythm, and Hero treatment. Do not simulate a second navigation bar. When a full-bleed Hero background is approved, cover the complete Hero without unexplained white bands or a detached image card.
+- Size images by information value. Reject oversized images, image-only sections without a buyer purpose, repeated Hero/process/material compositions, and fixed/min-height layouts that leave dead space below short content.
+- Material selectors must change both copy and imagery. Each state needs visibly distinct material cues such as color, opacity, surface, edge/chip behavior, or part form; relabeling one generic image is a failure.
+- Factory/operator images may include hands, torso, or lower-body operating context when useful; avoid identifiable faces unless explicitly approved. A compact mobile section index may be reused only after validating labels, anchors, touch size, collapsed state, and non-obstruction.
+- Add a buyer-visible capability proof module when verified evidence exists. Prioritize equipment count/type, axis coverage, workshop count, supported part envelope, tolerances, inspection, lead-time scope, and production range. Load `企业知识（保密）` only with explicit current-run inclusion; otherwise use approved current official sources and publish only the selected brand.
+- Before asking the user to open a search URL, load-test that exact URL in the built-in browser. Ambient browser context is not proof that the page opened. If exact Google Top-10 capture is blocked and the user directs work to continue, analyze at least five accessible commercial pages as `PROVISIONAL_REFERENCE_SET`; never label them Google ranks or pass the Top-10 gate.
+- Before WordPress editing, verify the exact editor URL, expected page/snippet identity, and usable authenticated editor. Allow one automatic large-paste/update attempt. On timeout, stall, Wordfence, or HTTP 403, stop retrying and provide the exact clipboard/raw-code handoff when the user authorizes manual assistance.
+- After a user save, read back the persisted editor value and verify the expected identifier, attachment ID, or payload hash. A spinner, green notice, or user-reported click alone is not deployment evidence.
+- Validate uploaded carriers after WordPress processing. The public object and server-readable attachment must retain the marker and payload hash. Never append page payloads to raster images because image optimization may strip trailing bytes.
+- Public acceptance uses a cache-busting request and requires one intended page wrapper, approved H1, intended title/canonical, zero broken images, no unexplained horizontal overflow, and working desktop/mobile interactions. Diagnose persisted value, carrier integrity, hook marker, filter multiplicity, then cache before rebuilding or repasting.
+- Keep progress reporting concise: report only material state changes, user-required actions, blockers, and final evidence. A status question does not cancel authorized unfinished work.
+
 ## Brand And Evidence Boundary
 
 - Public copy must name only XMAKE or PlasticHubs, according to `BRAND`.
