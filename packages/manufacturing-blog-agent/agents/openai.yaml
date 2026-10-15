@@ -1,0 +1,4 @@
+interface:
+  display_name: Manufacturing Blog Agent
+  short_description: Evidence-led manufacturing Blog planning, writing, and independent review
+  default_prompt: Plan and produce an original manufacturing Blog article using the stage gates in SKILL.md. Keep private run inputs outside this installed skill.

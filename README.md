@@ -1,5 +1,11 @@
 # Manufacturing Content Pipeline
 
+## 可公开安装的 Blog Agent / Public Blog Agent
+
+独立、无企业资料的 Blog 写作 Agent 位于 [packages/manufacturing-blog-agent](packages/manufacturing-blog-agent/README.md)。对应 ZIP、逐文件哈希及安装说明均在 `packages/`。该发布包是独立的可复用 Skill，使用时由使用者在本地提供品牌、证据和授权。
+
+The company-neutral Blog writing Agent is in [packages/manufacturing-blog-agent](packages/manufacturing-blog-agent/README.md). Its ZIP, file hashes, and install instructions are in `packages/`. This is a standalone reusable Skill; users supply brand settings, evidence, and approvals locally.
+
 这是 XMAKE / PlasticHubs 制造业内容的统一项目。它把原 `Plan`、`Info`、`Aduit`（兼容旧拼写）和 `B2B机加工生图` 四个项目整合为一个有顺序、有契约、有上下文隔离的执行系统。
 
 This is the canonical XMAKE / PlasticHubs manufacturing-content project. It combines the former Plan, Info, `Aduit`-named Audit, and B2B image projects into one ordered, contract-driven, context-isolated system.

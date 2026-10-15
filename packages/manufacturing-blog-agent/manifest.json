@@ -1,0 +1,13 @@
+{
+  "name": "manufacturing-blog-agent",
+  "version": "1.0.0",
+  "owner": "Lostk",
+  "updated_at": "2026-10-15",
+  "review_cadence": "per-release",
+  "status": "active",
+  "maturity_tier": "production",
+  "lifecycle_stage": "production",
+  "output_contract": "Versioned Plan, original draft, independent Audit, approved assets, and verified package receipt",
+  "rollback_boundary": "Repository commit and package ZIP SHA-256",
+  "privacy_boundary": "No company files, private source text, credentials, customer data, or local run artifacts"
+}

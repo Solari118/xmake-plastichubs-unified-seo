@@ -1,0 +1,22 @@
+{
+  "run_id": "replace-in-local-run",
+  "topic": null,
+  "primary_query": null,
+  "publishing_brand": null,
+  "primary_service": null,
+  "market_evidence": [],
+  "funnel_approval": null,
+  "topic_opportunity": null,
+  "independent_topic_audit": null,
+  "topic_approval": null,
+  "cta_decision": "WAITING_FOR_CTA_DECISION",
+  "serp_primary": [],
+  "serp_reference": [],
+  "reference_review": null,
+  "reference_adaptation": null,
+  "query_page_owner": null,
+  "internal_link_actions": [],
+  "reader_orientation": null,
+  "claim_boundaries": [],
+  "plan_gate_status": "NOT_RUN"
+}

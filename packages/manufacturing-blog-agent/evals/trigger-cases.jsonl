@@ -1,0 +1,5 @@
+{"prompt":"Plan and write an original manufacturing Blog article from this approved topic and evidence.","expected":"route"}
+{"prompt":"Audit this complete manufacturing Blog draft before images.","expected":"route_at_audit"}
+{"prompt":"Retouch this single factory photograph only.","expected":"do_not_route_full_blog"}
+{"prompt":"Translate this short paragraph into English.","expected":"do_not_route"}
+{"prompt":"Create a product logo.","expected":"do_not_route"}

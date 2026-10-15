@@ -1,0 +1,12 @@
+{
+  "run_id": "replace-in-local-run",
+  "publishing_brand": null,
+  "target_site": null,
+  "mode": "PACKAGE",
+  "stage": "market-data",
+  "status": "WAITING_FOR_FRESH_DATA",
+  "artifacts": {},
+  "approvals": {},
+  "dependencies": {},
+  "evidence_gaps": []
+}

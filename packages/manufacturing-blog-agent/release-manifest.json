@@ -1,0 +1,21 @@
+{
+  "file_count": 14,
+  "files_sha256": {
+    "README.md": "14083126fbf731a400c0682f52b8f60236214e6d23faa23e2ea3f5b9e58419a7",
+    "SKILL.md": "2fe35c535712af1806046ffb6494031ddfd80d109a28c9afaf0eb1b3a5d9bbd0",
+    "agents/openai.yaml": "b4a724bf75a20fedab19f85685bb4a3b752f675af9b922840baa2b15911a8c59",
+    "evals/trigger-cases.jsonl": "474512947fef1ef92d6b0d97d55db5f1c390caceeab2acf683fa6f8fd4e4d46d",
+    "manifest.json": "d9e8c3dec4e120015e833939f202011d7a1e12dc4d0538b376cc52169c5971e3",
+    "references/artifact-contract.md": "86db91e9f4d0426b8fe05d8bde41ce0b802020f9da16ea9ee2bfde29c2cee265",
+    "references/writing-and-audit.md": "dabe323507bd7b8c3b12144d6cbd3cb29840929cada025793aba302c06bd2566",
+    "reports/output_quality_scorecard.md": "84cd8aa9e3dcd8e387fe0d64cea2d57b8cc5c63f0c3e492e8101684e18cfb1c3",
+    "reports/security_trust_report.md": "74f2fd2d01e0b615830363fb793448734139ceabded12fc6cb3066e25f97e750",
+    "scripts/build_package.py": "f60f1cd4230206e4aace43decda3071ae49ebb306c13ca3b86b26e6cc07d7ebf",
+    "scripts/verify_package.py": "6b23c04652186534b541f1cbde0d75bdd9ed03b0a0740c31d2e11bd18c862e78",
+    "templates/audit-report.md": "09b1b007c3d0ceacdd82fb1c2c723b6694d8234fdba754e15c1dd993c3bcb150",
+    "templates/plan-brief.json": "751abb0ba1e8e92262e8c52157c4886b85ca05284a3df8d59dcb02eec5d50346",
+    "templates/run-state.json": "aee67dc6c34798ccf8f3d6b776dca1bdad82b19cba91710332add264215a2c7f"
+  },
+  "name": "manufacturing-blog-agent",
+  "version": "1.0.0"
+}
